@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Grid.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="Js/main.js"></script>
+    <script src="Js/time-out.js"></script>
+    <title>Pluto</title>
+    <link rel="shortcut icon" type="images/png" href="/logo-icon/solar-system.ico"/>
+
+    <style>
+        .explo-planet #img-nasa {
+           margin-top: 0px;
+           width: 33%;
+        }
+        .content {
+            height: 830px;
+        }
+        @media only screen and (max-width: 46.1875em){
+        .content {
+            height: 80rem;
+            }
+        .explo-planet #img-nasa {
+            margin-top: 40px;
+            width: 100%;
+            height: fit-content;
+        }
+        .content-add {
+            height: 88rem;
+        }
+        }
+        @media only screen and (min-width: 600px) and (max-width: 800px) {
+            .slider-responsive {
+                height: 900px;
+            }
+            .content-add {
+                height: 58rem;
+            }
+        }
+        @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+        .explo-planet #img-nasa {
+                margin-left: 4rem;
+                width: 80% !important;
+            }
+        .content-add {
+                height: 70rem !important;
+            } 
+        } 
+    </style>
+</head>
+<body>
+    <div class="loader disppear" >
+        <img src="../loading/9b1398619fa808505a7dbd6da70b2ff1.gif" alt="">
+    </div>
+    <div id="progress">
+        <i class="fa-solid fa-arrow-up" id="progress-value"></i>
+    </div>
+
+    <div id="main">
+        <div id="header">
+            <input type="checkbox" name="" class="nav-input" id="nav-res-input">
+            <label for="nav-res-input" class="nav-overlay"></label>
+            <div id="logo_img">
+                <a href="../Skygazing.com.html"><img src="./images/logo png.png" alt="Logo"></a>
+            </div>
+            <label for="nav-res-input"><i id="icon-mobile" class="bi bi-list"></i></label>
+            <ul id="nav">
+                <li class="astronomy-home__numberlives">live: 220</li>
+                <li><a href="Planets.html">Planets</a>
+                    <ul class="subnav">
+                        <li><a href="Mercury.html">Mercury</a></li>
+                        <li><a href="Venus.html">Venus</a></li>
+                        <li><a href="Earth.html">Earth</a></li>
+                        <li><a href="Mars.html">Mars</a></li>
+                        <li><a href="Jupiter.html">Jupiter</a></li>
+                        <li><a href="Saturn.html">Saturn</a></li>
+                        <li><a href="Uranus.html">Uranus</a></li>
+                        <li><a href="Neptune.html">Neptune</a></li>
+                        <li><a href="Pluto.html">Pluto</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Events The Planets</a>
+                    <ul class="subnav">
+                        <li><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                        <li><a href="../bigbang/bigbang.html">BigBang</a></li>
+                        <li><a href="../EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                    </ul>
+                </li>  
+                <li><a href="#">More</a>
+                    <ul class="subnav">
+                        <li><a href="../star-gazing/star-gazing.html">StarGazing</a></li>
+                        <li><a href="../comet-event/comet.html">Comet</a></li>
+                        <li><a href="../Observation/Observation.html">Observatories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li> 
+                <li class="astronomy-home__time-lives">
+                    <span>Times live:</span>
+                    <span id="hours">00</span>
+                    <span>:</span>
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                    <span id="session">AM</span>
+                </li>
+            </ul> 
+            <div class="header-res">   
+                <label for="nav-res-input"><i id="icon-res" class="bi bi-x-lg"></i></label>
+                <ul id="nav-res">
+                    <li><a href="Planets.html">Planets</a>
+                        <input type="checkbox" id="nav-down1">
+                        <label for="nav-down1"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res1">
+                            <li><i class="bi bi-dash"></i></i><a href="Mercury.html">Mercury</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Venus.html">Venus</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Earth.html">Earth</a></li>
+                            <li><i class="bi bi-dash"></i></i></i><a href="Mars.html">Mars</a></li>
+                            <li><i class="bi bi-dash"></i></i></i><a href="Jupiter.html">Jupiter</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Saturn.html">Saturn</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Uranus.html">Uranus</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Neptune.html">Neptune</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Pluto.html">Pluto</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Events The Planets</a>
+                        <input type="checkbox" id="nav-down2">
+                        <label for="nav-down2"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res2">
+                            <li><i class="bi bi-dash"></i></i><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../bigbang/bigbang.html">BigBang</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                        </ul>
+                    </li>  
+                    <li><a href="#">More</a>
+                        <input type="checkbox" id="nav-down3">
+                        <label for="nav-down3"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res3">
+                            <li><i class="bi bi-dash"></i></i><a href="../star-gazing/star-gazing.html">StarGazing</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../comet-event/comet.html">Comet</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../Observation/Observation.html">Observatories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About Us</a></li>
+                </ul>  
+            </div>   
+        </div>
+        <div class="slider">
+            <img id="img_planet" src="images/Pluto.png" alt="Pluto">
+            <div id="planet_name"><b>Pluto</b> 
+                <p id="text_planet">
+                    Pluto is a complex world of ice mountains and frozen plains. Once considered the ninth planet, Pluto is the largest member of the Kuiper Belt and the best known of a new class of worlds called dwarf planets.
+                </p>
+                <button id="btn_planet"><a href="#More-InfoPlantet">More details</a></button>
+            </div>
+            <div class="planet_info">
+                <table>
+                    <tr>
+                        <th>Surface area:</th>
+                        <td>1.664794×107 km<sup>2</sup></td>
+                    </tr>
+                    <tr>
+                        <th>Mean density:</th>    
+                        <td>1,88 g/cm³</td>                                      
+                    </tr>
+                    <tr>
+                        <th>Rotation cycle:</th>
+                        <td>153 hours</td>
+                    </tr>
+                    <tr>
+                        <th>Mass:</th>
+                        <td>(1.303±0.003)×1022 kg</td>
+                    </tr>
+                    <tr>
+                        <th>Mean radius:</th>
+                        <td>1.188,3 km</td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td>9 Year</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="planet_distance">
+                <table>
+                    <tr>
+                        <th>The distance from the Sun</th>
+                        <th>The distance from the Earth</th>
+                    </tr>
+                    <tr>
+                        <td>3.7 billion<small>miles</small></td>
+                        <td>4.67 billion<small>miles</small></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="slider-responsive">
+            <img id="img_responsive" src="images/Pluto.png" alt="Pluto">
+            <div data-aos="fade-up"
+            data-aos-duration="3000" id="planet_responsive"><b>Pluto</b> 
+                <p id="text_responsive">
+                    Pluto is a complex world of ice mountains and frozen plains. Once considered the ninth planet, Pluto is the largest member of the Kuiper Belt and the best known of a new class of worlds called dwarf planets.
+                </p>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000" class="responsive-table">
+                <table>
+                    <tr>
+                        <th>Surface area:</th>
+                        <td>1.664794×107 km<sup>2</sup></td>
+                    </tr>
+                    <tr>
+                        <th>Mean density:</th>    
+                        <td>1,88 g/cm³</td>                                      
+                    </tr>
+                    <tr>
+                        <th>Rotation cycle:</th>
+                        <td>153 hours</td>
+                    </tr>
+                    <tr>
+                        <th>Mass:</th>
+                        <td>(1.303±0.003)×1022 kg</td>
+                    </tr>
+                    <tr>
+                        <th>Mean radius:</th>
+                        <td>1.188,3 km</td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td>9 Year</td>
+                    </tr>
+                </table>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000" class="responsive-distance">
+                <table>
+                    <tr>
+                        <th>The distance from the Sun</th>
+                        <th>The distance from the Earth</th>
+                    </tr>
+                    <tr>
+                        <td class="res-td">3.7 billion<small>miles</small></td>
+                        <td class="res-td">4.67 billion<small>miles</small></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2 data-aos="fade-right" data-aos-offset="300" id="title-planet-name">What's The Pluto Planet ?</h2>
+                <div class="explo-planet">
+                    <div class="text-explo" data-aos="fade-up"  data-aos-easing="linear"    data-aos-duration="1500">
+                        <p class="text-pln-nasa"> 
+                            Pluto is a dwarf planet in the Kuiper Belt, a donut-shaped region of icy bodies beyond the orbit of Neptune. There may be millions of these icy objects, collectively referred to as Kuiper Belt objects (KBOs) or trans-Neptunian objects (TNOs), in this distant region of our solar system.
+                        </p>
+                        <details>
+                            <summary>More details</summary>
+                            <p class="text-pln-nasa">
+                                Pluto – which is smaller than Earth’s Moon – has a heart-shaped glacier that’s the size of Texas and Oklahoma. This fascinating world has blue skies, spinning moons, mountains as high as the Rockies, and it snows – but the snow is red.
+                            </p>
+                            <p class="text-pln-nasa">
+                                On July 14, 2015, NASA’s New Horizons spacecraft made its historic flight through the Pluto system – providing the first close-up images of Pluto and its moons and collecting other data that has transformed our understanding of these mysterious worlds on the solar system’s outer frontier. 
+                            </p>
+                            <p class="text-pln-nasa">
+                                In the years since that groundbreaking flyby, nearly every conjecture about Pluto possibly being an inert ball of ice has been thrown out the window or flipped on its head. 
+                            </p>
+                        </div>
+                        </details>        
+                    <img id="img-nasa" src="images/Pluto-gif.gif" alt="Nasa_pluto" autoplay loop muted play>
+                </div>          
+        </div>
+
+        <div class="content-img">
+            <div data-aos="zoom-in-up" class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-pluto1.jpg" >
+                  <div class="text">
+                    This is the highest-resolution color departure shot of Pluto's receding crescent from NASA's New Horizons spacecraft, taken when the spacecraft was 120,000 miles (200,000 kilometers) away from Pluto. Image credit: NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-pluto2.jpg" >
+                  <div class="text">
+                    This enhanced color view from NASA's New Horizons spacecraft zooms in on the southeastern portion of Pluto's great ice plains, where at lower right the plains border rugged, dark highlands informally named Krun Macula. Image credit: NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-pluto3.jpg">
+                  <div class="text">
+                    This ethereal scene captured by NASA's New Horizons spacecraft tells yet another story of Pluto's diversity of geological and compositional features -- this time in an enhanced color image of the north polar area. Image credit: NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute
+                  </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/img-pluto4.jpg">
+                    <div class="text">
+                        This geological map covers a portion of Pluto's surface that measures 1,290 miles (2,070 kilometers) from top to bottom, and includes the vast nitrogen-ice plain informally named Sputnik Planum and surrounding terrain. Image credit: NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute
+                    </div>
+                  </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/img-pluto5.jpg">
+                    <div class="text">
+                        This enhanced color mosaic combines some of the sharpest views of Pluto that NASA's New Horizons spacecraft obtained during its July 14 flyby. Image credit: NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute
+                    </div>
+                </div>
+ 
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                  <span class="dot" onclick="currentSlide(5)"></span> 
+                </div>
+        </div>
+
+        <div class="content-add">
+            <div class="content-planet">
+                <h4 ata-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">Significant Events</h4>
+                <ul id="years-content">
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i> Pluto orbits on the fringes of our solar system, billions of miles away. Sunlight is much weaker there than it is here on Earth, yet it isn't completely dark. In fact, for just a moment near dawn and dusk each day, the illumination on Earth matches that of high noon on Pluto.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i> We call this Pluto Time. If you go outside at this time on a clear day, the world around you will be as bright as the brightest part of the day on Pluto.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i> Pluto is the only world (so far) named by an 11-year-old girl. In 1930, Venetia Burney of Oxford, England, suggested to her grandfather that the new discovery be named for the Roman god of the underworld. He forwarded the name to the Lowell Observatory and it was selected.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i> Pluto's moons are named for other mythological figures associated with the underworld. Charon is named for the river Styx boatman who ferries souls in the underworld (as well as honoring Sharon, the wife of discoverer James Christy); Nix is named for the mother of Charon, who is also the goddess of darkness and night; Hydra is named for the nine-headed serpent that guards the underworld; Kerberos is named after the three-headed dog of Greek mythology (and called Fluffy in the Harry Potter novels), and Styx is named for the mythological river that separates the world of the living from the realm of the dead.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i> Pluto's place in mythology can get a little muddled, so we asked Dr. Elizabeth Vandiver, chair of the Department of Classics in Whitman College in Walla Walla, Washington, to clarify the origins of the name: "Pluto is the name of the Roman god of the Underworld, equivalent to the Greek Hades. However, the Greek name "Plouton" (from which the Romans derived their name "Pluto") was also occasionally used as an alternative name for Hades. But Pluto is definitely the Roman spelling."</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-last">
+            <div class="content-header">
+                <h2 data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" id="More-InfoPlantet">10 Need-to-Know Things About Pluto</h2>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000"  class="grid wide">
+                <div class="row">
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">1</div>
+                        <h3 class="grid-title">Small world</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Pluto is about 1,400 miles (2,380 km) wide. That's about half the width of the United States, or 2/3 the width of Earth's moon.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">2</div>
+                        <h3 class="grid-title">DEEP SPACEk</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Pluto orbits the Sun about 3.6 billion miles (5.8 billion km) away on average, about 40 times as far as Earth, in a region called the Kuiper Belt.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">3</div>
+                        <h3 class="grid-title">SLOW JOURNEY</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">
+                                A year on Pluto is 248 Earth years. A day on Pluto lasts 153 hours, or about 6 Earth days.
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <img class="img-fact" src="images/pluto-nasa1.jpg" alt="pluto-nasa">
+                        <div class="thing-fact">
+                            <p class="text-fact">NATURAL COLOR</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">4</div>
+                        <h3 class="grid-title">SMALL IN SIZE, BUT NOT IN IMPORTANCE</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Pluto is officially classified as a dwarf planet.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">5</div>
+                        <h3 class="grid-title">HAZY DAYS</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Pluto has a thin atmosphere of nitrogen, methane and carbon monoxide. The atmosphere has a blue tint and distinct layers of haze.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">6</div>
+                        <h3 class="grid-title">MOON DANCE</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Pluto has 5 moons. The largest, Charon, is so big that Pluto and Charon orbit each other like a double planet.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">7</div>
+                        <h3 class="grid-title">Ringless</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Pluto has no ring system.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">8</div>
+                        <h3 class="grid-title">SOLE ENCOUNTER</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">The only spacecraft to visit Pluto is NASA’s New Horizons, which passed close by in July 2015.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">9</div>
+                        <h3 class="grid-title">HARSH HABITAT</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Pluto’s surface is far too cold, -378 to -396 degrees F (-228 to -238 C), to sustain life as we know it.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count-fact">10</div>
+                        <h3 class="grid-title">FROM THE MOUTHS OF BABES</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Venetia Burney, just 11 years old at the time, suggested the name Pluto in 1930.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <img class="img-fact" src="images/pluto-nasa2.jpg" alt="pluto-nasa">
+                            <p class="text-fact">MAJESTIC MOUNTAINS AND FROZEN PLAINS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+
+            <div class="footer__bg">
+                <img src="images/Star.jpg" alt="bg-footer">
+                
+                <div class="footer__infor">
+    
+                    <div class="footer__icon-phone">
+                        <i class="fa-solid fa-phone footer__icon-infor"></i>
+                        <span class="footer__infor-name">Contact Information</span>
+                        <span class="footer__desc">0886313048</span>
+                        <span class="footer__desc">SkyGazing@gmail.com</span>
+                    </div>
+    
+                    <div class="footer__icon-times">
+                        <i class="fa-solid fa-clock footer__icon-infor"></i>
+                        <span class="footer__infor-name">Times</span>
+                        <span class="footer__desc">Days of the week</span>
+                        <span class="footer__desc">(8:00 AM to 10:00 PM)</span>
+                    </div>
+    
+                    <div class="footer__icon-address">
+                        <i class="fa-solid fa-location-dot footer__icon-infor"></i>
+                        <span class="footer__infor-name">Address</span>
+                        <span class="footer__desc">Fpt Aptech Hà Nội</span>
+                        <span class="footer__desc">(Tôn thất thuyết, Mỹ Đình 2, Nam Từ Liêm, Hà Nội)</span>
+                    </div>
+               
+                </div>
+            </div>
+
+        </div>
+
+        <div class="map">
+            <div class="map__address">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966092835115!2d105.78010801471528!3d21.028820085998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9ac1%3A0xa9bc04e04602dd85!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1665652904057!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map__img"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Js/img-slider.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+</html>

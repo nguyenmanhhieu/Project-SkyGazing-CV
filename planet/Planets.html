@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/solar-system.css">
+    <link rel="stylesheet" href="css/Grid.css">
+    <link rel="stylesheet" href="css/Grid2.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="Js/main.js"></script>
+    <script src="Js/time-out.js"></script>
+    <title>Planets</title>
+    <link rel="shortcut icon" type="images/png" href="/logo-icon/solar-system.ico"/>
+    <style>
+        @media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+            img.img-slider {
+            margin-left: 12rem !important;
+        }.prev {
+            right: 30rem !important;
+        }
+        .next {
+            right: 13rem !important;
+            border-radius: 3px 0px 0px 3px;
+        }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="loader disppear" >
+        <img src="../loading/9b1398619fa808505a7dbd6da70b2ff1.gif" alt="">
+    </div>  
+
+    <div id="progress">
+        <i class="fa-solid fa-arrow-up" id="progress-value"></i>
+    </div>  
+
+    <div id="main">
+        <div id="header">
+            <input type="checkbox" name="" class="nav-input" id="nav-res-input">
+            <label for="nav-res-input" class="nav-overlay"></label>
+            <div id="logo_img">
+                <a href="../Skygazing.com.html"><img src="./images/logo png.png" alt="Logo"></a>
+            </div>
+            <label for="nav-res-input"><i id="icon-mobile" class="bi bi-list"></i></label>
+            <ul id="nav">
+                <li class="astronomy-home__numberlives">live: 220</li>
+                <li><a href="#">Planets</a>
+                    <ul class="subnav">
+                        <li><a href="Mercury.html">Mercury</a></li>
+                        <li><a href="Venus.html">Venus</a></li>
+                        <li><a href="Earth.html">Earth</a></li>
+                        <li><a href="Mars.html">Mars</a></li>
+                        <li><a href="Jupiter.html">Jupiter</a></li>
+                        <li><a href="Saturn.html">Saturn</a></li>
+                        <li><a href="Uranus.html">Uranus</a></li>
+                        <li><a href="Neptune.html">Neptune</a></li>
+                        <li><a href="Pluto.html">Pluto</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Events The Planets</a>
+                    <ul class="subnav">
+                        <li><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                        <li><a href="../bigbang/bigbang.html">BigBang</a></li>
+                        <li><a href="../EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                    </ul>
+                </li>  
+                <li><a href="#">More</a>
+                    <ul class="subnav">
+                        <li><a href="../star-gazing/star-gazing.html">StarGazing</a></li>
+                        <li><a href="../comet-event/comet.html">Comet</a></li>
+                        <li><a href="../Observation/Observation.html">Observatories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li> 
+                <li class="astronomy-home__time-lives">
+                    <span>Times live:</span>
+                    <span id="time-out"></span>
+                    <span id="hours">00</span>
+                    <span>:</span>
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                    <span id="session">AM</span>
+                </li>
+            </ul>   
+            <div class="header-res">   
+                <label for="nav-res-input"><i id="icon-res" class="bi bi-x-lg"></i></label>
+                <ul id="nav-res">
+                    <li><a href="#">Planets</a>
+                        <input type="checkbox" id="nav-down1">
+                        <label for="nav-down1"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res1">
+                            <li><i class="bi bi-dash"></i></i><a href="Mercury.html">Mercury</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Venus.html">Venus</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Earth.html">Earth</a></li>
+                            <li><i class="bi bi-dash"></i></i></i><a href="Mars.html">Mars</a></li>
+                            <li><i class="bi bi-dash"></i></i></i><a href="Jupiter.html">Jupiter</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Saturn.html">Saturn</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Uranus.html">Uranus</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Neptune.html">Neptune</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Pluto.html">Pluto</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Events The Planets</a>
+                        <input type="checkbox" id="nav-down2">
+                        <label for="nav-down2"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res2">
+                            <li><i class="bi bi-dash"></i></i><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../bigbang/bigbang.html">BigBang</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                        </ul>
+                    </li>  
+                    <li><a href="#">More</a>
+                        <input type="checkbox" id="nav-down3">
+                        <label for="nav-down3"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res3">
+                            <li><i class="bi bi-dash"></i></i><a href="../star-gazing/star-gazing.html">StarGazing</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../comet-event/comet.html">Comet</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../Observation/Observation.html">Observatories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About Us</a></li>
+                </ul>  
+            </div> 
+        </div>
+        <div class="slider">
+            <img id="img_planet" src="images/Solar-system.jpg" alt="solar-system">
+        </div>
+
+        <div class="slider-responsive">
+            <img id="img_responsive" src="images/Solar-system.jpg" alt="solar-system">
+        </div>
+
+        <div  class="content-img">
+            <h2 data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500" id="text-slider">More Destinations</h2>
+            <div data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000" class="slideshow-container">
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/mercury_slider.png" >
+                  <div class="text">
+                    <a class="link-pln" href="Mercury.html">Mercury </a>
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/venus_slider.png" >
+                  <div class="text">  
+                    <a class="link-pln" href="Venus.html">Venus </a>
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/earth_slider.png">
+                  <div class="text">   
+                    <a class="link-pln" href="Earth.html">Earth </a>
+                  </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/mars_slider.png">
+                    <div class="text">
+                      <a class="link-pln" href="Mars.html">Mars</a>  
+                    </div>
+                  </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/jupiter_slider.png">
+                    <div class="text">                 
+                        <a class="link-pln" href="Jupiter.html">Jupiter</a>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/saturn_slider.png">
+                    <div class="text">   
+                        <a class="link-pln" href="Saturn.html">Saturn</a>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/uranus_slider.png">
+                    <div class="text">   
+                        <a class="link-pln" href="Uranus.html">Uranus</a>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/neptune_slider.png">
+                    <div class="text"> 
+                        <a class="link-pln" href="Neptune.html">Neptune</a>
+                    </div>
+                </div>
+
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                  <span class="dot" onclick="currentSlide(5)"></span> 
+                  <span class="dot" onclick="currentSlide(6)"></span> 
+                  <span class="dot" onclick="currentSlide(7)"></span> 
+                  <span class="dot" onclick="currentSlide(8)"></span> 
+                </div>
+        </div>
+        
+        <div class="content">
+            <h2 data-aos="fade-up"
+            data-aos-duration="3000" id="title-planet-name">Our Solar System</h2>
+            <video data-aos="zoom-out" id="img-nasa" src="images/Solar System.mp4" alt="solar-system" autoplay loop muted play></video>
+           <div class="explo-planet">
+               <div data-aos="fade-up"
+               data-aos-duration="3000" class="text-explo">
+                   <p class="text-pln-nasa"> 
+                    <i class="bi bi-check2-circle"></i> Our planetary system is located in an outer spiral arm of the Milky Way galaxy.
+                   </p>
+                   <p class="text-pln-nasa"> 
+                    <i class="bi bi-check2-circle"></i> Our solar system consists of our star, the Sun, and everything bound to it by gravity – the planets Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune; dwarf planets such as Pluto; dozens of moons; and millions of asteroids, comets, and meteoroids. Beyond our own solar system, we have discovered thousands of planetary systems orbiting other stars in the Milky Way
+                   </p>
+                   <details>
+                       <summary>Why is it Called the Solar System?</summary>
+                       <p class="text-pln-nasa">
+                        There are many planetary systems like ours in the universe, with planets orbiting a host star. Our planetary system is called “the solar system” because we use the word “solar” to describe things related to our star, after the Latin word for Sun, "solis."
+                       </p>
+                   </details>
+               </div>         
+           </div>          
+   </div>
+
+
+        
+       <!-- Footer -->
+
+   <div class="footer">
+    <div class="footer-title">
+        <p class="footer-title__contact">Contact Us</p>
+    </div>
+
+    <div class="footer-contact__mobie grid wide">
+        <div class="footer-contact__row row">
+            <div class="footer-contact__setting col c-10 c-o-1 l-0">
+
+                <div class="footer-contact">
+                    <form class="footer-contact__form" onsubmit="sendEmail(); reset(); return false;">
+                        <div class="footer-feedback">
+                            <p class="footer__feedback-text">Feedback Form:</p>
+                        </div>
+                        <input type="text" id="footer-contact__name" placeholder="Your Name" required class="footer-contact__box">
+                        <input type="email" id="footer-contact__email" placeholder="Your Email" required class="footer-contact__box">
+                        <input type="text" id="footer-contact__phone" placeholder="Your Phone" required class="footer-contact__box">
+                        <textarea id="message" type="footer-contact__message" row="10" placeholder="How can we help you?" required class="footer-contact__box"> </textarea>
+                        <button type="submit" id="btn" class="footer-contact__click">Send</button>
+            
+                    </form>
+                </div>
+
+            </div>
+            
+        </div>
+   
+    </div>
+
+    <div class="footer-contact__2">
+
+        <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966092835115!2d105.78010801471528!3d21.028820085998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9ac1%3A0xa9bc04e04602dd85!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1665652904057!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="footer-map__img"></iframe>
+        </div>
+        
+        <div class="footer-form m-o c-0 l-5">
+            <form class="footer__form-2" onsubmit="sendEmail(); reset(); return false;">
+                <div class="footer-feedback">
+                    <p class="footer__feedback-text">Feedback Form:</p>
+                </div>
+                <input type="text" id="footer-form__name" placeholder="Your Name" required class="footer-form__box-2">
+                <input type="email" id="footer-form__email" placeholder="Your Email" required class="footer-form__box-2">
+                <input type="text" id="footer-form__text" placeholder="Your Phone" required class="footer-form__box-2">
+                <textarea id="message" type="footer-form__message" row="10" placeholder="How can we help you?" class="footer-form__box-message" required> </textarea>
+                    <button type="submit" id="form-2" class="footer-form__click">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact-about">
+            <div class="contact-about__grid grid wide">
+                <div class="footer-about__flex">
+                    <div class="footer-about__row body-row_post-4">
+                        
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__1">
+                                <p class="contact-about__title">OUR ADDRES</p>
+                                <p class="contact-about__desc">Mỹ Đình 2, Nam Từ Liêm, Hà Nội</p>
+                                <p class="contact-about__desc">FPT APTECH</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__2">
+                                <p class="contact-about__title">OUR CONTACT</p>
+                                <p class="contact-about__desc">skygazing2022@gmail.com</p>
+                                <p class="contact-about__desc">0886313048</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__icon">
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__flower l-3 l-o-9">
+                            <p class="contact-about__flower-text">follow us</p>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+
+            <!-- mobie -->
+
+            <div class="contact-about__grid grid wide">
+                <div class="footer-about__flex">
+                    <div class="footer-about__row row-footer__contact">
+                        
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__title">OUR ADDRES</p>
+                                <p class="contact-about__desc">Mỹ Đình 2, Nam Từ Liêm, Hà Nội</p>
+                                <p class="contact-about__desc">FPT APTECH</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__title">OUR CONTACT</p>
+                                <p class="contact-about__desc">skygazing2022@gmail.com</p>
+                                <p class="contact-about__desc">0886313048</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer-icon">
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__folower">Follower</p>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+</body>
+<script src="Js/img-slider.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+<script src="Js/loading-page.js"></script>
+</html>

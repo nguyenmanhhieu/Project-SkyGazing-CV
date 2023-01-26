@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/comet.css">
+    <link rel="stylesheet" href="../reset/reset.css">
+    <link rel="stylesheet" href="../grid/grid_astronomy.css">
+    <link rel="stylesheet" href="./js/comet.js">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Observation Deck</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" type="images/png" href="/logo-icon/solar-system.ico"/>
+    
+
+</head>
+<body style="font-family: kanit;">
+
+
+    <div class="loader disppear" >
+        <img src="../loading/9b1398619fa808505a7dbd6da70b2ff1.gif" alt="">
+    </div>
+
+    <div class="astronomy-home">
+
+        <!-- menu -->
+
+        <div id="header">
+            <input type="checkbox" name="" class="nav-input" id="nav-res-input">
+            <label for="nav-res-input" class="nav-overlay"></label>
+            <div id="logo_img">
+                <a href="../Skygazing.com.html"><img src="./img/logo.png" alt="Logo"></a>
+            </div>
+            <label for="nav-res-input"><i id="icon-mobile" class="bi bi-list"></i></label>
+            <ul id="nav">
+                <li class="astronomy-home__numberlives">live: 220</li>
+                <li><a href="#">Planets</a>
+                    <ul class="subnav">
+                        <li><a href="../planet/Mercury.html">Mercury</a></li>
+                        <li><a href="../planet/Venus.html">Venus</a></li>
+                        <li><a href="../planet/Earth.html">Earth</a></li>
+                        <li><a href="../planet/Mars.html">Mars</a></li>
+                        <li><a href="../planet/Jupiter.html">Jupiter</a></li>
+                        <li><a href="../planet/Saturn.html">Saturn</a></li>
+                        <li><a href="../planet/Uranus.html">Uranus</a></li>
+                        <li><a href="../planet/Neptune.html">Neptune</a></li>
+                        <li><a href="../planet/Pluto.html">Pluto</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Events The Planets</a>
+                    <ul class="subnav">
+                        <li><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                        <li><a href="../bigbang/bigbang.html">BigBang</a></li>
+                        <li><a href="../EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                    </ul>
+                </li>  
+                <li><a href="#">More</a>
+                    <ul class="subnav">
+                        <li><a href="../star-gazing/star-gazing.html">StarGazing</a></li>
+                        <li><a href="../comet-event/comet.html">Comet</a></li>
+                        <li><a href="./Observation.html">Observatories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li> 
+                <li class="astronomy-home__time-lives">
+                    <span>Times live:</span>
+                    <span id="hours">00</span>
+                    <span>:</span>
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                    <span id="session">AM</span>
+                </li>
+            </ul> 
+            <div class="header-res">   
+                <label for="nav-res-input"><i id="icon-res" class="bi bi-x-lg"></i></label>
+                <ul id="nav-res">
+                    <li class="nav-res__menu"><a href="#">Planets</a>
+                        <input type="checkbox" id="nav-down1">
+                        <label for="nav-down1"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res1">
+                            <li><a href="../planet/Mercury.html">Mercury</a></li>
+                            <li><a href="../planet/Venus.html">Venus</a></li>
+                            <li><a href="../planet/Earth.html">Earth</a></li>
+                            <li><a href="../planet/Mars.html">Mars</a></li>
+                            <li><a href="../planet/Jupiter.html">Jupiter</a></li>
+                            <li><a href="../planet/Saturn.html">Saturn</a></li>
+                            <li><a href="../planet/Uranus.html">Uranus</a></li>
+                            <li><a href="../planet/Neptune.html">Neptune</a></li>
+                            <li><a href="../planet/Pluto.html">Pluto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-res__menu"><a href="#">Events The Planets</a>
+                        <input type="checkbox" id="nav-down2">
+                        <label for="nav-down2"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res2">
+                            <li><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                            <li><a href="../bigbang/bigbang.html">BigBang</a></li>
+                            <li><a href="../EvolveEarth.html">Evolved Earth</a></li>
+                        </ul>
+                    </li>  
+                    <li class="nav-res__menu"><a href="#">More</a>
+                        <input type="checkbox" id="nav-down3">
+                        <label for="nav-down3"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res3">
+                            <li><a href="./star-gazing.html">StarGazing</a></li>
+                            <li><a href="../comet-event/comet.html">Comet</a></li>
+                            <li><a href="./Observation.html">Observatories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-res__menu"><a href="#">About Us</a></li>
+                </ul>  
+            </div> 
+        </div>
+
+        <div class="banner">
+            <img src="./img/Observatory1.jpg" alt="background-destination-desktop" class="banner-img">
+
+            <div class="banner-link">
+                <p class="banner-title">Observation Deck</p>
+                <p class="banner-desc">Best Observatories in The World</p>
+                <div class="banner-click">
+                    <button class="banner-click__button"><a href="#content-seconds__post">More details</a></button>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- content 1 -->
+
+        <div class="content-first">
+            <div class="content-first__grid grid wide">
+                <div class="content-first__row body-row_post">
+
+                    <div class="content-first__setting col l-6 m-10 c-10">
+                        <div class="content-first__post-1">
+                            <p class="content-first__title" data-aos="fade-right" data-aos-duration="2000"> THIEN VAN OBSERVATION</p>
+                            <p class="content-first__desc" data-aos="fade-right" data-aos-duration="2000">An observatory or observatory, astronomical observatory, 
+                                astronomical observatory is a work equipped with telescopes and other necessary 
+                                equipment to observe and track celestial objects in the sky. heaven, or natural
+                                 phenomena on Earth such as meteorology.
+                            </p>
+                            <p class="content-first__desc" data-aos="fade-right" data-aos-duration="2000">Observatory observatories are key structures in astronomical research,
+                                 providing collaborative work between astronomers, giving them access to state-of-the-art equipment and
+                                  telescopes to meet their needs. The demand for observation is increasingly precise and urgent.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="content-first__setting col l-6 m-10 c-10">
+                        <div class="content-first__gif-1" data-aos="fade-left" data-aos-duration="2000">
+                            <img src="./img/Observatory2.gif" alt="Comet Space Stars" class="content-first__gif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+
+        <!-- content 2 -->
+
+        <div class="content-seconds">
+            <div class="content-seconds__grid grid wide">
+                <div class="content-seconds__row row-colum">
+                    <div class="content-seconds__setting col l-6 l-o-3 m-10 c-10 c-o-1">
+                        <div class="content-seconds__post" id="content-seconds__post">
+
+                            <p class="content-seconds__title" data-aos="fade-up" data-aos-duration="2000">OBSERVATORY</p>
+                        
+                            <p class="content-seconds__desc" data-aos="fade-up" data-aos-duration="2000"><strong style="font-weight: 700;">Gemini Observatory:</strong>This observatory 
+                                has two optical and infrared telescopes installed at two distant locations.
+                                 The Gemini South telescope is installed at an altitude of 9,000 feet (2,700 meters) in the Chilean Andes,
+                                  while the North telescope, mounted at the summit of Maura Kea volcano, is capable of seeing the sky at night. 
+                                 </p>
+                            <div class="content-seconds__img" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="./img/observatory01.jpg" alt="img-comet" class="content-seconds__img-comet">
+                            </div>
+        
+                            <p class="content-seconds__desc" data-aos="fade-up" data-aos-duration="2000"><strong style="font-weight: 700;">The European Southern Observatory (ESO):</strong>
+                                ESO consists of a high-tech telescope and is also the world's first telescope with a computer-controlled mirror. Very modern, working in collaboration with other
+                                 observatories in North America, East Asia and Chile, it is considered the most modern radio astronomy observatory in the world today.</p>
+        
+                            <div class="content-seconds__img" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="./img/observatory03.jpg" alt="img-comet" class="content-seconds__img-comet">
+                            </div>
+
+                            <p class="content-seconds__desc" data-aos="fade-up" data-aos-duration="2000"><strong style="font-weight: 700;">National Radio Astronomy Observatory (NRAD): </strong>
+                                This is a cluster of American observatories installed in many places, including the Green Bank Telescope, Very Large Array, Very Large Baseline Array and a part of 
+                                the ALMA telescope that is about to be put into use. The NRAD station is responsible for the continuous observation of meteorites passing through space and interstellar space.
+
+                            </p>
+        
+                            <div class="content-seconds__img" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="./img/observatory02.jpg" alt="img-comet" class="content-seconds__img-comet">
+                            </div>
+
+                            <p class="content-seconds__desc" data-aos="fade-up" data-aos-duration="2000"><strong style="font-weight: 700;">Mount Wilson Observatory: </strong>
+                                The birth of the Mount Wilson observatory is considered an evolutionary process of generations of telescopes, especially the birth of a new modern instrument such as a 
+                                100-inch wide glass instead of the 60-inch Hale Telescope. nearly 100 years ago and thanks to being equipped with many modern equipment..
+                            </p>
+        
+                            <div class="content-seconds__img" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="./img/observatory04.jpg" alt="img-comet" class="content-seconds__img-comet">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- content 3 -->
+
+        <div class="content-information">
+            <div class="content-information__grid grid wide">
+                <div class="content-information__row body-row_post">
+
+                    <div class="content-information__setting col l-4 m-12 c-12">
+                        <div class="content-information__post" data-aos="fade-right" data-aos-duration="1500">
+                            <div class="content-information__number">
+                                <span class="content-information__count">1</span>
+                            </div>
+                            <div class="content-information__title">
+                                <span class="content-information__title-text">OBSERVATORY NT</span>
+                            </div>
+                            <div class="content-information__desc">
+                                <p class="content-information__desc-text">Nha Trang Observatory is a glass drive structure that is synchronized with an automatic control dome. 
+                                    This instrument allows viewers to observe variable stars, thereby conducting research on atmospheric thickness, clouds, haze, and observations of stars,
+                                     nebulae, and galaxies..</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-information__setting col l-4 m-12 c-12">
+                        <div class="content-information__post"  data-aos="fade-right" data-aos-duration="2000">
+                            <div class="content-information__number">
+                                <span class="content-information__count">2</span>
+                            </div>
+                            <div class="content-information__title">
+                                <span class="content-information__title-text">OBSERVATORY VNSC</span>
+                            </div>
+                            <div class="content-information__desc">
+                                <p class="content-information__desc-text">Hanoi Observatory aims to disseminate scientific knowledge to the community,
+                                     arouse a passion for science in general, and a passion for space in particular for young people. It is expected that after opening,
+                                      the Observatory will create favorable conditions for students to study and learn...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="content-information__setting col l-4 m-12 c-12">
+                        <div class="content-information__post" data-aos="fade-right" data-aos-duration="2500">
+                            <div class="content-information__number">
+                                <span class="content-information__count">3</span>
+                            </div>
+                            <div class="content-information__title">
+                                <span class="content-information__title-text">COMET SECRETS</span>
+                            </div>
+                            <div class="content-information__desc">
+                                <p class="content-information__desc-text">
+                                    Comet Halley is one of the most famous comets out there. It returned after a period of about 75 years,
+                                     and there are historical records of sightings of it. However, the ancient civilizations didn't realize 
+                                     they were looking...</p>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+     <!-- Footer -->
+
+   <div class="footer">
+        <div class="footer-title">
+            <p class="footer-title__contact">Contact Us</p>
+        </div>
+
+        <div class="footer-contact__mobie grid wide">
+            <div class="footer-contact__row row">
+                <div class="footer-contact__setting col c-10 c-o-1 l-0">
+
+                    <div class="footer-contact">
+                        <form class="footer-contact__form" onsubmit="sendEmail(); reset(); return false;">
+                            <div class="footer-feedback">
+                                <p class="footer__feedback-text">Feedback Form:</p>
+                            </div>
+                            <input type="text" id="fullName" placeholder="Your Name" required class="footer-contact__box">
+                            <input type="email" id="email_id" placeholder="Your Email" required class="footer-contact__box">
+                            <textarea id="message" type="footer-contact__message" row="10" placeholder="How can we help you?" required class="footer-contact__box"> </textarea>
+                            <button onclick="SendMail()" type="submit" id="btn" class="footer-contact__click">Send</button>
+                
+                        </form>
+                    </div>
+
+                </div>
+                
+            </div>
+       
+        </div>
+
+        <div class="footer-contact__2">
+
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966092835115!2d105.78010801471528!3d21.028820085998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9ac1%3A0xa9bc04e04602dd85!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1665652904057!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="footer-map__img"></iframe>
+            </div>
+            
+            <div class="footer-form m-o c-0 l-5">
+                <form class="footer__form-2">
+                    <div class="footer-feedback">
+                        <p class="footer__feedback-text">Feedback Form:</p>
+                    </div>
+                    <input type="text" id="fullName" placeholder="Your Name" required class="footer-form__box-2">
+                    <input type="email" id="email_id" placeholder="Your Email" required class="footer-form__box-2">
+                    <textarea id="message" type="footer-form__message" row="10" placeholder="How can we help you?" class="footer-form__box-message" required> </textarea>
+                    <button onclick="SendMail()" class="footer-form__click">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact-about">
+            <div class="contact-about__grid grid wide">
+                <div class="footer-about__flex">
+                    <div class="footer-about__row body-row_post-4" data-aos="fade-up" data-aos-duration="2000">
+                        
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__1">
+                                <p class="contact-about__title">OUR ADDRES</p>
+                                <p class="contact-about__desc">Mỹ Đình 2, Nam Từ Liêm, Hà Nội</p>
+                                <p class="contact-about__desc">FPT APTECH</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__2">
+                                <p class="contact-about__title">OUR CONTACT</p>
+                                <p class="contact-about__desc">skygazing2022@gmail.com</p>
+                                <p class="contact-about__desc">0886313048</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__icon">
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__flower l-3 l-o-9">
+                            <p class="contact-about__flower-text">follow us</p>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+
+            <!-- mobie -->
+
+            <div class="contact-about__grid grid wide">
+                <div class="footer-about__flex">
+                    <div class="footer-about__row row-footer__contact">
+                        
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__title">OUR ADDRES</p>
+                                <p class="contact-about__desc">Mỹ Đình 2, Nam Từ Liêm, Hà Nội</p>
+                                <p class="contact-about__desc">FPT APTECH</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__title">OUR CONTACT</p>
+                                <p class="contact-about__desc">skygazing2022@gmail.com</p>
+                                <p class="contact-about__desc">0886313048</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer-icon">
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__folower">Follower</p>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+   
+    </div>
+
+    <!-- scroll to top -->
+
+    <div id="progress">
+        <i class="fa-solid fa-arrow-up" id="progress-value"></i>
+    </div>
+        
+    <!-- script -->
+    <script src="./js/comet.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    
+</body>
+</html>

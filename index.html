@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyGazing</title>
+    <link rel="stylesheet" href="./Home/style/home.css">
+    <link rel="stylesheet" href="./reset/reset.css">
+    <link rel="stylesheet" href="./grid/grid_astronomy.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" type="images/png" href="/logo-icon/solar-system.ico"/>
+</head>
+<body>
+    <div class="loader disppear" >
+        <img src="./loading/9b1398619fa808505a7dbd6da70b2ff1.gif" alt="">
+    </div>
+    <div class="astronomy-home">
+        <div id="header">
+            <input type="checkbox" name="" class="nav-input" id="nav-res-input">
+            <label for="nav-res-input" class="nav-overlay"></label>
+            <div id="logo_img">
+                <a href="./Skygazing.com.html"><img src="./Home/img/logo png.png" alt="Logo"></a>
+            </div>
+            <label for="nav-res-input"><i id="icon-mobile" class="bi bi-list"></i></label>
+            <ul id="nav">
+                <li class="astronomy-home__numberlives">live: 220</li>
+                <li><a href="#">Planets</a>
+                    <ul class="subnav">
+                        <li><a href="./planet/Mercury.html">Mercury</a></li>
+                        <li><a href="./planet/Venus.html">Venus</a></li>
+                        <li><a href="./planet/Earth.html">Earth</a></li>
+                        <li><a href="./planet/Mars.html">Mars</a></li>
+                        <li><a href="./planet/Jupiter.html">Jupiter</a></li>
+                        <li><a href="./planet/Saturn.html">Saturn</a></li>
+                        <li><a href="./planet/Uranus.html">Uranus</a></li>
+                        <li><a href="./planet/Neptune.html">Neptune</a></li>
+                        <li><a href="./planet/Pluto.html">Pluto</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Events The Planets</a>
+                    <ul class="subnav">
+                        <li><a href="./eclipse/eclipse.html">Eclipse</a></li>
+                        <li><a href="./bigbang/bigbang.html">BigBang</a></li>
+                        <li><a href="./EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                    </ul>
+                </li>  
+                <li><a href="#">More</a>
+                    <ul class="subnav">
+                        <li><a href="./star-gazing/star-gazing.html">StarGazing</a></li>
+                        <li><a href="./comet-event/comet.html">Comet</a></li>
+                        <li><a href="./Observation/Observation.html">Observatories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li> 
+                <li class="astronomy-home__time-lives">
+                    <span>Times live:</span>
+                    <span id="hours">00</span>
+                    <span>:</span>
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                    <span id="session">AM</span>
+                </li>
+            </ul> 
+            <div class="header-res">   
+                <label for="nav-res-input"><i id="icon-res" class="bi bi-x-lg"></i></label>
+                
+                <ul id="nav-res">
+                    <li class="nav-res__menu"><a href="#">Planets</a>
+                        <input type="checkbox" id="nav-down1">
+                        <label for="nav-down1"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res1">
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="./planet/Mercury.html">Mercury</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="./planet/Venus.html">Venus</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="./planet/Earth.html">Earth</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i></i><a href="./planet/Mars.html">Mars</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i></i><a href="./planet/Jupiter.html">Jupiter</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="./planet/Saturn.html">Saturn</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="./planet/Uranus.html">Uranus</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="./planet/Neptune.html">Neptune</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="./planet/Pluto.html">Pluto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-res__menu"><a href="#">Events The Planets</a>
+                        <input type="checkbox" id="nav-down2">
+                        <label for="nav-down2"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res2">
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="./eclipse/eclipse.html">Eclipse</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="./bigbang/bigbang.html">BigBang</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="./EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                        </ul>
+                    </li>  
+                    <li class="nav-res__menu"><a href="#">More</a>
+                        <input type="checkbox" id="nav-down3">
+                        <label for="nav-down3"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res3">
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="./star-gazing/star-gazing.html">StarGazing</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="./comet-event/comet.html">Comet</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="./Observation/Observation.html">Observatories</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-res__menu"><a href="#">About Us</a></li>
+                </ul>  
+            </div> 
+        </div>
+      
+        <!-- banner gif -->
+
+        <div class="banner-news">
+            <video class="banner-news__videogif" autoplay loop muted plays>
+                <source src="./Home/img/video gif web.mp4">
+            </video>
+
+            <h3 class="banner-news__title">Learn About The Planet Mars </h3>
+            <a href="./planet/Mars.html" class="banner-news__title-link">Discovery Now</a>
+
+            <!-- banenr-news pc -->
+
+            <div class="banner-news__All">
+
+                <div class="banner-news__link">
+                    <img src="./Home/img/Comet-home-news.jpeg" alt="Comet-home-news" class="banner-news-img">
+                
+                    <div class="banner-news__post">
+                        <p class="banner-news__more">Learn About Comet</p>
+                        <a href="./comet-event/comet.html" class="banner-news__more-link">more <i class="fa-solid fa-chevron-right"></i></a>
+    
+                    </div>
+                
+                </div>
+
+                <div class="banner-news__link">
+                    <img src="./Home/img/Observatories.jpg" alt="Comet-home-news" class="banner-news-img">
+                
+                    <div class="banner-news__post">
+                        <p class="banner-news__more">Observatories</p>
+                        <a href="#" class="banner-news__more-link">more <i class="fa-solid fa-chevron-right"></i></a>
+    
+                    </div>
+                    
+                </div>
+
+                <div class="banner-news__link">
+                    <img src="./Home/img/Evolved Earth.jpg" alt="Comet-home-news" class="banner-news-img">
+                
+                
+                    <div class="banner-news__post">
+                        <p class="banner-news__more">Evolved Earth</p>
+                        <a href="./EvolveEarth/EvolveEarth.html" class="banner-news__more-link">more <i class="fa-solid fa-chevron-right"></i></a>
+    
+                    </div>
+                
+                </div>
+
+            </div>
+
+           
+        </div>
+        
+        <!-- banner news mobile -->
+
+        <div class="news-mobile">
+
+            <div class="news-mobile__grid grid img-news">
+
+                <div class="news-mobile__row row-new">
+                    
+    
+                        <div class="news-mobile__link col l-0 m-0 c-o-1 c-10">
+                            <img src="./Home/img/Comet-home-news.jpeg" alt="Comet-home-news" class="news-mobile_img">
+                        
+                            <div class="news-mobile__post">
+                                <p class="news-mobile__more">Learn About Comet</p>
+                                <a href="./comet-event/comet.html" class="news-mobile__more-link">more <i class="fa-solid fa-chevron-right"></i></a>
+            
+                            </div>
+                        
+                        </div>
+    
+                        <div class="news-mobile__link col l-0 m-0 c-o-1 c-10">
+                            <img src="./Home/img/img-firstchild-homenews.avif" alt="Comet-home-news" class="news-mobile_img">
+                        
+                            <div class="news-mobile__post">
+                                <p class="news-mobile__more">Observatories</p>
+                                <a href="#" class="news-mobile__more-link">more <i class="fa-solid fa-chevron-right"></i></a>
+            
+                            </div>
+                            
+                        </div>
+    
+                        <div class="news-mobile__link col l-0 m-0 c-o-1 c-10">
+                            <img src="./Home/img/img-secondchild-homenews.avif" alt="Comet-home-news" class="news-mobile_img">
+                        
+                        
+                            <div class="news-mobile__post">
+                                <p class="news-mobile__more">Evolved Earth</p>
+                                <a href="./EvolveEarth/EvolveEarth.html" class="news-mobile__more-link">more <i class="fa-solid fa-chevron-right"></i></a>
+            
+                            </div>
+                        
+                        </div>
+    
+                </div>
+    
+            </div>
+
+        </div>
+
+         <!-- banner news mobile -->
+
+
+        <!-- banner news tablet -->
+
+        <div class="news-tablet">
+
+            <div class="news-tablet__grid-wide grid wide">
+                <div class="news-tablet__row body-row_post-3">
+
+
+                        <div class="news-tablet__post col l-0 m-4 c-0 ">
+                            <div class="news-tablet__gif">
+                                <img src="./Home/img/Comet-home-news.jpeg" alt="Comet-home-news" class="news-tablet__img">
+                            </div>
+                            <div class="news-tablet__title">
+                                <p class="news-tablet__more">Learn About Comet</p>
+                                <a href="./comet-event/comet.html" class="news-tablet__more-link">more <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="news-tablet__post col l-0 m-4 c-0 ">
+                            <div class="news-tablet__gif">
+                                <img src="./Home/img/img-firstchild-homenews.avif" alt="Comet-home-news" class="news-tablet__img">
+                            </div>
+                            <div class="news-tablet__title">
+                                <p class="news-tablet__more">Learn about Observatories</p>
+                                <a href="#" class="news-tablet__more-link">more <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="news-tablet__post col l-0 m-4 c-0 ">
+                            <div class="news-tablet__gif">
+                                <img src="./Home/img/img-secondchild-homenews.avif" alt="Comet-home-news" class="news-tablet__img">
+                            </div>
+                            <div class="news-tablet__title">
+                                <p class="news-tablet__more">Evolved Earth</p>
+                                <a href="./EvolveEarth/EvolveEarth.html" class="news-tablet__more-link">more <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+
+        </div>
+
+         <!-- banner news mobile -->
+    </div>
+
+    <div class="body">
+
+        <!-- post 1 -->
+        <div class="body-post__caption">
+            <span class="body-caption__post">EVENTS THE PLANETS</span>
+        </div>
+
+        <div class="body-post__grid grid wide">
+
+            <div class="body-post__row body-row_post-3">
+
+
+                <div class="body__post-1 col l-7 body-post__c-12 m-7 ">
+                    <p class="body-post__title" data-aos="fade-right" data-aos-duration="2000">WHAT IS A SOLAR ECLIPSE?</p>
+                    <p class="body-post__desc" data-aos="fade-right" data-aos-duration="2000">Sometimes when the Moon orbits Earth, 
+                        the Moon moves between the Sun and Earth. When this happens, 
+                        the Moon blocks the light of the Sun from reaching Earth. 
+                        This causes an eclipse of the Sun, or a solar eclipse. During 
+                        a solar eclipse, the Moon casts a shadow onto Earth.</p>
+                    <button class="body-post__button" data-aos="fade-right" data-aos-duration="2000">
+                        <a href="./eclipse/eclipse.html" class="body-button__link"><p class="body-buttom__explore">EXPLORE <i class="fa-solid fa-chevron-right body-post__icon"></i></p></a>
+                    </button>
+                </div>
+
+
+                <div class="col l-5 c-12 m-5 ">
+                    <div class="body__gif-1 c-10 c-o-1">
+                        <div class="body-post__gift" data-aos="fade-left" data-aos-duration="2000">
+                            <img src="./Home/img/home-eclipse__post.gif" alt="" class="body-post__gift-1" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- post 2 -->
+
+        <div class="body-post__caption" data-aos="fade-right" data-aos-duration="2000">
+            <span class="body-caption__post">EVENTS THE BIGBANG</span>
+        </div>
+
+        <div class="body-post__grid grid wide">
+
+            <div class="body-post__row body-row_post-3">
+
+
+                <div class="body__post-2 col l-7 body-post__c-12 m-7 ">
+                    <p class="body-post__title" data-aos="fade-right" data-aos-duration="2000">WHAT IS THE BIG BANG?</p>
+                    <p class="body-post__desc" data-aos="fade-right" data-aos-duration="2000">The big bang is how astronomers 
+                        explain the way the universe began. It is the idea that 
+                        the universe began as just a single point, then expanded 
+                        and stretched to grow as large as it is right now—and it 
+                        is still stretching!</p>
+                    <button class="body-post__button" data-aos="fade-right" data-aos-duration="2000">
+                        <a href="./bigbang/bigbang.html" class="body-button__link"><p class="body-buttom__explore">EXPLORE <i class="fa-solid fa-chevron-right body-post__icon"></i></p></a>
+                    </button>
+                </div>
+
+
+                <div class="col l-5 c-12 m-5 ">
+                    <div class="body__gif-1 c-10 c-o-1" data-aos="fade-left" data-aos-duration="2000">
+                        <img src="./bigbang/img/bigbang-banner-2.jpeg" alt="" class="body-post__gift-1">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- post 3 -->
+
+        <div class="body-post__caption-3">
+            <span class="body-caption__post-3" data-aos="fade-up" data-aos-duration="2000">EVENTS THE COMET</span>
+        </div>
+
+        <div class="body-post__grid grid wide">
+
+            <div class="body-post__row body-row">
+
+
+                <div class="body__post-3 col l-6  body-post__c-12 m-10 m-o-1 l-o-3  ">
+                    <p class="body-post__title-3" data-aos="fade-up" data-aos-duration="2000">WHAT IS THE STAR-GAZING?</p>
+                    <p class="body-post__desc m-10 m-o-1" data-aos="fade-up" data-aos-duration="2000">The big bang is how astronomers 
+                        explain the way the universe began. It is the idea that 
+                        the universe began as just a single point, then expanded 
+                        and stretched to grow as large as it is right now—and it 
+                        is still stretching!</p>
+                    <button class="body-post__button" data-aos="fade-up" data-aos-duration="2000">
+                        <a href="./star-gazing/star-gazing.html" class="body-button__link"><p class="body-buttom__explore">EXPLORE <i class="fa-solid fa-chevron-right body-post__icon"></i></p></a>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+            <div class="body__map-effects col l-12 m-0 c-0" data-aos="fade-up" data-aos-duration="3000">
+                <img src="./Home/img/map__home.png" alt="img_map" class="body__map-img">
+                
+                <div class="body-map__EF-size">
+
+                    <div class="body__dotEF-1">
+                        <div class="body__dot-1"></div>
+                    </div>  
+    
+                    <div class="body__dotEF-2">
+                        <div class="body__dot-2"></div>
+                    </div>
+    
+                    <div class="body__dotEF-3">
+                        <div class="body__dot-3"></div>
+                    </div>
+                    
+                    <div class="body__dotEF-4">
+                        <div class="body__dot-4"></div>
+                    </div>
+    
+                    <div class="body__dotEF-5">
+                        <div class="body__dot-5"></div>
+                    </div>
+    
+                    <div class="body__dotEF-6">
+                        <div class="body__dot-6"></div>
+                    </div>
+    
+                    <div class="body__dotEF-7">
+                        <div class="body__dot-7"></div>
+                    </div>
+    
+                    <div class="body__dotEF-8">
+                        <div class="body__dot-8"></div>
+                    </div>
+                    <div class="body__dotEF-9">
+                        <div class="body__dot-9"></div>
+                    </div>
+                    <div class="body__dotEF-10">
+                        <div class="body__dot-10"></div>
+                    </div>
+                    <div class="body__dotEF-11">
+                        <div class="body__dot-11"></div>
+                    </div>
+                    <div class="body__dotEF-12">
+                        <div class="body__dot-12"></div>
+                    </div>
+                    <div class="body__dotEF-13">
+                        <div class="body__dot-13"></div>
+                    </div>
+                    <div class="body__dotEF-14">
+                        <div class="body__dot-14"></div>
+                    </div>
+
+                </div>
+            
+            </div>
+
+            <div class="body__map-effects col l-0 m-12 c-12-map-effect ">
+                <video class="body-map__gif" autoplay loop muted plays>
+                    <source src="./Home/img/gif-star__map.mov">
+                </video>    
+            </div>
+
+            
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+
+   <div class="footer">
+        <div class="footer-title">
+            <p class="footer-title__contact">Contact Us</p>
+        </div>
+
+        <div class="footer-contact__mobie grid wide">
+            <div class="footer-contact__row row">
+                <div class="footer-contact__setting col c-10 c-o-1 l-0">
+
+                    <div class="footer-contact">
+                        <form class="footer-contact__form" onsubmit="sendEmail(); reset(); return false;">
+                            <div class="footer-feedback">
+                                <p class="footer__feedback-text">Feedback Form:</p>
+                            </div>
+                            <input type="text" id="fullName" placeholder="Your Name" required class="footer-contact__box">
+                            <input type="email" id="email_id" placeholder="Your Email" required class="footer-contact__box">
+                            <textarea id="message" type="footer-contact__message" row="10" placeholder="How can we help you?" required class="footer-contact__box"> </textarea>
+                            <button onclick="SendMail()" type="submit" id="btn" class="footer-contact__click">Send</button>
+                
+                        </form>
+                    </div>
+
+                </div>
+                
+            </div>
+       
+        </div>
+
+        <div class="footer-contact__2">
+
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966092835115!2d105.78010801471528!3d21.028820085998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9ac1%3A0xa9bc04e04602dd85!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1665652904057!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="footer-map__img"></iframe>
+            </div>
+            
+            <div class="footer-form m-o c-0 l-5">
+                <form class="footer__form-2">
+                    <div class="footer-feedback">
+                        <p class="footer__feedback-text">Feedback Form:</p>
+                    </div>
+                    <input type="text" id="fullName" placeholder="Your Name" required class="footer-form__box-2">
+                    <input type="email" id="email_id" placeholder="Your Email" required class="footer-form__box-2">
+                    <textarea id="message" type="footer-form__message" row="10" placeholder="How can we help you?" class="footer-form__box-message" required> </textarea>
+                    <button onclick="SendMail()" class="footer-form__click">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact-about">
+            <div class="contact-about__grid grid wide">
+                <div class="footer-about__flex">
+                    <div class="footer-about__row body-row_post-4" data-aos="fade-up" data-aos-duration="2000">
+                        
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__1">
+                                <p class="contact-about__title">OUR ADDRES</p>
+                                <p class="contact-about__desc">Mỹ Đình 2, Nam Từ Liêm, Hà Nội</p>
+                                <p class="contact-about__desc">FPT APTECH</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__2">
+                                <p class="contact-about__title">OUR CONTACT</p>
+                                <p class="contact-about__desc">skygazing2022@gmail.com</p>
+                                <p class="contact-about__desc">0886313048</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__icon">
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__flower l-3 l-o-9">
+                            <p class="contact-about__flower-text">follow us</p>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+
+            <!-- mobie -->
+
+            <div class="contact-about__grid grid wide">
+                <div class="footer-about__flex">
+                    <div class="footer-about__row row-footer__contact">
+                        
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__title">OUR ADDRES</p>
+                                <p class="contact-about__desc">Mỹ Đình 2, Nam Từ Liêm, Hà Nội</p>
+                                <p class="contact-about__desc">FPT APTECH</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__title">OUR CONTACT</p>
+                                <p class="contact-about__desc">skygazing2022@gmail.com</p>
+                                <p class="contact-about__desc">0886313048</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer-icon">
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__folower">Follower</p>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+   
+    </div>
+
+    <!-- scroll to top -->
+
+    <div id="progress">
+        <i class="fa-solid fa-arrow-up" id="progress-value"></i>
+    </div>
+    
+
+
+    <!-- script -->
+
+    <script src="./Home/js/App.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript">
+        emailjs.init("")
+    </script>
+    <script>
+        AOS.init();
+    </script>
+   
+
+   <!-- script -->
+
+</body>
+</html>

@@ -1,0 +1,1285 @@
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Kanit';
+    font-size: 1.6rem;
+}
+
+$color-blue: #0ab7fa;
+$color-gray: #7a7a7a;
+$color-white: #fff;
+$color-black: #000;
+$font-bold-pc: 600;
+$font-size-bold: 2.2rem;
+$box-shadow: 3px 3px 12px #242424;
+
+.astronomy-home {
+    width: 100%;
+    height: 5500px;
+    background-color: black;
+  }
+  
+  /* menu */
+  
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  input#nav-res-input {
+    display: none;
+  }
+  
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: fadeIn linear 0.2s;
+  }
+  
+  #header {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 74px;
+    background-color: black;
+  }
+  
+  .header-res {
+    transition: transform linear 0.2s;
+    display: none;
+    transform: translateX(100%);
+    right: 0rem;
+    position: fixed;
+    top: 0rem;
+    bottom: 0;
+    width: 16rem;
+    max-width: 100%;
+    background-color: #fff;
+  }
+  
+  #nav-res {
+    color: #000;
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    margin-top: 3rem;
+  }
+  
+  .subnav-res {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 0;
+  }
+  
+  #icon-res {
+    top: 0.5rem;
+    color: #666;
+    position: absolute;
+    font-size: 1.4rem;
+    left: 0.5rem;
+  }
+  
+  i#icon-mobile {
+    display: none;
+  }
+  
+  #logo_img {
+    position: absolute;
+    margin-left: 20px;
+  }
+  
+  #nav, .subnav {
+    list-style-type: none;
+  }
+  
+  ul#nav {
+    position: absolute;
+    margin-left: 280px;
+    margin-top: 0px;
+    top: 0;
+  }
+  
+  #nav > li {
+    display: inline-block;
+  }
+  
+  #nav li {
+    position: relative;
+  }
+  
+  #nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  #nav li a {
+    text-decoration: none;
+    line-height: 74px;
+    padding: 0px 50px;
+    font-size: 20px;
+    display: block;
+  }
+  
+  li.astronomy-home__time-lives {
+    color: white;
+  }
+  
+  li.astronomy-home__numberlives {
+    color: white;
+  }
+  
+  #nav li:hover .subnav {
+    display: block;
+  }
+  
+  #nav .subnav li:hover a,
+  #nav > li:hover > a {
+    color: #000;
+    background-color: rgb(207, 207, 207);
+  }
+  
+  #nav .subnav {
+    text-align: center;
+    width: 100%;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  #nav .subnav a {
+    color: #000;
+    padding: 0 10px;
+    line-height: 50px;
+  }
+
+// banner
+
+  .banner{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    &-img{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: center;
+        transition: all 0.5s linear;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+
+    &-link{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-white;
+        text-align: center;
+
+
+    }
+
+    &-title{
+        font-size: 5rem;
+        font-weight: 600;
+      
+    }
+
+    &-desc{
+        margin-top: 2px;
+        font-style: italic;
+        color: rgba($color-white, $alpha: 0.5);
+        font-size: 2rem;
+    }
+
+    &-click{
+        margin-top: 1rem;
+        font-size: 1.8rem;
+        text-decoration: none;
+
+        &__button{
+            padding: 5px 1.2rem;
+        }
+    }
+}
+
+//  content first
+
+.content-first{
+    color: $color-white;
+    border-bottom: 1px solid $color-blue;
+
+    &__post-1{
+        margin-top: 5rem;
+        margin-bottom: 5rem;    
+
+    }
+
+    &__title{
+        font-size: 3.4rem;
+        font-weight: 500;
+
+    }
+
+    &__desc{
+        margin-top: 2rem;
+        
+    }
+
+    &__gif-1{
+        
+    }
+
+    &__gif{
+        border-radius: 5rem;
+        overflow: hidden;
+        box-shadow: $box-shadow;
+    }
+    
+}
+
+.content-seconds{
+    color: $color-white;
+    margin-top: 9rem;
+    height: 3900px;
+
+    &__title{
+        font-size: 5rem;
+        color: $color-white;
+        font-weight: 500;
+        margin-bottom: 4rem;
+    }
+
+    &__desc{
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 5rem;
+    }
+
+    &__bold{
+        font-weight: 600;
+    }
+
+    &__img{
+        width: 650px;
+        height: 350px;
+        margin: 0 auto 5rem auto;
+    }
+
+    &__img-comet{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    
+}
+
+// content 3
+
+.content-three{
+    color: $color-white;
+    width: 100%;
+    height: 500px;
+    background-color: #2B2929;
+    margin: 0 auto;
+
+    &__gif{
+        width: 285px;
+        height: 285px;
+        
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &__post{
+        text-align: center;
+        width: 280px;
+        margin-top: 25%;
+     
+    }
+
+    &__title-text{
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+    &__content-text{
+        font-size: 1.6rem;
+        font-style: italic;
+        text-align: center;
+        color: rgba($color-white, $alpha: 0.6);
+
+    }
+}
+
+// footer
+
+.footer{
+    width: 100%;
+    height: 900px;
+    background-color: $color-black;
+
+    &-title{
+
+        padding-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    &-title__contact{
+        color: $color-blue;
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &-contact{
+        width: 100%;
+        height: 300px;
+        background-color: $color-white;
+        margin-bottom: 5rem;
+
+        &__form{
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+
+            
+        }
+
+        &__box{
+            border: 0;
+            margin: 8px 0;
+            padding: 1rem;
+            outline: none;
+            background-color: #f5f5f5;
+            font-size: 16px;
+        }
+    }
+
+    &-contact__2{
+        width: 100%;
+        height: 450px;
+        position: relative;
+        margin-top: 5rem;
+    }
+
+    &-form{
+        position: absolute;
+        top: -5%;
+        right: 60px;
+        width: 40%;
+        height: 100%;
+        background-color: #fff;
+        transform: translateX(-60px);
+        box-shadow: $box-shadow;
+
+        &__box-2{
+            border: 0;
+            margin: 8px 0;
+            padding: 1rem;
+            outline: none;
+            background-color: #f5f5f5;
+            font-size: 16px;
+        }
+
+        &__click{
+            width: 10rem;
+            height: 3rem;
+            background-color: $color-blue;
+            color: $color-white;
+            border: none;
+            border-radius: 3rem;
+            margin: 0 auto;
+        }
+
+        
+    }
+    &-form__box-message{
+        outline: none;
+        margin: 8px 0;
+        padding: 1rem;
+        width: 100%;
+        height: 10rem;
+        margin-bottom: 2rem;
+    }
+
+
+    &__feedback-text{
+        font-size: 2rem;
+        font-weight: 400;
+        color: $color-blue;
+    }
+
+    &__form-2{
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    &-map{
+        
+        width: 100%;
+        height: 400px;
+        
+        &__img{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            object-fit: cover;
+            object-position: right;
+        }
+    }
+}
+
+.contact-about{
+    width: 100%;
+    color: $color-white;
+    margin-top: 5rem;
+
+
+    &__title{
+        font-weight: 600;
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+        }
+    }
+
+
+    &__icon{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__social{
+        color: $color-white;
+        font-size: 3rem;
+        margin-right: 2rem;
+    }
+
+    &__flower-text{
+        position: relative;
+        padding-left: 4rem;
+        margin-left: -4rem;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 3rem;
+            height: 5px;
+            background-color: $color-blue;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+#progress{
+    position: fixed;
+    bottom: 20px;
+    right: 5rem;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    &-value{
+        display: block;
+        height: 50px;
+        width: 50px;
+        background-color: #ffff;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 25px;
+        color: #001a2e;
+    }
+}
+
+
+// responsive mobile
+
+@media only screen and (max-width: 46.1875em) {
+    .astronomy-home {
+        width: 100%;
+        height: 6000px;
+        background-color: black;
+      }
+
+    i#icon-mobile {
+        font-size: 3rem;
+        position: absolute;
+        color: #fff;
+        display: block;
+        right: 10%;
+        top: 20%;
+        transform: translate(-10%, -20%);
+        padding: 0.5rem;
+    }
+    #logo_img {
+        position: relative;
+        margin-left: 2rem;
+        height: 40px;
+        width: 120px;
+        margin-top: 0px;
+        margin-top: 1.2rem;
+    }
+
+    ul#nav {
+        display: none;
+    }
+    .header-res {
+        display: block;
+        width: 200px;
+     }
+ 
+     .nav-res__menu{
+         margin-bottom: 3rem;
+         overflow: scroll;
+         margin-left: 2rem;
+     }
+     
+     .nav-menu__child{
+         margin-top: 2rem;
+         margin-bottom: 2rem;
+         background-color: #f2f2f2;
+         height: 3rem;
+         line-height: 3rem;
+     }
+    #header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        top: 0;
+    }
+    #logo_img {
+        margin-left: 0;
+        position: relative;
+    }
+    i#icon-mobile {
+        font-size: 3rem;
+        position: relative;
+        color: #fff;
+        display: block;
+        padding: 0.5rem;
+    }
+    .content {
+        height: 78rem !important;
+    }  
+    
+    .content-add {
+        height: 70rem !important;
+    }
+
+    i#icon-res {
+        display: block;
+        position: relative;
+    }
+    .p#text_planet,
+    #planet_name ,
+    .planet_info,
+    .planet_distance   {
+        display: none;
+    }
+        .content-img {
+        height: 32rem;
+    }  
+        
+    .subnav-res1,
+    .subnav-res2,
+    .subnav-res3
+    {
+        padding-left: 2rem;
+        display: none;
+    }
+    
+
+    .nav-input:checked ~.header-res {
+        transform: translateX(0%);
+        top:0;
+    }
+
+    .nav-input:checked ~ .nav-overlay {
+        display: block;
+    }
+
+    #nav-down1:checked ~ .subnav-res1{
+        display: block;
+    }
+
+    #nav-down2:checked ~ .subnav-res2{
+        display: block;
+    }
+
+    #nav-down3:checked ~ .subnav-res3{
+        display: block;
+    }
+
+    input#nav-down1 {
+        display: none;
+    }
+
+    input#nav-down2 {
+        display: none;
+    }
+
+    input#nav-down3 {
+        display: none;
+    }
+
+    details {
+        border: 0.2rem solid #aaa;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .banner{
+        width: 100%;
+        height: 300px;
+
+        &-title{
+            font-size: 2rem;
+        }
+    
+        &-desc{
+            margin-top: 2px;
+            font-style: italic;
+            color: rgba($color-white, $alpha: 0.5);
+            font-size: 1.4rem;
+        }
+    
+        &-click{
+            margin-top: 1rem;
+            font-size: 1rem;
+            text-decoration: none;
+    
+            &__button{
+                padding: 3px 1rem;
+            }
+        }
+    }
+
+
+    //  content fist
+
+    .content-first{
+        color: $color-white;
+        border-bottom: 1px solid $color-blue;
+    
+        &__post-1{
+            margin-top: 5rem;
+            margin-bottom: 5rem;    
+            text-align: center;
+    
+        }
+    
+        &__title{
+            font-size: 4rem;
+            font-weight: 500;
+    
+        }
+    
+        &__desc{
+            margin-top: 2rem;
+            font-size: 1.6rem;
+            
+        }
+    
+        &__gif-1{
+        }
+        
+        &__gif{
+            width: 100%;
+            margin-bottom: 5rem;
+        }
+        
+    }
+
+    // post 2
+
+    .content-seconds{
+        color: $color-white;
+        margin-top: 9rem;
+        height: 3600px;
+    
+        &__title{
+            font-size: 4rem;
+            color: $color-white;
+            font-weight: 500;
+            margin-bottom: 4rem;
+        
+        }
+    
+        &__desc{
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-bottom: 5rem;
+        }
+    
+        &__bold{
+            font-weight: 600;
+        }
+    
+        &__img{
+            width: 300px;
+            height: 200px;
+            margin: 0 auto 5rem auto;
+        }
+
+        &__img-comet{
+            margin-bottom: 5rem;
+            border: 2px solid $color-blue;
+        }
+
+    }
+
+    // content three
+    .content-three{
+        color: $color-white;
+        width: 100%;
+        height: 1800px;
+        background-color: #2B2929;
+        margin: 0 auto;        
+        
+        &__post{
+            text-align: center;
+            width: 280px;
+            margin: 25% auto 0px auto;
+        }
+
+        &__gif{
+            margin-bottom: 1rem;
+        }
+    }
+
+
+
+// footer
+
+.footer{
+    width: 100%;
+    height: 1100px;
+    background-color: $color-black;
+
+    &-title{
+
+        padding-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    &-title__contact{
+        color: $color-blue;
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &-contact{
+        width: 100%;
+        height: 300px;
+        background-color: $color-white;
+        margin-bottom: 5rem;
+
+        &__form{
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+
+            
+        }
+
+        &__box{
+            border: 0;
+            margin: 8px 0;
+            padding: 1rem;
+            outline: none;
+            background-color: #f5f5f5;
+            font-size: 16px;
+        }
+    }
+
+    &-contact__2{
+        width: 100%;
+        height: 200px;
+        position: relative;
+        margin-top: 2rem;
+    }
+    
+
+    &-form{
+        position: absolute;
+        top: -5%;
+        right: 60px;
+        width: 40%;
+        height: 100%;
+        background-color: #fff;
+        transform: translateX(-60px);
+        box-shadow: $box-shadow;
+
+        &__box-2{
+            border: 0;
+            margin: 8px 0;
+            padding: 1rem;
+            outline: none;
+            background-color: #f5f5f5;
+            font-size: 16px;
+        }
+
+        &__click{
+            width: 10rem;
+            height: 3rem;
+            background-color: $color-blue;
+            color: $color-white;
+            border: none;
+            border-radius: 3rem;
+            margin: 0 auto;
+        }
+
+        
+    }
+    &-form__box-message{
+        outline: none;
+        margin: 8px 0;
+        padding: 1rem;
+        width: 100%;
+        height: 10rem;
+        margin-bottom: 2rem;
+    }
+
+
+    &__feedback-text{
+        font-size: 2rem;
+        font-weight: 400;
+        color: $color-blue;
+    }
+
+    &__form-2{
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    &-map{
+        
+        width: 100%;
+        height: 100%;
+        
+        &__img{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            object-fit: cover;
+            object-position: right;
+        }
+    }
+}
+
+.contact-about{
+    width: 100%;
+    color: $color-white;
+    margin-top: 5rem;
+
+
+    &__footer{
+        margin-bottom: 1rem;
+    }
+
+    &__title{
+        font-weight: 600;
+        position: relative;
+        display: inline;
+        margin-bottom: 1rem;
+
+        &::before{
+            content: "";
+            position: absolute;
+            background-color: $color-blue;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+        }
+    }
+
+
+    &__icon{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__social{
+        color: $color-white;
+        font-size: 3rem;
+        margin-right: 2rem;
+    }
+
+    &__flower-text{
+        position: relative;
+        padding-left: 4rem;
+        margin-left: -4rem;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 3rem;
+            height: 5px;
+            background-color: $color-blue;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+    
+}
+}
+
+
+// responsive ipad 
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .astronomy-home{
+         height: 6900px;
+
+    }
+
+    i#icon-mobile {
+        font-size: 3rem;
+        position: absolute;
+        color: #fff;
+        display: block;
+        right: 5%;
+        top: 20%;
+        transform: translate(-5%, -20%);
+        padding: 0.5rem;
+    }
+    #logo_img {
+        position: relative;
+        margin-left: 2rem;
+        width: 160px;
+        object-fit: contain;
+        margin-top: 0px;
+    }
+
+    ul#nav {
+        display: none;
+    }
+
+    .header-res {
+        display: block;
+        width: 300px;
+     }
+
+    #nav-res {
+        color: #000;
+        font-size: 1.4rem;
+        margin-left: 4.5rem;
+        margin-top: 3rem;
+        overflow: scroll;
+    }
+    
+    .nav-res__menu{
+        margin-bottom: 3rem;
+        overflow: scroll;
+    }
+    
+    .nav-menu__child{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        background-color: #f2f2f2;
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+
+    #header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        top: 0;
+    }
+
+    .content {
+        height: 78rem !important;
+    }  
+    
+    .content-add {
+        height: 70rem !important;
+    }
+
+    i#icon-res {
+        display: block;
+        position: relative;
+    }
+    .p#text_planet,
+    #planet_name ,
+    .planet_info,
+    .planet_distance   {
+        display: none;
+    }
+        .content-img {
+        height: 32rem;
+    }  
+        
+    .subnav-res1,
+    .subnav-res2,
+    .subnav-res3
+    {
+        padding-left: 2rem;
+        display: none;
+    }
+    
+
+    .nav-input:checked ~.header-res {
+        transform: translateX(0%);
+        top:0;
+    }
+
+    .nav-input:checked ~ .nav-overlay {
+        display: block;
+    }
+
+    #nav-down1:checked ~ .subnav-res1{
+        display: block;
+    }
+
+    #nav-down2:checked ~ .subnav-res2{
+        display: block;
+    }
+
+    #nav-down3:checked ~ .subnav-res3{
+        display: block;
+    }
+
+    input#nav-down1 {
+        display: none;
+    }
+
+    input#nav-down2 {
+        display: none;
+    }
+
+    input#nav-down3 {
+        display: none;
+    }
+
+    details {
+        border: 0.2rem solid #aaa;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    //  content fist
+
+    .content-first{
+        
+        &__gif{
+            width: 100%;
+            margin-bottom: 5rem;
+        }
+        
+    }
+
+    // content second
+    .content-seconds{
+
+        &__img{
+            width: 450px;
+            height: 250px;
+            border: 2px solid $color-blue;
+        }
+    }
+
+    // content three
+
+    .content-three{
+        height: 1400px;
+
+        &__post{
+            width: 100%;
+        }
+
+        &__gif{
+            width: 100%;
+            height: 350px;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .footer{
+        height: 1200px;
+    }
+
+    .contact-about{
+
+        &__icon{
+            margin-left: 3rem;
+        }
+
+        &__flower-text{
+            margin-left: 4rem;
+        }
+    }
+    
+}
+
+
+// responsive tablet pro 1023px -> 1920px:
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    #img_planet {
+        margin-top: 4rem;
+    }
+    #nav li a {
+        padding: 0px 35px;
+        font-size: 17px;
+    }
+    #nav .subnav a {
+        padding: 0 0px;
+    }
+    #logo_img {
+        margin-left: 0;
+    }
+    #planet_name {
+        margin-top: -30rem;
+        padding-left: 4rem;
+    }
+    p#text_planet {
+        margin-bottom: 0px;
+    }
+    .planet_info {
+        margin-top: -19rem;
+        margin-left: 41rem;
+    }
+    .planet_distance th {
+        padding-right: 10rem;
+        padding-bottom: 0rem;
+    }
+    .planet_distance {
+        margin-top: 4rem;
+        margin-left: 17rem;
+    }    
+    .slider {
+        height: 39rem !important;
+    }
+    .content {
+        height: 72rem !important;
+    }
+    div.explo-planet {
+        display: block;
+        height: 50rem;
+    }
+    .explo-planet .text-explo {
+        margin-right: 0px;
+        padding: 1rem;
+        width: 100%;
+    }    
+    .explo-planet #img-nasa {
+        margin-top: 1rem;
+        width: 50% !important;
+        margin-left: 15rem;
+    }
+    ul#years-content {
+        color: #000;
+        list-style: none;
+        margin-left: 0;
+        width: 100%;
+    }
+    li#years-content-text {
+        font-size: 20px;
+        padding: 1rem;
+        width: 100%;
+    }
+    .content-add {
+        height: 60rem;
+    }
+    .number-count,
+    .number-count-fact {
+        margin-left: 124px;
+    }
+    li.astronomy-home__numberlives{
+        display: none !important;
+    }
+    
+    li.astronomy-home__time-lives {
+        display: none !important;
+    }
+}
+
+
+// loader
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    background-color: #090420;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.disppear{
+    animation: vanish 2s forwards;
+}
+
+@keyframes vanish {
+    100%{
+        display: none;
+        visibility: hidden;
+    }
+}

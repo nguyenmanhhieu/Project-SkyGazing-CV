@@ -1,0 +1,685 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Kanit" !important;
+  }
+  
+  /* .nav-overlay{
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+  } */
+  
+  #progress {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 60px;
+    width: 60px;
+    z-index: 100;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  #progress-value {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    color: #001a2e;
+  }
+  
+  #header {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 74px;
+    background-color: black;
+  }
+  
+  i#icon-mobile {
+    display: none;
+  }
+  
+  #logo_img {
+    position: absolute;
+    margin-left: 20px;
+  }
+
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: #fff !important;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 400;
+}
+  
+
+ .navbar-dark .navbar-nav .nav-link:hover {
+  background-color: #ccc;
+ }
+
+  #nav,
+  .subnav {
+    list-style-type: none;
+  }
+  
+  ul#nav {
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 0px;
+  }
+  
+  #nav > li {
+    display: inline-block;
+  }
+  
+  #nav li {
+    position: relative;
+  }
+  
+  #nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  #nav li a {
+    text-decoration: none;
+    line-height: 74px;
+    padding: 0px 65px;
+    font-size: 24px !important;
+    display: block;
+  }
+  
+  #nav li:hover .subnav {
+    display: block;
+  }
+  
+  #nav li:hover .subnav {
+  }
+  
+
+  .dropdown-item:focus, .dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #a8aaab !important;
+  }
+
+  .dropdown-toggle::after {
+    display: none !important;
+  }
+
+  #nav .subnav li:hover a,
+  #nav > li:hover > a {
+    color: #000;
+    background-color: rgb(71, 69, 69);
+  }
+  
+  #nav .subnav {
+    text-align: center;
+    width: 100%;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  #nav .subnav a {
+    color: #000;
+    padding: 0 40px;
+    line-height: 50px;
+  }
+  
+  .slider {
+    height: 850px;
+  }
+  
+  #img_planet {
+    width: 100%;
+    margin-bottom: -5px;
+  }
+  
+  #planet_name {
+    margin-top: -700px;
+    padding-left: 90px;
+    font-size: 60px;
+    color: bisque;
+  }
+  
+  p#text_planet {
+    width: 35%;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    line-height: 35px;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  #btn_planet a {
+    color: #000;
+    padding: 0 34px;
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 50px;
+  }
+  
+  button#btn_planet {
+    border-radius: 20px;
+  }
+  
+  .planet_info {
+    margin-top: -130px;
+    margin-left: 880px;
+  }
+  
+  .planet_info th {
+    display: inline-block;
+    padding-bottom: 12px;
+  }
+  
+  .planet_info td {
+    padding-left: 20px;
+    color: #fff;
+  }
+  
+  .planet_distance {
+    margin-top: 80px;
+    margin-left: 80px;
+    color: #fff;
+  }
+  
+  .planet_distance th {
+    padding-right: 180px;
+    padding-bottom: 20px;
+  }
+  
+  .planet_distance td {
+    font-size: 40px;
+  }
+  
+  .planet_distance td small {
+    padding-left: 8px;
+    font-size: 25px;
+  }
+  
+  .content {
+    padding-top: 90px;
+    height: 930px;
+    background-color: #000;
+  }
+  
+  h2#title-planet-name {
+    color: #fff;
+    font-size: 4rem;
+  }
+  
+  div.explo-planet {
+    justify-content: center;
+    display: flex;
+    height: 400px;
+  }
+  
+  .explo-planet #img-nasa {
+    margin-top: 20px;
+    width: 36%;
+  }
+  
+  .explo-planet .text-explo {
+    margin-right: 80px;
+    width: 40%;
+  }
+  
+  .text-explo .text-pln-nasa {
+    padding-top: 20px;
+    line-height: 25px;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .time-navbar {
+    color: #fff;
+    line-height: 35px;
+  }
+  
+
+  /*content*/
+  .text-content{
+    text-align: center;
+    line-height: 35px;
+  }
+
+  .sub-content {
+    opacity: 0.6;
+    font-style: italic;
+  }
+  .content-add {
+    /* height: 1150px; */
+    background-color: #000;
+  }
+  
+  .btn-light a {
+    color: #000;
+  }
+  .btn-light:hover a {
+    color: #0ab7fa;
+    text-decoration: none;
+  }
+
+  
+  .content-add h4 {
+    padding: 40px;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  ul#years-content {
+    color: #fff;
+    list-style: none;
+    margin-left: 390px;
+    width: 50%;
+  }
+  
+  i.bi.bi-check-circle {
+    padding-right: 10px;
+  }
+  
+  li#years-content-text {
+    font-size: 20px;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .content-last {
+    height: 1520px;
+  }
+  
+  .content-header {
+    text-align: center;
+    padding: 30px;
+    font-size: 24px;
+  }
+  
+  img.img-fact {
+    margin-left: 30px;
+    width: 85%;
+  }
+  
+  .col.l-4.item-planet {
+    height: 350px;
+  }
+  
+  .number-count {
+    margin-top: 30px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding-top: 10px;
+    padding-left: 24px;
+    display: inline-block;
+    margin-left: 160px;
+    font-size: 28px;
+  }
+  
+  .number-count-fact {
+    margin-top: 30px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding-top: 10px;
+    padding-left: 17px;
+    display: inline-block;
+    margin-left: 160px;
+    font-size: 28px;
+  }
+  
+  h3.grid-title {
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  p.text-fact {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .icon-web {
+    font-size: 25px;
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  img#img-footer {
+    width: 100%;
+  }
+  
+  .grid.wide.footer-contentWeb {
+    color: white;
+    margin-top: -600px;
+  }
+  
+  .footer {
+    width: 100%;
+    height: 400px;
+    position: relative;
+  }
+  .footer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  .footer__bg {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+  }
+  .footer__infor {
+    width: 100%;
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 7rem;
+    margin-right: 20px;
+    align-items: center;
+    z-index: 2;
+  }
+  .footer__icon-phone {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-right: 3px solid #0ab7fa;
+  }
+  .footer__icon-times {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-right: 3px solid #0ab7fa;
+  }
+  .footer__icon-address {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__icon-infor {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+  }
+  .footer__infor-name {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+  .footer__desc {
+    padding-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  .map {
+    width: 100%;
+    height: 500px;
+  }
+  .map__address {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+  }
+  .map__img {
+    width: 100%;
+    height: 500px;
+  }
+  
+  /* Mobile: width < 740px */
+  @media only screen and (max-width: 1023px) {
+    i#icon-mobile {
+      position: absolute;
+      margin-left: 22rem;
+      margin-top: 16px;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      display: block;
+    }
+    ul#nav {
+      display: none;
+    }
+    #logo_img {
+      position: absolute;
+      margin-left: 8px;
+      width: 120px;
+      margin-top: 5px;
+    }
+  
+    #header {
+      z-index: 100;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background-color: black;
+    }
+    #img_planet {
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+    #planet_name {
+      margin-top: -700px;
+      padding-left: 90px;
+      font-size: 60px;
+      color: bisque;
+    }
+    p#text_planet {
+      width: 35%;
+      margin-bottom: 30px;
+      margin-top: 10px;
+      margin-left: -60px;
+      line-height: 5px;
+      font-size: 20px;
+      color: #fff;
+    }
+    button#btn_planet {
+    }
+    .planet_info {
+    }
+  }
+  
+  /* Tablet: width >= 740px and width < 1024px */
+  @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  }
+  /* cua minh */
+  .nav-item {
+    font-size: 24px !important;
+  }
+  .minh-text-planet {
+    /* width: 75%; */
+    font-size: 20px;
+  }
+  .img-nasa {
+    width: 100%;
+  }
+  .years-content {
+    list-style: none !important;
+  }
+  .bg-black {
+    background-color: #000;
+  }
+  
+  .years-content-text {
+    font-size: 20px;
+    padding: 20px;
+    width: 100%;
+  }
+  .overflow {
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+  .number-bg {
+    background-color: antiquewhite;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    justify-content: center;
+    text-align: center;
+  }
+  .bg-stary {
+    background: #000;
+  }
+  .navigation {
+    height: 100px;
+  }
+  .main-content {
+    margin-top: 100px;
+  }
+  
+
+    .topic {
+    font-size: 23px;
+    width: 380px;
+  }
+
+   .sub-topic {
+    opacity: 0.5;
+    font-style: italic;
+  }
+
+
+  .section-justify {
+    color: #fff;
+    background-color: rgb(43, 41, 41);
+    border: 2px solid rgb(198, 243, 206);
+  }
+
+
+  @media screen and (max-width: 46.1875em) {
+    .img-star ,.img-comet {
+       flex-direction: column;
+       width: 85%;
+    }
+    
+  }
+
+  @media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .dropdown-content,#navbarNavDropdown,.dropdown-content a {
+      display: none;
+    }
+  }
+
+  .icon-contact {
+    list-style: none;
+    font-size: 30px;
+   }
+  .follow-us {
+    display: flex;
+    margin-left: 320px;
+    margin-top: -122px;
+  }
+
+
+
+ 
+
+  #navbarNavDropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(116, 115, 115);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(174, 172, 172, 0.2);
+    z-index: 1;
+    width: 100%;
+  }
+  
+  .dropdown-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: rgb(226, 221, 221);color: rgba(27, 26, 26, 0.75);}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+
+
+/*feeback form*/
+
+.footer-form {
+  position: absolute;
+  top: 654%;
+  right: 60px;
+  width: 40%;
+  height: 48%;
+  background-color: #fff;
+  /* transform: translateX(-60px); */
+  box-shadow: 3px 3px 12px #242424;
+}
+
+
+.footer__feedback-text {
+  color:rgb(66, 136, 234);
+  font-size: 20px;
+}
+.danhgia {
+  height: 400px;
+  display: grid;
+  padding: 0 100px;
+}
+
+.footer-form__box-2 {
+  width: 350px;
+  height: 45px;
+
+}
+
+.footer-form__box-message{
+  width: 350px;
+}
+
+.footer-form__click {
+  width: 110px;
+  height: 31px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  background-color: rgb(66, 136, 234);
+}
+
+
+  

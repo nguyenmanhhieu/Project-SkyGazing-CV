@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Grid.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="Js/main.js"></script>
+    <script src="Js/time-out.js"></script>
+    <title>Earth</title>
+    <link rel="shortcut icon" type="images/png" href="/logo-icon/solar-system.ico"/>
+    <style>
+        img.img-fact {
+            margin-left: 0px;
+            width: 100%;
+        }
+        th {
+            color: white;
+        }
+        .explo-planet #img-nasa {
+             margin-top: 20px;
+             width: 25%;
+        }
+        .content {
+           height: 830px;
+        }
+        @media only screen and (max-width: 46.1875em) {
+            th {
+                color: black;
+            }
+            .explo-planet #img-nasa {
+                width: 40%;
+            }
+            .content-img {
+                height: 400px;
+            }
+            .content {
+               height: 1340px;
+            }
+            .content-add {
+                height: 90rem;
+            }
+            .explo-planet #img-nasa {
+               width: 80%;
+            }
+        }
+        @media only screen and (min-width: 600px) and (max-width: 800px) {
+           .content-img {
+                height: 31rem;
+           }
+           .content-add {
+                height: 58rem;
+           }
+            .number-count,
+            .number-count-fact{ 
+                margin-left: 16rem;
+            }
+            img.img-fact {
+                margin-left: 6rem;
+                width: 70%;
+            }
+            .slider-responsive {
+            height: 880px;
+            }
+        } 
+        @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+           th {
+            color: #000;
+           }
+           .content-add {
+                height: 68rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader disppear" >
+        <img src="../loading/9b1398619fa808505a7dbd6da70b2ff1.gif" alt="">
+    </div>
+    <div id="progress">
+        <i class="fa-solid fa-arrow-up" id="progress-value"></i>
+    </div>
+
+    <div id="main">
+        <div id="header">
+            <input type="checkbox" name="" class="nav-input" id="nav-res-input">
+            <label for="nav-res-input" class="nav-overlay"></label>
+            <div id="logo_img">
+                <a href="../Skygazing.com.html"><img src="./images/logo png.png" alt="Logo"></a>
+            </div>
+            <label for="nav-res-input"><i id="icon-mobile" class="bi bi-list"></i></label>
+            <ul id="nav">
+                <li class="astronomy-home__numberlives">live: 220</li>
+                <li><a href="Planets.html">Planets</a>
+                    <ul class="subnav">
+                        <li><a href="Mercury.html">Mercury</a></li>
+                        <li><a href="Venus.html">Venus</a></li>
+                        <li><a href="Earth.html">Earth</a></li>
+                        <li><a href="Mars.html">Mars</a></li>
+                        <li><a href="Jupiter.html">Jupiter</a></li>
+                        <li><a href="Saturn.html">Saturn</a></li>
+                        <li><a href="Uranus.html">Uranus</a></li>
+                        <li><a href="Neptune.html">Neptune</a></li>
+                        <li><a href="Pluto.html">Pluto</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Events The Planets</a>
+                    <ul class="subnav">
+                        <li><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                        <li><a href="../bigbang/bigbang.html">BigBang</a></li>
+                        <li><a href="../EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                    </ul>
+                </li>  
+                <li><a href="#">More</a>
+                    <ul class="subnav">
+                        <li><a href="../star-gazing/star-gazing.html">StarGazing</a></li>
+                        <li><a href="../comet-event/comet.html">Comet</a></li>
+                        <li><a href="../Observation/Observation.html">Observatories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li> 
+                <li class="astronomy-home__time-lives">
+                    <span>Times live:</span>
+                    <span id="hours">00</span>
+                    <span>:</span>
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                    <span id="session">AM</span>
+                </li>
+            </ul> 
+            <div class="header-res">   
+                <label for="nav-res-input"><i id="icon-res" class="bi bi-x-lg"></i></label>
+                <ul id="nav-res">
+                    <li><a href="Planets.html">Planets</a>
+                        <input type="checkbox" id="nav-down1">
+                        <label for="nav-down1"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res1">
+                            <li><i class="bi bi-dash"></i></i><a href="Mercury.html">Mercury</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Venus.html">Venus</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Earth.html">Earth</a></li>
+                            <li><i class="bi bi-dash"></i></i></i><a href="Mars.html">Mars</a></li>
+                            <li><i class="bi bi-dash"></i></i></i><a href="Jupiter.html">Jupiter</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Saturn.html">Saturn</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Uranus.html">Uranus</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Neptune.html">Neptune</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Pluto.html">Pluto</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Events The Planets</a>
+                        <input type="checkbox" id="nav-down2">
+                        <label for="nav-down2"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res2">
+                            <li><i class="bi bi-dash"></i></i><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../bigbang/bigbang.html">BigBang</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                        </ul>
+                    </li>  
+                    <li><a href="#">More</a>
+                        <input type="checkbox" id="nav-down3">
+                        <label for="nav-down3"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res3">
+                            <li><i class="bi bi-dash"></i></i><a href="../star-gazing/star-gazing.html">StarGazing</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../comet-event/comet.html">Comet</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../Observation/Observation.html">Observatories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About Us</a></li>
+                </ul>  
+            </div>    
+        </div>
+        <div class="slider">
+            <img id="img_planet" src="images/Earth.png" alt="Earth">
+            <div id="planet_name" ><b>Earth</b> 
+                <p id="text_planet">
+                    Earth—our home planet—is the only place we know of so far that’s inhabited by living things. It's also the only planet in our solar system with liquid water on the surface.
+                </p>
+                <button id="btn_planet"><a href="#More-InfoPlantet">More details</a></button>
+            </div>
+            <div class="planet_info">
+                <table>
+                    <tr>
+                        <th>Surface area:</th>
+                        <td>510.100.000 km²</td>
+                    </tr>
+                    <tr>
+                        <th>Mean density:</th>    
+                        <td>5,51 g/cm³</td>                                      
+                    </tr>
+                    <tr>
+                        <th>Rotation cycle:</th>
+                        <td>24 hours </td>
+                    </tr>
+                    <tr>
+                        <th>Mass:</th>
+                        <td>5.9722×10<sup>24</sup>kg (3.0×10−6 M☉)</td>
+                    </tr>
+                    <tr>
+                        <th>Mean radius:</th>
+                        <td>6.371 km</td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td>4,543E9 Year</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="planet_distance">
+                <table>
+                    <tr>
+                        <th>The distance from the Sun</th>
+                    </tr>
+                    <tr>
+                        <td>93 million<small>miles</small></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="slider-responsive">
+            <img id="img_responsive" src="images/Earth.png" alt="Earth">
+            <div data-aos="fade-up"
+            data-aos-duration="3000" id="planet_responsive"><b>Earth</b> 
+                <p id="text_responsive">
+                    Earth—our home planet—is the only place we know of so far that’s inhabited by living things. It's also the only planet in our solar system with liquid water on the surface.
+                </p>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000" class="responsive-table">
+                <table>
+                    <tr>
+                        <th>Surface area:</th>
+                        <td>510.100.000 km²</td>
+                    </tr>
+                    <tr>
+                        <th>Mean density:</th>    
+                        <td>5,51 g/cm³</td>                                      
+                    </tr>
+                    <tr>
+                        <th>Rotation cycle:</th>
+                        <td>24 hours </td>
+                    </tr>
+                    <tr>
+                        <th>Mass:</th>
+                        <td>5.9722×10<sup>24</sup>kg (3.0×10−6 M☉)</td>
+                    </tr>
+                    <tr>
+                        <th>Mean radius:</th>
+                        <td>6.371 km</td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td>4,543E9 Year</td>
+                    </tr>
+                </table>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000" class="responsive-distance">
+                <table>
+                    <tr>
+                        <th>The distance from the Sun</th>
+                    </tr>
+                    <tr>
+                        <td class="res-td">93 million<small>miles</small></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div  class="content">
+            <h2 data-aos="fade-right" data-aos-offset="300" id="title-planet-name">What's The Our Home Planet ?</h2>
+                <div class="explo-planet">
+                    <div class="text-explo" data-aos="fade-up"  data-aos-easing="linear"    data-aos-duration="1500">
+                        <p class="text-pln-nasa"> 
+                            Our home planet is the third planet from the Sun, and the only place we know of so far that’s inhabited by living things. While Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface. Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun, all of which are made of rock and metal.
+                        </p>
+                        <details>
+                            <summary>More details</summary>
+                            <p class="text-pln-nasa">
+                                While Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface. Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun, all of which are made of rock and metal.
+                            </p>
+                            <p class="text-pln-nasa">
+                                The name Earth is at least 1,000 years old. All of the planets, except for Earth, were named after Greek and Roman gods and goddesses. However, the name Earth is a Germanic word, which simply means “the ground.”
+                            </p>
+                        </details>
+                    </div>
+                    <img id="img-nasa" src="images/gif-earth.gif"  alt="Nasa_Earth" autoplay loop muted play>
+                </div>          
+        </div>
+
+        <div class="content-img">
+            <div data-aos="zoom-in-up" class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-earth2.jpg" >
+                  <div class="text">
+                    This narrow-angle color image of the Earth is a part of the first ever "portrait" of the solar system taken by Voyager 1.
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-earth1.jpg" >
+                  <div class="text">
+                    On Oct. 9, NASA's Juno spacecraft flew past Earth, using our home planet's gravity to get the final boost it needed to reach Jupiter. The JunoCam instrument captured this monochrome view of Earth, and other instruments were tested to ensure they work as designed during a close planetary encounter. Image Credit: NASA/JPL-Caltech/Malin Space Science Systems
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-earth3.jpg">
+                  <div class="text">
+                    This view of the twilight sky and Martian horizon taken by NASA's Curiosity Mars rover includes Earth as the brightest point of light in the night sky. Image Credit: NASA/JPL-Caltech/MSSS/TAMU
+                  </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/img-earth4.png">
+                    <div class="text">
+                        The Moon moving over the Pacific Ocean near North America as seen by the Deep Space Climate Observatory (DSCOVR) spacecraft. 
+                    </div>
+                  </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/img-earth5.jpg">
+                    <div class="text">
+                        This composite image of Earth and its moon, as seen from Mars, combines the best Earth image with the best moon image from four sets of images acquired on Nov. 20, 2016, by the High Resolution Imaging Science Experiment (HiRISE) camera on NASA's Mars Reconnaissance Orbiter. Image Credit: NASA/JPL-Caltech/Univ. of Arizona
+                    </div>
+                </div>
+ 
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                  <span class="dot" onclick="currentSlide(5)"></span> 
+                </div>
+        </div>
+
+        <div class="content-add">
+            <div class="content-planet">
+                <h4 data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">Significant Events</h4>
+                <ul data-aos="fade-up"
+                data-aos-duration="2000" id="years-content">
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>Namesake :</strong> The name Earth is at least 1,000 years old. All of the planets, except for Earth, were named after Greek and Roman gods and goddesses. However, the name Earth is a Germanic word, which simply means “the ground.”</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>Potential for Life :</strong> 
+                        Earth has a very hospitable temperature and mix of chemicals that have made life abundant here. Most notably, Earth is unique in that most of our planet is covered in liquid water, since the temperature allows liquid water to exist for extended periods of time. Earth's vast oceans provided a convenient place for life to begin about 3.8 billion years ago. <br>
+                        Some of the features of our planet that make it great for sustaining life are changing due to the ongoing effects of climate change.
+                    </li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>Moons :</strong>There are more than 200 known moons in our solar system and several more awaiting confirmation of discovery. Of the eight planets, Mercury and Venus are the only ones with no moons. The giant planets Jupiter and Saturn lead our solar system’s moon counts. In some ways, the swarms of moons around these worlds resemble mini versions of our solar system. Pluto, smaller than our own moon, has five moons in its orbit, including the Charon, a moon so large it makes Pluto wobble. Even tiny asteroids can have moons. In 2017, scientists found asteroid 3122 Florence had two tiny moons.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>Formation :</strong>Our solar system formed about 4.5 billion years ago from a dense cloud of interstellar gas and dust. The cloud collapsed, possibly due to the shockwave of a nearby exploding star, called a supernova. When this dust cloud collapsed, it formed a solar nebula – a spinning, swirling disk of material. <br>
+                        At the center, gravity pulled more and more material in. Eventually, the pressure in the core was so great that hydrogen atoms began to combine and form helium, releasing a tremendous amount of energy. With that, our Sun was born, and it eventually amassed more than 99% of the available matter.
+                    </li>                    
+                </ul>
+            </div>
+        </div>
+        <div class="content-last">
+            <div class="content-header">
+                <h2 data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" id="More-InfoPlantet">10 Need-to-Know Things About Our Home Planet</h2>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000" class="grid wide">
+                <div class="row">
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">1</div>
+                        <h3 class="grid-title">MEASURING UP</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">If the Sun were as tall as a typical front door, Earth would be the size of a nickel.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">2</div>
+                        <h3 class="grid-title">THIRD ROCK</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Earth orbits our Sun, a star. Earth is the third planet from the Sun at a distance of about 93 million miles (150 million km).</p>
+                        </div>
+                    </div>
+                    <div  data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">3</div>
+                        <h3 class="grid-title">AS THE WORLD TURNS</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">
+                                A day on Earth is 24 hours. Earth makes a complete orbit around the sun (a year in Earth time) in about 365 days.
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <img class="img-fact" src="images/Earth1.jpg" alt="earth-nasa">
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">4</div>
+                        <h3 class="grid-title">WE'RE ON IT</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Earth is a rocky planet with a solid and dynamic surface of mountains, canyons, plains and more. Most of our planet is covered in water.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">5</div>
+                        <h3 class="grid-title">BREATHE EASY</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Earth's atmosphere is 78 percent nitrogen, 21 percent oxygen and 1 percent other ingredients—the perfect balance to breathe and live.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">6</div>
+                        <h3 class="grid-title">OUR COSMIC COMPANION</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Earth has one moon.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">7</div>
+                        <h3 class="grid-title">RINGLESS</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Earth has no rings.</p>
+                        </div>
+                    </div>
+                    <div  data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000"class="col l-4 item-planet">
+                        <div class="number-count">8</div>
+                        <h3 class="grid-title">ORBITAL SCIENCE</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Many orbiting spacecraft study the Earth from above as a whole system—observing the atmosphere, ocean, glaciers, and the solid earth.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">9</div>
+                        <h3 class="grid-title">HOME, SWEET HOME</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Earth is the perfect place for life as we know it.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count-fact">10</div>
+                        <h3 class="grid-title">PROTECTIVE SHIELD</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Our atmosphere protects us from incoming meteoroids, most of which break up in our atmosphere before they can strike the surface.</p>
+                        </div>
+                    </div>
+                        <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                            <img class="img-fact" src="images/Earth2.jpg" alt="earth-nasa">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+
+            <div class="footer__bg">
+                <img src="images/Star.jpg" alt="bg-footer">
+                
+                <div class="footer__infor">
+    
+                    <div class="footer__icon-phone">
+                        <i class="fa-solid fa-phone footer__icon-infor"></i>
+                        <span class="footer__infor-name">Contact Information</span>
+                        <span class="footer__desc">0886313048</span>
+                        <span class="footer__desc">SkyGazing@gmail.com</span>
+                    </div>
+    
+                    <div class="footer__icon-times">
+                        <i class="fa-solid fa-clock footer__icon-infor"></i>
+                        <span class="footer__infor-name">Times</span>
+                        <span class="footer__desc">Days of the week</span>
+                        <span class="footer__desc">(8:00 AM to 10:00 PM)</span>
+                    </div>
+    
+                    <div class="footer__icon-address">
+                        <i class="fa-solid fa-location-dot footer__icon-infor"></i>
+                        <span class="footer__infor-name">Address</span>
+                        <span class="footer__desc">Fpt Aptech Hà Nội</span>
+                        <span class="footer__desc">(Tôn thất thuyết, Mỹ Đình 2, Nam Từ Liêm, Hà Nội)</span>
+                    </div>
+               
+                </div>
+            </div>
+
+        </div>
+
+        <div class="map">
+            <div class="map__address">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966092835115!2d105.78010801471528!3d21.028820085998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9ac1%3A0xa9bc04e04602dd85!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1665652904057!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map__img"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Js/img-slider.js"></script>
+<script src="./Js/loader.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+</html>

@@ -1,0 +1,777 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Album</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    
+
+<link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<link rel="stylesheet" href="aseets/style.css">
+<meta name="theme-color" content="#712cf9">
+    
+  </head>
+  <body onload="hienthithoigian()">
+    
+<header>
+
+  <!-- menu -->
+
+  <div id="header">
+            <input type="checkbox" name="" class="nav-input" id="nav-res-input">
+            <label for="nav-res-input" class="nav-overlay"></label>
+            <div id="logo_img">
+                <a href="../Home/Skygazing.com.html"><img src="./aseets/img/logo png.png" alt="Logo"></a>
+            </div>
+            <label for="nav-res-input"><i id="icon-mobile" class="bi bi-list"></i></label>
+            <ul id="nav">
+                <li class="astronomy-home__numberlives">live: 220</li>
+                <li><a href="#">Planets</a>
+                    <ul class="subnav">
+                        <li><a href="Mercury.html">Mercury</a></li>
+                        <li><a href="Venus.html">Venus</a></li>
+                        <li><a href="Earth.html">Earth</a></li>
+                        <li><a href="Mars.html">Mars</a></li>
+                        <li><a href="Jupiter.html">Jupiter</a></li>
+                        <li><a href="Saturn.html">Saturn</a></li>
+                        <li><a href="Uranus.html">Uranus</a></li>
+                        <li><a href="Neptune.html">Neptune</a></li>
+                        <li><a href="Pluto.html">Pluto</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Events The Planets</a>
+                    <ul class="subnav">
+                        <li><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                        <li><a href="../bigbang/bigbang.html">BigBang</a></li>
+                        <li><a href="../EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                    </ul>
+                </li>  
+                <li><a href="#">More</a>
+                    <ul class="subnav">
+                        <li><a href="#">StarGazing</a></li>
+                        <li><a href="./comet.html">Comet</a></li>
+                        <li><a href="#">Constellation</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Observatories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li> 
+                <li class="astronomy-home__time-lives">
+                    <span>Times live:</span>
+                    <span id="hours">00</span>
+                    <span>:</span>
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                    <span id="session">AM</span>
+                </li>
+            </ul> 
+            <div class="header-res">   
+                <label for="nav-res-input"><i id="icon-res" class="bi bi-x-lg"></i></label>
+                <ul id="nav-res">
+                    <li class="nav-res__menu"><a href="#">Planets</a>
+                        <input type="checkbox" id="nav-down1">
+                        <label for="nav-down1"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res1">
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="Mercury.html">Mercury</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="Venus.html">Venus</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="Earth.html">Earth</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i></i><a href="Mars.html">Mars</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i></i><a href="Jupiter.html">Jupiter</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="Saturn.html">Saturn</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="Uranus.html">Uranus</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="Neptune.html">Neptune</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="Pluto.html">Pluto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-res__menu"><a href="#">Events The Planets</a>
+                        <input type="checkbox" id="nav-down2">
+                        <label for="nav-down2"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res2">
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="#">Eclipse</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="#">BigBang</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="#">Evolved Earth</a></li>
+                        </ul>
+                    </li>  
+                    <li class="nav-res__menu"><a href="#">More</a>
+                        <input type="checkbox" id="nav-down3">
+                        <label for="nav-down3"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res3">
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="#">StarGazing</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="#">Comet</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="#">Constellation</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i></i><a href="#">News</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="#">Observatories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-res__menu"><a href="#">About Us</a></li>
+                </ul>  
+            </div> 
+        </div>
+   
+
+</header>
+
+<main style="background:rgb(24, 24, 24);">
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">ALBUM ASTRONOMY</h1>
+        <p class="lead text-muted">The Milky Way, or Milky Way, is a galaxy containing our Solar System.
+           It appears in the sky as a faint band of light extending from the constellation Andromeda in the north to the constellation Southern Cross in the south, and is brightest in the constellation Sagittarius - the center of the Milky Way.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+
+            <img src="./aseets/img/TheSun.png" width="100%" height="225"  alt="">
+            <div class="card-body">
+              <p class="card-text"><b>The Sun</b> or Sun is the star at the center of the Solar System, accounting for about 99.8% of the Solar System's mass...</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary view-section"><a href="#my-dialog">View</a></button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    <div class="dialog overlay" id="my-dialog">
+                      <a href="#" class="overlay-close"></a>
+                        <div class="dialog-body">
+                          <a class="dialog-close-btn" href="#">&times;</a>
+                          
+                          <div class="col info-galaxy">
+                            <img style="width: 400px;height: 250px;" src="./aseets/img/Thesun01.gif" alt="">
+                            <table>
+                              <tr>
+                                <th class="pr-3">Distance to Earth:</th>
+                                <td>149,600,000 km²</td>
+                              </tr>
+                              <tr>
+                                <th class="pr-3">Age:</th>
+                                <td> 4,603E9 years</td>
+                              </tr>
+                              <tr>
+                                <th class="pr-3">Radius:</th>
+                                <td> 696,340 km</td>
+                              </tr>
+                              <tr>
+                                <th class="pr-3">Weight:</th>
+                                <td>1,989E30 kg</td>
+                              </tr>
+                              <tr>
+                                <th class="pr-3">Density:</th>
+                                <td>1.41 g/cm³</td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <small class="text-muted">distance from the sun</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+
+            <img src="./aseets/img/Mercury.jpeg" width="100%" height="225" alt="">
+            <div class="card-body">
+              <p class="card-text"><b>Mercury</b> or Mercury is the smallest and closest planet to the Sun of the eight planets in the Solar System, with an orbital period ...</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary view-section"><a href="#my-dialog1">View</a></button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <div class="dialog overlay" id="my-dialog1">
+                    <a href="#" class="overlay-close"></a>
+                      <div class="dialog-body">
+                        <a class="dialog-close-btn" href="#">&times;</a>
+                        
+                        <div class="col info-galaxy1">
+                          <img width="400px" height="250" src="./aseets/img/Mercury 02.gif" alt="">
+                          <table>
+                            <tr>
+                              <th class="pr-3">Distance from Sun:</th>
+                              <td>58 million km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Radius:</th>
+                              <td>2,439.7 km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Surface area:</th>
+                              <td> 74.8 million km²</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Mass:</th>
+                              <td>3.285 × 10^23 kg (0.055 M⊕)</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <small class="text-muted">58 million km</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+
+            <img src="./aseets/img/Venus.png" width="100%" height="225" alt="">
+            <div class="card-body">
+              <p class="card-text"><b>Venus</b> is the 2nd planet in the solar system, orbiting itself with a period of 224.7 Earth days After the Moon, it is the brightest...</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary view-section"><a href="#my-dialog3">View</a></button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <div class="dialog overlay" id="my-dialog3">
+                    <a href="#" class="overlay-close"></a>
+                      <div class="dialog-body">
+                        <a class="dialog-close-btn" href="#">&times;</a>
+                        
+                        <div class="col info-galaxy3">
+                          <img width="400px" height="250" src="./aseets/img/Venus03.gif" alt="">
+                          <table>
+                            <tr>
+                              <th class="pr-3">Distance from Sun:</th>
+                              <td>108.2 million km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Radius:</th>
+                              <td> 6,051.8 km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Surface area:</th>
+                              <td>460.2 million km²</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Mass:</th>
+                              <td> 4.867 × 10^24 kg (0.815 M⊕)</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Density:</th>
+                              <td>5.24 g/cm³</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                  </div>
+
+                </div>
+                <small class="text-muted">108.2 million km</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+
+            <img src="./aseets/img/Earth.png"  width="100%" height="225" alt="">
+            <div class="card-body">
+              <p class="card-text"><b>Earth</b> or Earth, is the third planet from the Sun, and is also the largest of the terrestrial planets of the Solar system in terms of radius...</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary view-section"><a href="#my-dialog4">View</a></button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+
+                  <div class="dialog overlay" id="my-dialog4">
+                    <a href="#" class="overlay-close"></a>
+                      <div class="dialog-body">
+                        <a class="dialog-close-btn" href="#">&times;</a>
+                        
+                        <div class="col info-galaxy4">
+                          <img width="400px" height="250" src="./aseets/img/Earth04.gif" alt="">
+                          <table>
+                            <tr>
+                              <th class="pr-3">Distance from Sun:</th>
+                              <td>149.6 million km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Radius:</th>
+                              <td>6,371 km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Surface area:</th>
+                              <td>510.1 million km²</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Land area:</th>
+                              <td> 148.9 million km²</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Mass:</th>
+                              <td>5.972 × 10^24 kg</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Age:</th>
+                              <td> 4.543 billion years</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                  </div>
+
+                </div>
+                <small class="text-muted">149.6 million km</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+
+            <img src="./aseets/img/Mars.png"  width="100%" height="225" alt="">
+            <div class="card-body">
+              <p class="card-text"><b>Mars</b> or Mars is the fourth planet from the Sun and the second smallest planet in the Solar System,known as the "Red Planet"....</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary view-section"><a href="#my-dialog5">View</a></button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+
+                  <div class="dialog overlay" id="my-dialog5">
+                    <a href="#" class="overlay-close"></a>
+                      <div class="dialog-body">
+                        <a class="dialog-close-btn" href="#">&times;</a>
+                        
+                        <div class="col info-galaxy5">
+                          <img width="400px" height="250" src="./aseets/img/Mars05.gif" alt="">
+                          <table>
+                            <tr>
+                              <th class="pr-3">Distance from Sun:</th>
+                              <td> 227.9 million km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Radius:</th>
+                              <td>3,389.5 km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Surface area:</th>
+                              <td>144.8 million km²</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Mass:</th>
+                              <td> 6.39 × 10^23 kg (0.107 M⊕)</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Density:</th>
+                              <td>3.93 g/cm³</td>
+                            </tr>                          
+                          </table>
+                        </div>
+                      </div>
+                  </div>
+
+
+                </div>
+                <small class="text-muted">227.9 million km</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+
+            <img src="./aseets/img/Jupiter.png"  width="100%" height="225" alt="">
+            <div class="card-body">
+              <p class="card-text"><b>Jupiter</b>or Jupiter is the fifth planet from the Sun and the largest planet in the Solar System,It is a gas giant with a mass one-thousandth of the Sun...</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary view-section"><a href="#my-dialog6">View</a></button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+
+                  <div class="dialog overlay" id="my-dialog6">
+                    <a href="#" class="overlay-close"></a>
+                      <div class="dialog-body">
+                        <a class="dialog-close-btn" href="#">&times;</a>
+                        
+                        <div class="col info-galaxy6">
+                          <img width="400px" height="250" src="./aseets/img/Jupiter06.gif" alt="">
+                          <table>
+                            <tr>
+                              <th class="pr-3">Distance from Sun:</th>
+                              <td>778.5 million km²</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Radius:</th>
+                              <td>69,911 km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Surface area:</th>
+                              <td>61.42 billion km²</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Mass:</th>
+                              <td>1.898 × 10^27 kg (317.8 M⊕)</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Density:</th>
+                              <td>1.33 g/cm³</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Age:</th>
+                              <td>4.603 billion years</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                  </div>
+
+
+                </div>
+                <small class="text-muted">740.5 million km</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+
+            <img src="./aseets/img/ Saturn.png"  width="100%" height="225" alt="">
+            <div class="card-body">
+              <p class="card-text"><b>Saturn</b>or Saturn is the sixth planet by mean distance from the Sun and the second largest in diameter and mass, after Jupiter in the Solar...</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary view-section"><a href="#my-dialog7">View</a></button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+
+                  <div class="dialog overlay" id="my-dialog7">
+                    <a href="#" class="overlay-close"></a>
+                      <div class="dialog-body">
+                        <a class="dialog-close-btn" href="#">&times;</a>
+                        
+                        <div class="col info-galaxy7">
+                          <img width="400px" height="250" src="./aseets/img/Saturn07.gif" alt="">
+                          <table>
+                            <tr>
+                              <th class="pr-3">Distance from Sun:</th>
+                              <td>1.434 billion km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Radius:</th>
+                              <td>58,232 km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Surface area:</th>
+                              <td>42.7 billion km²</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Mass:</th>
+                              <td>5.683 × 10^26 kg (95.16 M⊕)</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Density:</th>
+                              <td>687 kg/m³</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Age:</th>
+                              <td>4.503 billion years</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                  </div>
+
+
+                </div>
+                <small class="text-muted">11,434E9 km</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+      
+            <img src="./aseets/img/Uranus.png"  width="100%" height="225" alt="">
+            <div class="card-body">
+              <p class="card-text"><b>Uranus</b> or Uranus is the seventh planet from the Sun; It is the third largest radius and fourth most massive planet in the Solar System...</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary view-section"><a href="#my-dialog8">View</a></button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+
+                  <div class="dialog overlay" id="my-dialog8">
+                    <a href="#" class="overlay-close"></a>
+                      <div class="dialog-body">
+                        <a class="dialog-close-btn" href="#">&times;</a>
+                        
+                        <div class="col info-galaxy8">
+                          <img width="400px" height="250" src="./aseets/img/Uranus08.gif" alt="">
+                          <table>
+                            <tr>
+                              <th class="pr-3">Distance from Sun:</th>
+                              <td>2.871 billion km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Radius: </th>
+                              <td>25,362 km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Surface area:</th>
+                              <td> 8.083 billion km²</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Mass:</th>
+                              <td>8.681 × 10^25 kg (14.54 M⊕)</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Density:</th>
+                              <td> 1.27 g/cm³</td>
+                            </tr>
+                            
+                          </table>
+                        </div>
+                      </div>
+                  </div>
+
+
+                </div>
+                <small class="text-muted">2,871E9 km</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+
+            <img src="./aseets/img/Neptune.png"  width="100%" height="225" alt="">
+            <div class="card-body">
+              <p class="card-text"><b>Neptune</b> or Neptune is the eighth and farthest planet from the Sun in the Solar System. It is the fourth largest planet in diameter...</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary view-section"><a href="#my-dialog9">View</a></button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+
+                  <div class="dialog overlay" id="my-dialog9">
+                    <a href="#" class="overlay-close"></a>
+                      <div class="dialog-body">
+                        <a class="dialog-close-btn" href="#">&times;</a>
+                        
+                        <div class="col info-galaxy9">
+                          <img width="400px" height="250" src="./aseets/img/Neptune09.gif" alt="">
+                          <table>
+                            <tr>
+                              <th class="pr-3">Distance from Sun:</th>
+                              <td>4.495 billion km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Radius:</th>
+                              <td>24,622 km</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Surface area:</th>
+                              <td>7.618 billion km²</td>
+                            </tr>
+                            <tr>
+                              <th class="pr-3">Mass:</th>
+                              <td>1.024 × 10^26 kg (17.15 M⊕)</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                  </div>
+
+
+                </div>
+                <small class="text-muted">7,618E9 km²</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+   <!-- Footer -->
+
+   <div class="footer">
+        <div class="footer-title">
+            <p class="footer-title__contact">Contact Us</p>
+        </div>
+
+        <div class="footer-contact__mobie grid wide">
+            <div class="footer-contact__row row">
+                <div class="footer-contact__setting col c-10 c-o-1 l-0">
+
+                    <div class="footer-contact">
+                        <form class="footer-contact__form" onsubmit="sendEmail(); reset(); return false;">
+                            <div class="footer-feedback">
+                                <p class="footer__feedback-text">Feedback Form:</p>
+                            </div>
+                            <input type="text" id="fullName" placeholder="Your Name" required class="footer-contact__box">
+                            <input type="email" id="email_id" placeholder="Your Email" required class="footer-contact__box">
+                            <textarea id="message" type="footer-contact__message" row="10" placeholder="How can we help you?" required class="footer-contact__box"> </textarea>
+                            <button onclick="SendMail()" type="submit" id="btn" class="footer-contact__click">Send</button>
+                
+                        </form>
+                    </div>
+
+                </div>
+                
+            </div>
+       
+        </div>
+
+        <div class="footer-contact__2">
+
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966092835115!2d105.78010801471528!3d21.028820085998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9ac1%3A0xa9bc04e04602dd85!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1665652904057!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="footer-map__img"></iframe>
+            </div>
+            
+            <div class="footer-form m-o c-0 l-5">
+                <form class="footer__form-2">
+                    <div class="footer-feedback">
+                        <p class="footer__feedback-text">Feedback Form:</p>
+                    </div>
+                    <input type="text" id="fullName" placeholder="Your Name" required class="footer-form__box-2">
+                    <input type="email" id="email_id" placeholder="Your Email" required class="footer-form__box-2">
+                    <textarea id="message" type="footer-form__message" row="10" placeholder="How can we help you?" class="footer-form__box-message" required> </textarea>
+                    <button onclick="SendMail()" class="footer-form__click">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact-about">
+            <div class="contact-about__grid grid wide">
+                <div class="footer-about__flex">
+                    <div class="footer-about__row body-row_post-4" data-aos="fade-up" data-aos-duration="2000">
+                        
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__1">
+                                <p class="contact-about__title">OUR ADDRES</p>
+                                <p class="contact-about__desc">Mỹ Đình 2, Nam Từ Liêm, Hà Nội</p>
+                                <p class="contact-about__desc">FPT APTECH</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__2">
+                                <p class="contact-about__title">OUR CONTACT</p>
+                                <p class="contact-about__desc">skygazing2022@gmail.com</p>
+                                <p class="contact-about__desc">0886313048</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__icon">
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__flower l-3 l-o-9">
+                            <p class="contact-about__flower-text">follow us</p>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+
+            <!-- mobie -->
+
+            <div class="contact-about__grid grid wide">
+                <div class="footer-about__flex">
+                    <div class="footer-about__row row-footer__contact">
+                        
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__title">OUR ADDRES</p>
+                                <p class="contact-about__desc">Mỹ Đình 2, Nam Từ Liêm, Hà Nội</p>
+                                <p class="contact-about__desc">FPT APTECH</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__title">OUR CONTACT</p>
+                                <p class="contact-about__desc">skygazing2022@gmail.com</p>
+                                <p class="contact-about__desc">0886313048</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer-icon">
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__folower">Follower</p>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+   
+    </div>
+
+
+    <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="./Js/main.js"></script>
+
+    <script>
+
+      window.onload = function(){
+          hienthithoigian()
+      }
+      
+      function hienthithoigian() {
+          const t = new Date();
+          let h = t.getHours();
+          let m = t.getMinutes();
+          let s = t.getSeconds();
+      
+          m = dinhdang2so(m);
+          s = dinhdang2so(s);
+      
+          document.getElementById("time").innerHTML = h + ":" + m + ":" + s ;
+          setTimeout(hienthithoigian, 1000);
+      }
+      function dinhdang2so(x){
+          if (x  <10) {
+               x = "0" + x;
+               return x;
+          }else{
+          return x;
+          }
+      }
+          </script>
+    
+      
+  </body>
+</html>

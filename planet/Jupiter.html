@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Grid.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="Js/main.js"></script>
+    <script src="Js/time-out.js"></script>
+    <link rel="shortcut icon" type="images/png" href="/logo-icon/solar-system.ico"/>
+    <style>
+        .content-add {
+            height: 1440px;
+        }   
+        .content-img {
+            height: 1080px;
+        }
+        @media only screen and (max-width: 46.1875em){
+        .content {
+            height: 1200px;
+        }
+        .content-img {
+            height: 24rem;
+        }
+        .explo-planet #img-nasa {
+            width: 100% !important;
+        }
+    }
+    @media only screen and (min-width: 600px) and (max-width: 800px) {
+            .slider-responsive {
+                height: 900px;
+            }
+            .content-add {
+                height: 60rem;
+            }
+        } 
+    @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+        .explo-planet #img-nasa {
+                margin-left: 0rem;
+                width: 100% !important;
+            }
+            .content-add {
+                height: 75rem !important;
+            }    
+        }    
+        @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+            .explo-planet #img-nasa {
+                margin-top: 1rem;
+                width: 80% !important;
+                margin-left: 6rem;
+            }
+            .content-img {
+                height: 50rem;
+            }
+            .content-add {
+                height: 72rem;
+            }
+        }
+    </style>
+    <title>Jupiter</title>
+</head>
+<body>
+    <div class="loader disppear" >
+        <img src="../loading/9b1398619fa808505a7dbd6da70b2ff1.gif" alt="">
+    </div>
+    <div id="progress">
+        <i class="fa-solid fa-arrow-up" id="progress-value"></i>
+    </div>
+
+    <div id="main">
+        <div id="header">
+            <input type="checkbox" name="" class="nav-input" id="nav-res-input">
+            <label for="nav-res-input" class="nav-overlay"></label>
+            <div id="logo_img">
+                <a href="../Skygazing.com.html"><img src="./images/logo png.png" alt="Logo"></a>
+            </div>
+            <label for="nav-res-input"><i id="icon-mobile" class="bi bi-list"></i></label>
+            <ul id="nav">
+                <li class="astronomy-home__numberlives">live: 220</li>
+                <li><a href="Planets.html">Planets</a>
+                    <ul class="subnav">
+                        <li><a href="Mercury.html">Mercury</a></li>
+                        <li><a href="Venus.html">Venus</a></li>
+                        <li><a href="Earth.html">Earth</a></li>
+                        <li><a href="Mars.html">Mars</a></li>
+                        <li><a href="Jupiter.html">Jupiter</a></li>
+                        <li><a href="Saturn.html">Saturn</a></li>
+                        <li><a href="Uranus.html">Uranus</a></li>
+                        <li><a href="Neptune.html">Neptune</a></li>
+                        <li><a href="Pluto.html">Pluto</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Events The Planets</a>
+                    <ul class="subnav">
+                        <li><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                        <li><a href="../bigbang/bigbang.html">BigBang</a></li>
+                        <li><a href="../EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                    </ul>
+                </li>  
+                <li><a href="#">More</a>
+                    <ul class="subnav">
+                        <li><a href="../star-gazing/star-gazing.html">StarGazing</a></li>
+                        <li><a href="../comet-event/comet.html">Comet</a></li>
+                        <li><a href="../Observation/Observation.html">Observatories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li> 
+                <li class="astronomy-home__time-lives">
+                    <span>Times live:</span>
+                    <span id="hours">00</span>
+                    <span>:</span>
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                    <span id="session">AM</span>
+                </li>
+            </ul> 
+            <div class="header-res">   
+                <label for="nav-res-input"><i id="icon-res" class="bi bi-x-lg"></i></label>
+                <ul id="nav-res">
+                    <li><a href="Planets.html">Planets</a>
+                        <input type="checkbox" id="nav-down1">
+                        <label for="nav-down1"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res1">
+                            <li><i class="bi bi-dash"></i></i><a href="Mercury.html">Mercury</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Venus.html">Venus</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Earth.html">Earth</a></li>
+                            <li><i class="bi bi-dash"></i></i></i><a href="Mars.html">Mars</a></li>
+                            <li><i class="bi bi-dash"></i></i></i><a href="Jupiter.html">Jupiter</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Saturn.html">Saturn</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Uranus.html">Uranus</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Neptune.html">Neptune</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Pluto.html">Pluto</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Events The Planets</a>
+                        <input type="checkbox" id="nav-down2">
+                        <label for="nav-down2"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res2">
+                            <li><i class="bi bi-dash"></i></i><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../bigbang/bigbang.html">BigBang</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                        </ul>
+                    </li>  
+                    <li><a href="#">More</a>
+                        <input type="checkbox" id="nav-down3">
+                        <label for="nav-down3"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res3">
+                            <li><i class="bi bi-dash"></i></i><a href="../star-gazing/star-gazing.html">StarGazing</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../comet-event/comet.html">Comet</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../Observation/Observation.html">Observatories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About Us</a></li>
+                </ul>  
+            </div>    
+        </div>
+        <div class="slider">
+            <img id="img_planet" src="images/Jupiter.png" alt="Jupiter">
+            <div id="planet_name"><b>Jupiter</b> 
+                <p id="text_planet">
+                    Jupiter is more than twice as massive than the other planets of our solar system combined. The giant planet's Great Red spot is a centuries-old storm bigger than Earth.
+                </p>
+                <button id="btn_planet"><a href="#More-InfoPlantet">More details</a></button>
+            </div>
+            <div class="planet_info">
+                <table>
+                    <tr>
+                        <th>Surface area:</th>
+                        <td>6,142E10 km²</td>
+                    </tr>
+                    <tr>
+                        <th>Mean density:</th>    
+                        <td>1,33 g/cm³</td>                                      
+                    </tr>
+                    <tr>
+                        <th>Rotation cycle:</th>
+                        <td>10 hours</td>
+                    </tr>
+                    <tr>
+                        <th>Mass:</th>
+                        <td>1.9 x 10<sup>27</sup> kg.</td>
+                    </tr>
+                    <tr>
+                        <th>Mean radius:</th>
+                        <td>69.911 km</td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td>4,603E9 Year</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="planet_distance">
+                <table>
+                    <tr>
+                        <th>The distance from the Sun</th>
+                        <th>The distance from the Earth</th>
+                    </tr>
+                    <tr>
+                        <td>779 million<small>miles</small></td>
+                        <td>588 million<small>miles</small></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="slider-responsive">
+            <img id="img_responsive" src="images/Jupiter.png" alt="Jupiter">
+            <div data-aos="fade-up"
+            data-aos-duration="3000" id="planet_responsive"><b>Jupiter</b> 
+                <p id="text_responsive">
+                    Jupiter is more than twice as massive than the other planets of our solar system combined. The giant planet's Great Red spot is a centuries-old storm bigger than Earth.
+                </p>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000" class="responsive-table">
+                <table>
+                    <tr>
+                        <th>Surface area:</th>
+                        <td>6,142E10 km²</td>
+                    </tr>
+                    <tr>
+                        <th>Mean density:</th>    
+                        <td>1,33 g/cm³</td>                                      
+                    </tr>
+                    <tr>
+                        <th>Rotation cycle:</th>
+                        <td>10 hours</td>
+                    </tr>
+                    <tr>
+                        <th>Mass:</th>
+                        <td>1.9 x 10<sup>27</sup> kg.</td>
+                    </tr>
+                    <tr>
+                        <th>Mean radius:</th>
+                        <td>69.911 km</td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td>4,603E9 Year</td>
+                    </tr>
+                </table>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000" class="responsive-distance">
+                <table>
+                    <tr>
+                        <th>The distance from the Sun</th>
+                        <th>The distance from the Earth</th>
+                    </tr>
+                    <tr>
+                        <td class="res-td">779 million<small>miles</small></td>
+                        <td class="res-td">588 million<small>miles</small></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2 data-aos="fade-right" data-aos-offset="300" id="title-planet-name">What's The Jupiter Planet ?</h2>
+                <div class="explo-planet">
+                    <div class="text-explo" data-aos="fade-up"  data-aos-easing="linear"    data-aos-duration="1500">
+                        <p class="text-pln-nasa"> 
+                            TJupiter has a long history of surprising scientists – all the way back to 1610 when Galileo Galilei found the first moons beyond Earth. That discovery changed the way we see the universe.
+                        </p>
+                        <details>
+                            <summary>More details</summary>
+                            <p class="text-pln-nasa">
+                                Jupiter is the fifth planet from our Sun and is, by far, the largest planet in the solar system – more than twice as massive as all the other planets combined. Jupiter's stripes and swirls are actually cold, windy clouds of ammonia and water, floating in an atmosphere of hydrogen and helium. Jupiter’s iconic Great Red Spot is a giant storm bigger than Earth that has raged for hundreds of years.
+                            </p>
+                            <p class="text-pln-nasa">
+                                Jupiter is surrounded by dozens of moons. Jupiter also has several rings, but unlike the famous rings of Saturn, Jupiter’s rings are very faint and made of dust, not ice. 
+                            </p>
+                            <p class="text-pln-nasa">
+                                Jupiter, being the biggest planet, gets its name from the king of the ancient Roman gods.
+                            </p>
+                        </details>   
+                    </div>
+                    <img id="img-nasa" style="width: 40%;" src="images/jupiter-gif.gif" alt="Jupiter-gif" autoplay loop muted play>
+                </div>          
+        </div>
+        <div class="content-img">
+            <div data-aos="zoom-in-up" class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-jupiter1.jpg" >
+                  <div class="text">
+                    This striking view of Jupiter was captured by NASA's Juno spacecraft on Feb. 12, 2019, as the spacecraft performed its 17th science pass of Jupiter. Credits: NASA/JPL-Caltech/SwRI/MSSS
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-jupiter2.jpg" >
+                  <div class="text">
+                    Jupiter's moon Io rises just off the horizon of the gas giant planet in this image from NASA's Juno spacecraft. Slightly larger than Earth's moon, Io is the most volcanically active world in the solar system. Credits: NASA/JPL-Caltech/SwRI/MSSS 
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-jupiter3.jpg">
+                  <div class="text">
+                    This composite of images from the JunoCam imager on NASA's Juno spacecraft shows eight circumpolar cyclones around a central cyclone at Jupiter's north pole. The cyclones range in size from 1,500 miles (2,400 kilometers) to 1,740 miles (2,800 kilometers) across — about the same distance as from the southern tip of Texas to the border with Canada. The images were taken on Feb. 17, April 10, June 2, and July 25 of 2020. Credits: NASA/JPL-Caltech/SwRI/MSSS 
+                  </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/img-jupiter4.jpg">
+                    <div class="text">
+                        This image was taken in 1994 a little over an hour after a fragment of comet Shoemaker-Levy 9 crashed into Jupiter. The inside edge of the dark outermost ring is about the size of Earth. Credit: NASA/MIT/H. Hammel
+                    </div>
+                  </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/img-jupiter5.jpg">
+                    <div class="text">
+                        On Dec. 4, 1973, NASA's Pioneer 10 spacecraft sent back images of Jupiter of ever-increasing size. Pioneer 10 was the first spacecraft to send back close-up views of Jupiter
+                    </div>
+                </div>
+ 
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                  <span class="dot" onclick="currentSlide(5)"></span> 
+                </div>
+        </div>
+        <div class="content-add">
+            <div class="content-planet">
+                <h4 data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">Significant Events</h4>
+                <ul data-aos="fade-up"
+                data-aos-duration="2000" id="years-content">
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>1610:</strong> Galileo Galilei makes the first detailed observations of Jupiter.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>1973:</strong> Pioneer 10 becomes the first spacecraft to cross the asteroid belt and fly past Jupiter.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>1979:</strong> Ulysses swung by Jupiter on Feb. 8, 1992. The giant planet's gravity bent the spacecraft's flight path southward and away from the ecliptic plane, putting the probe into a final orbit that would take it over the sun's south and north poles.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>1992:</strong> Mariner 10 photographs roughly half of Mercury's surface during three flybys.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>1994:</strong> Astronomers observe as pieces of comet Shoemaker-Levy 9 collide with Jupiter's southern hemisphere.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>1995-2003:</strong> The Galileo spacecraft drops a probe into Jupiter's atmosphere and conducts extended observations of Jupiter and its moons and rings.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>2000:</strong> Cassini makes its closest approach to Jupiter at a distance of approximately 6.2 million miles (10 million kilometers), taking a highly detailed true color mosaic photo of the gas giant.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>2007:</strong> Images taken by NASA's New Horizons spacecraft, on the way to Pluto, show new perspectives on Jupiter's atmospheric storms, the rings, volcanic Io, and icy Europa.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>2009:</strong> On 20 July, almost exactly 15 years after fragments of comet Shoemaker-Levy slammed into Jupiter, a comet or asteroid crashes into the giant planet's southern hemisphere.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>2011:</strong> Juno launches to examine Jupiter's chemistry, atmosphere, interior structure and magnetosphere.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>2016:</strong> NASA's Juno spacecraft arrives at Jupiter, conducting an in-depth investigation of the planet's atmosphere, deep structure and magnetosphere for clues to its origin and evolution</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-last">
+            <div class="content-header">
+                <h2 data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" id="More-InfoPlantet">10 Need-to-Know Things About Jupiter</h2>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000" class="grid wide">
+                <div class="row">
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">1</div>
+                        <h3 class="grid-title">THE GRANDEST PLANET</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Eleven Earths could fit across Jupiter’s equator. If Earth were the size of a grape, Jupiter would be the size of a basketball.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">2</div>
+                        <h3 class="grid-title">FIFTH PLANET FROM OUR STAR</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Jupiter orbits about 484 million miles (778 million kilometers) or 5.2 Astronomical Units (AU) from our Sun (Earth is one AU from the Sun).</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">3</div>
+                        <h3 class="grid-title">SHORT DAY/LONG YEAR</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">
+                                Jupiter rotates once about every 10 hours (a Jovian day), but takes about 12 Earth years to complete one orbit of the Sun (a Jovian year).
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <img class="img-fact" src="images/jupiter-nasa1.jpg" alt="jupiter-nasa">
+                        <div class="thing-fact">
+                            <p class="text-fact">JUPITER AND IO</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">4</div>
+                        <h3 class="grid-title">WHAT'S INSIDE</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Jupiter is a gas giant and so lacks an Earth-like surface. If it has a solid inner core at all, it’s likely only about the size of Earth.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">5</div>
+                        <h3 class="grid-title">MASSIVE WORLD, LIGHT ELEMENTS</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">
+                                Jupiter's atmosphere is made up mostly of hydrogen (H2) and helium (He).
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">6</div>
+                        <h3 class="grid-title">WORLDS GALORE</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Jupiter has more than 75 moons.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">7</div>
+                        <h3 class="grid-title">RINGED WORLD</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">In 1979 the Voyager mission discovered Jupiter’s faint ring system. All four giant planets in our solar system have ring systems.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">8</div>
+                        <h3 class="grid-title">EXPLORING JUPITER</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Nine spacecraft have visited Jupiter. Seven flew by and two have orbited the gas giant. Juno, the most recent, arrived at Jupiter in 2016.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">9</div>
+                        <h3 class="grid-title">INGREDIENTS FOR LIFE?</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Jupiter cannot support life as we know it. But some of Jupiter's moons have oceans beneath their crusts that might support life.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count-fact">10</div>
+                        <h3 class="grid-title">SUPER STORM</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Jupiter's Great Red Spot is a gigantic storm that’s about twice the size of Earth and has raged for over a century.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <img class="img-fact" src="images/jupiter-nasa2.jpg" alt="jupiter-nasa">
+                            <p class="text-fact">GREAT RED SPOT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+
+            <div class="footer__bg">
+                <img src="images/Star.jpg" alt="bg-footer">
+                
+                <div class="footer__infor">
+    
+                    <div class="footer__icon-phone">
+                        <i class="fa-solid fa-phone footer__icon-infor"></i>
+                        <span class="footer__infor-name">Contact Information</span>
+                        <span class="footer__desc">0886313048</span>
+                        <span class="footer__desc">SkyGazing@gmail.com</span>
+                    </div>
+    
+                    <div class="footer__icon-times">
+                        <i class="fa-solid fa-clock footer__icon-infor"></i>
+                        <span class="footer__infor-name">Times</span>
+                        <span class="footer__desc">Days of the week</span>
+                        <span class="footer__desc">(8:00 AM to 10:00 PM)</span>
+                    </div>
+    
+                    <div class="footer__icon-address">
+                        <i class="fa-solid fa-location-dot footer__icon-infor"></i>
+                        <span class="footer__infor-name">Address</span>
+                        <span class="footer__desc">Fpt Aptech Hà Nội</span>
+                        <span class="footer__desc">(Tôn thất thuyết, Mỹ Đình 2, Nam Từ Liêm, Hà Nội)</span>
+                    </div>
+               
+                </div>
+            </div>
+
+        </div>
+
+        <div class="map">
+            <div class="map__address">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966092835115!2d105.78010801471528!3d21.028820085998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9ac1%3A0xa9bc04e04602dd85!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1665652904057!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map__img"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Js/img-slider.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Grid.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="Js/main.js"></script>
+    <script src="Js/time-out.js"></script>
+    <title>Venus</title>
+    <link rel="shortcut icon" type="images/png" href="/logo-icon/solar-system.ico"/>
+    <style>
+        .explo-planet #img-nasa {
+            width: 30%; 
+        }
+        @media only screen and (max-width: 46.1875em){
+            .content-add {
+               height: 78rem;
+            }
+            .content {
+               height: 78rem;
+            }
+            .explo-planet #img-nasa {
+                width: 80%;
+                height: fit-content;
+                margin-top: 40px;
+            }
+        }
+        @media only screen and (min-width: 600px) and (max-width: 800px) {
+            .slider-responsive {
+                height: 900px;
+            }
+            .content-add {
+                height: 56rem;
+            }
+        } 
+        @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+            .content-add {
+                height: 62rem !important;
+            }
+            .content {
+                height: 66rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader disppear" >
+        <img src="../loading/9b1398619fa808505a7dbd6da70b2ff1.gif" alt="">
+    </div>
+
+    <div id="progress">
+        <i class="fa-solid fa-arrow-up" id="progress-value"></i>
+    </div>
+
+    <div id="main">
+        <div id="header">
+            <input type="checkbox" name="" class="nav-input" id="nav-res-input">
+            <label for="nav-res-input" class="nav-overlay"></label>
+            <div id="logo_img">
+                <a href="../Skygazing.com.html"><img src="./images/logo png.png" alt="Logo"></a>
+            </div>
+            <label for="nav-res-input"><i id="icon-mobile" class="bi bi-list"></i></label>
+            <ul id="nav">
+                <li class="astronomy-home__numberlives">live: 220</li>
+                <li><a href="Planets.html">Planets</a>
+                    <ul class="subnav">
+                        <li><a href="Mercury.html">Mercury</a></li>
+                        <li><a href="Venus.html">Venus</a></li>
+                        <li><a href="Earth.html">Earth</a></li>
+                        <li><a href="Mars.html">Mars</a></li>
+                        <li><a href="Jupiter.html">Jupiter</a></li>
+                        <li><a href="Saturn.html">Saturn</a></li>
+                        <li><a href="Uranus.html">Uranus</a></li>
+                        <li><a href="Neptune.html">Neptune</a></li>
+                        <li><a href="Pluto.html">Pluto</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Events The Planets</a>
+                    <ul class="subnav">
+                        <li><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                        <li><a href="../bigbang/bigbang.html">BigBang</a></li>
+                        <li><a href="../EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                    </ul>
+                </li>  
+                <li><a href="#">More</a>
+                    <ul class="subnav">
+                        <li><a href="../star-gazing/star-gazing.html">StarGazing</a></li>
+                        <li><a href="../comet-event/comet.html">Comet</a></li>
+                        <li><a href="../Observation/Observation.html">Observatories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li> 
+                <li class="astronomy-home__time-lives">
+                    <span>Times live:</span>
+                    <span id="hours">00</span>
+                    <span>:</span>
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                    <span id="session">AM</span>
+                </li>
+            </ul>   
+            <div class="header-res">   
+                <label for="nav-res-input"><i id="icon-res" class="bi bi-x-lg"></i></label>
+                <ul id="nav-res">
+                    <li><a href="Planets.html">Planets</a>
+                        <input type="checkbox" id="nav-down1">
+                        <label for="nav-down1"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res1">
+                            <li><i class="bi bi-dash"></i></i><a href="Mercury.html">Mercury</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Venus.html">Venus</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Earth.html">Earth</a></li>
+                            <li><i class="bi bi-dash"></i></i></i><a href="Mars.html">Mars</a></li>
+                            <li><i class="bi bi-dash"></i></i></i><a href="Jupiter.html">Jupiter</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Saturn.html">Saturn</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Uranus.html">Uranus</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Neptune.html">Neptune</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Pluto.html">Pluto</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Events The Planets</a>
+                        <input type="checkbox" id="nav-down2">
+                        <label for="nav-down2"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res2">
+                            <li><i class="bi bi-dash"></i></i><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../bigbang/bigbang.html">BigBang</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                        </ul>
+                    </li>  
+                    <li><a href="#">More</a>
+                        <input type="checkbox" id="nav-down3">
+                        <label for="nav-down3"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res3">
+                            <li><i class="bi bi-dash"></i></i><a href="../star-gazing/star-gazing.html">StarGazing</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../comet-event/comet.html">Comet</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="../Observation/Observation.html">Observatories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About Us</a></li>
+                </ul>  
+            </div>  
+        </div>
+        <div class="slider">
+            <img id="img_planet" src="images/Venus-pln.png" alt="Venus">
+            <div id="planet_name"><b>Venus</b> 
+                <p id="text_planet">
+                    Venus spins slowly in the opposite direction from most planets. A thick atmosphere traps heat in a runaway greenhouse effect, making it the hottest planet in our solar system.
+                </p>
+                <button id="btn_planet"><a href="#More-InfoPlantet">More details</a></button>
+            </div>
+            <div class="planet_info">
+                <table>
+                    <tr>
+                        <th>Surface area:</th>
+                        <td>460.200.000 km²</td>
+                    </tr>
+                    <tr>
+                        <th>Mean density:</th>    
+                        <td>5,24 g/cm³</td>                                      
+                    </tr>
+                    <tr>
+                        <th>Rotation cycle:</th>
+                        <td>243 Earth Days</td>
+                    </tr>
+                    <tr>
+                        <th>Mass:</th>
+                        <td>4,867E24 kg (0,815 M⊕)</td>
+                    </tr>
+                    <tr>
+                        <th>Mean radius:</th>
+                        <td>6.051,8 km</td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td>4,503E9 Year</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="planet_distance">
+                <table>
+                    <tr>
+                        <th>The distance from the Sun</th>
+                        <th>The distance from the Earth</th>
+                    </tr>
+                    <tr>
+                        <td>67,000,000<small>miles</small></td>
+                        <td>38 million<small>miles</small></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="slider-responsive">
+            <img id="img_responsive" src="images/Venus-pln.png" alt="Venus">
+            <div data-aos="fade-up"
+            data-aos-duration="3000" id="planet_responsive"><b>Venus</b> 
+                <p id="text_responsive">
+                    Venus spins slowly in the opposite direction from most planets. A thick atmosphere traps heat in a runaway greenhouse effect, making it the hottest planet in our solar system.
+                </p>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000" class="responsive-table">
+                <table>
+                    <tr>
+                        <th>Surface area:</th>
+                        <td>460.200.000 km²</td>
+                    </tr>
+                    <tr>
+                        <th>Mean density:</th>    
+                        <td>5,24 g/cm³</td>                                      
+                    </tr>
+                    <tr>
+                        <th>Rotation cycle:</th>
+                        <td>243 Earth Days</td>
+                    </tr>
+                    <tr>
+                        <th>Mass:</th>
+                        <td>4,867E24 kg (0,815 M⊕)</td>
+                    </tr>
+                    <tr>
+                        <th>Mean radius:</th>
+                        <td>6.051,8 km</td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td>4,503E9 Year</td>
+                    </tr>
+                </table>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000" class="responsive-distance">
+                <table>
+                    <tr>
+                        <th>The distance from the Sun</th>
+                        <th>The distance from the Earth</th>
+                    </tr>
+                    <tr>
+                        <td class="res-td">67,000,000<small>miles</small></td>
+                        <td class="res-td">38 million<small>miles</small></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2 data-aos="fade-right" data-aos-offset="300" id="title-planet-name">What's The Venus Planet ?</h2>
+                <div class="explo-planet">
+                    <div class="text-explo" data-aos="fade-up"  data-aos-easing="linear"    data-aos-duration="1500">
+                        <p class="text-pln-nasa"> 
+                            Venus is the second planet from the Sun and is Earth’s closest planetary neighbor. It’s one of the four inner, 
+                            terrestrial (or rocky) planets, and it’s often called Earth’s twin because it’s similar in size and density. 
+                            These are not identical twins, however – there are radical differences between the two worlds.
+                        </p>
+                        <details>
+                            <summary>More details</summary>
+                            <p class="text-pln-nasa">
+                                Venus has a thick, toxic atmosphere filled with carbon dioxide and it’s perpetually shrouded in thick, yellowish clouds of sulfuric acid that trap heat, causing a runaway greenhouse effect. It’s the hottest planet in our solar system, even though Mercury is closer to the Sun. Surface temperatures on Venus are about 900 degrees Fahrenheit (475 degrees Celsius) – hot enough to melt lead. The surface is a rusty color and it’s peppered with intensely crunched mountains and thousands of large volcanoes. Scientists think it’s possible some volcanoes are still active.
+                            </p>
+                            <p class="text-pln-nasa">
+                                Venus has crushing air pressure at its surface – more than 90 times that of Earth – similar to the pressure you'd encounter a mile below the ocean on Earth.
+                            </p>
+                        </details>
+                    </div>
+                    <img id="img-nasa" src="images/venus-gif.gif" alt="Nasa_venus" autoplay loop muted play>
+                </div>          
+        </div>
+        <div class="content-img">
+            <div data-aos="zoom-in-up" class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-venus1.jpg" >
+                  <div class="text">
+                    As it sped away in February 1974, NASA's Mariner 10 spacecraft captured this view of Venus showing a world wrapped in a dense layer of toxic clouds. The clouds whip around the planet at about 200 miles per hour (100 meters per second), circling the globe in about four and a half days. Credit: NASA/JPL-Caltech
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-venus2.jpg" >
+                  <div class="text">
+                    After acquiring hundreds of high-resolution images during close approach to Venus, MESSENGER turned its wide-angle camera back to the planet and acquired a departure sequence. Image Credit: NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie Institution of Washington
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-venus3.jpg">
+                  <div class="text">
+                    This is a NASA Hubble Space Telescope ultraviolet-light image of the planet Venus, taken on January 24 1995, when Venus was at a distance of 70.6 million miles (113.6 million kilometers) from Earth. Image Credit: NASA/JPL
+                  </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/img-venus4.jpg">
+                    <div class="text">
+                        This hemispheric view of Venus was created using radar data gathered by NASA's Magellan spacecraft from 1990-1994. Magellan imaged more than 98% of the planet's surface. Image Credit: NASA/JPL/USGS
+                    </div>
+                  </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/img-venus5.jpg">
+                    <div class="text">
+                        This image shows Sacajawea Patera, a large, elongated caldera on Venus. Sacajawea is about 0.6 to 1.2 miles (1-2 kilometers) deep and 74 x 133 miles (120 x 215 kilometers) in diameter. The image was taken by NASA's Magellan spacecraft. Credit: NASA/JPL
+                    </div>
+                </div>
+ 
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                  <span class="dot" onclick="currentSlide(5)"></span> 
+                </div>
+        </div>
+        <div class="content-add">
+            <div class="content-planet">
+                <h4 ata-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">Significant Events</h4>
+                <ul id="years-content">
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>Dec. 14, 1962:</strong> Venus became the first planet to be explored by a spacecraft when NASA’s Mariner 2 successfully flew by the planet at a range of 21,660 miles (34,854 kilometers).</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>Aug. 10, 1990:</strong> Since Mariner 2, numerous spacecraft from the U.S. and other space agencies have explored Venus, including NASA’s Magellan. Magellan entered orbit and over the next four years, it used radar to pierce the planet's clouds, providing the first clear views of most of the planet’s surface.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>2006 - 2016:</strong> More recently, ESA’s Venus Express orbited from 2006 to 2014. Japan’s Akatsuki Venus Climate Orbiter has been orbiting Venus since 2016.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>July 11, 2020:</strong> NASA’s Parker Solar Probe has made multiple flybys of Venus, coming within about 515 miles (830 kilometers) of the surface.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>On Feb. 9, 2022:</strong> NASA announced that Parker had captured its first visible light images of the surface of Venus from space during its February 2021 flyby.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i> Of course, you don’t need a spacecraft or a telescope to observe Venus. It’s the third brightest object in our sky after the Sun and Moon. It’s easy to spot in the evening or morning sky, and people have been watching Venus with their own eyes since ancient times.</li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i>As one of just two bodies between Earth and the Sun, Venus periodically passes across the face of the Sun – a phenomenon called a transit. The most recent transit occurred in 2012, and the next one isn’t until December 2117. (Transits are one of several methods astronomers use to detect exoplanets or planets outside our solar system.)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-last">
+            <div class="content-header">
+                <h2 data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" id="More-InfoPlantet">10 Need-to-Know Things About Venus</h2>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000"  class="grid wide">
+                <div class="row">
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">1</div>
+                        <h3 class="grid-title">TOXIC TWIN</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Venus is often called "Earth’s twin" because they’re similar in size and structure, but Venus has extreme surface heat and a dense, toxic atmosphere. If the Sun were as tall as a typical front door, Earth and Venus would each be about the size of a nickel.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">2</div>
+                        <h3 class="grid-title">SECOND ROCK</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Venus is the second closest planet to the Sun, orbiting at a distance of about 67 million miles (108 million kilometers)</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">3</div>
+                        <h3 class="grid-title">LONG DAYS, SHORT YEARS</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">
+                                Venus rotates very slowly on its axis – one day on Venus lasts 243 Earth days. The planet orbits the Sun faster than Earth, however, so one year on Venus takes only about 225 Earth days, making a Venusian day longer than its year!
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <img class="img-fact" src="images/venus-nasa1.jpg" alt="venus-nasa">
+                        <div class="thing-fact">
+                            <p class="text-fact">MESSENGER BIDS FAREWELL TO VENUS</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">4</div>
+                        <h3 class="grid-title">DIVERSE TERRAIN</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Venus has a solid surface covered in dome-like volcanoes, rifts, and mountains, with expansive volcanic plains and vast, ridged plateaus.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">5</div>
+                        <h3 class="grid-title">YOUTHFUL SURFACE</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">The average surface of Venus is less than a billion years old, and possibly as young as 150 million years old – which is relatively young from a geological perspective. This is a major conundrum for scientists – they don’t know exactly what happened that made Venus completely resurface itself.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">6</div>
+                        <h3 class="grid-title">RUNAWAY GREENHOUSE</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Venus’ thick atmosphere traps heat creating a runaway greenhouse effect – making it the hottest planet in our solar system with surface temperatures hot enough to melt lead. The greenhouse effect makes Venus roughly 700°F (390°C) hotter than it would be without a greenhouse effect.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">7</div>
+                        <h3 class="grid-title">STINKY CLOUDS</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Venus is permanently shrouded in thick, toxic clouds of sulfuric acid that start at an altitude of 28 to 43 miles (45 to 70 kilometers). The clouds smell like rotten eggs!</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">8</div>
+                        <h3 class="grid-title">SPACECRAFT MAGNET</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Venus was the first planet explored by a spacecraft and was intensely studied early in the history of space exploration. Venus was also the first planet whose surface was reached by a spacecraft from Earth. The intense heat means landers have only survived for a couple of hours.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">9</div>
+                        <h3 class="grid-title">LIFE ON VENUS</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Venus is an unlikely place for life as we know it, but some scientists theorize microbes might exist high in the clouds where it’s cooler and the pressure is similar to Earth’s surface. Phosphine, a possible indicator of microbial life, has been observed in the clouds.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count-fact">10</div>
+                        <h3 class="grid-title">BACKWARD SUNRISE</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Venus rotates backward on its axis compared to most planets in our solar system. This means the Sun rises in the west and sets in the east, opposite of what we see on Earth.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <img class="img-fact" src="images/venus-nasa2.jpg" alt="venus-nasa">
+                            <p class="text-fact">MARINER 2: FIRST SPACECRAFT TO EXPLORE VENUS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+
+            <div class="footer__bg">
+                <img src="images/Star.jpg" alt="bg-footer">
+                
+                <div class="footer__infor">
+    
+                    <div class="footer__icon-phone">
+                        <i class="fa-solid fa-phone footer__icon-infor"></i>
+                        <span class="footer__infor-name">Contact Information</span>
+                        <span class="footer__desc">0886313048</span>
+                        <span class="footer__desc">SkyGazing@gmail.com</span>
+                    </div>
+    
+                    <div class="footer__icon-times">
+                        <i class="fa-solid fa-clock footer__icon-infor"></i>
+                        <span class="footer__infor-name">Times</span>
+                        <span class="footer__desc">Days of the week</span>
+                        <span class="footer__desc">(8:00 AM to 10:00 PM)</span>
+                    </div>
+    
+                    <div class="footer__icon-address">
+                        <i class="fa-solid fa-location-dot footer__icon-infor"></i>
+                        <span class="footer__infor-name">Address</span>
+                        <span class="footer__desc">Fpt Aptech Hà Nội</span>
+                        <span class="footer__desc">(Tôn thất thuyết, Mỹ Đình 2, Nam Từ Liêm, Hà Nội)</span>
+                    </div>
+               
+                </div>
+            </div>
+
+        </div>
+
+        <div class="map">
+            <div class="map__address">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966092835115!2d105.78010801471528!3d21.028820085998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9ac1%3A0xa9bc04e04602dd85!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1665652904057!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map__img"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Js/img-slider.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+</html>

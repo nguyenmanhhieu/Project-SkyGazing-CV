@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/style.css">
+  <!-- <link rel="stylesheet" href="css/Grid.css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <script src="Js/main.js"></script>
+
+  <!-- boostrap4 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>THE MOON</title>
+</head>
+
+<body onload="hienthithoigian()" class="overflow">
+
+  <!-- navbar -->
+  <nav style=" background: #060606 !important;" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top navigation">
+    <!-- brand logo -->
+    <a class="navbar-brand" href="#"><img src="./assets/img/logo png.png" alt="Logo"></a>
+    <!-- button for sm-screen -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- nav items -->
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+      <ul class="navbar-nav d-flex justify-content-around navbar-all" style="flex-grow: 1;">
+        <li class="nav-item dropdown text-uppercase">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Planet
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="Mercury.html">Mercury</a>
+            <a class="dropdown-item" href="Venus.html">Venus</a>
+            <a class="dropdown-item" href="Earth.html">Earth</a>
+            <a class="dropdown-item" href="Mars.html">Mars</a>
+            <a class="dropdown-item" href="Jupiter.html">Jupiter</a>
+            <a class="dropdown-item" href="Saturn.html">Saturn</a>
+            <a class="dropdown-item" href="Uranus.html">Uranus</a>
+            <a class="dropdown-item" href="Neptune.html">Neptune</a>
+            <a class="dropdown-item" href="Pluto.html">Pluto</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown text-uppercase">
+          <a class="nav-link dropdown-toggle dropbtn" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+            Events The Planet
+          </a>
+          <div class="dropdown-menu dropdown-content"  aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="Mercury.html">Eclipses</a>
+            <a class="dropdown-item" href="Venus.html">BigBang</a>
+            <a class="dropdown-item" href="Earth.html">Observatories</a>
+          </div>
+        </li>
+        <!-- <li class="nav-item text-uppercase">
+          <a class="nav-link " href="#">Events The Planet</a>
+        </li> -->
+
+        <li class="nav-item dropdown text-uppercase">
+          <a class="nav-link dropdown-toggle dropbtn" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+            More
+          </a>
+          <div class="dropdown-menu dropdown-content"  aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="Mercury.html">Constellation</a>
+            <a class="dropdown-item" href="Venus.html">New</a>
+            <a class="dropdown-item" href="Earth.html">Observatories</a>
+          </div>
+        </li>
+
+
+
+
+        <!-- <li class="nav-item text-uppercase">
+          <a class="nav-link" href="#">More</a>
+        </li> -->
+        <li class="nav-item text-uppercase">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <!--Date times-->
+        <li class="time-navbar">
+          <p>Live times: <span id="time"></span></p>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- content -->
+  <div class="container-fluid bg-black text-light p-0 main-content">
+    <!-- section #1 -->
+    <div style="background:url(./assets/img/Star.jpg) ;" class="p-5">
+      <div class="row p-4">
+        <div class="col">     
+          <h1>THE MOON</h1>
+          <p class="minh-text-planet">
+            The Moon is the only natural satellite of the Earth. Its diameter is 1/4 of the Earth's diameter. 
+            The Moon is the fifth largest satellite in the Solar System. It is larger than any known dwarf planet and is the largest satellite of its parent planet.
+          </p>
+          <button type="button" class="btn btn-light"><a href="#content-section">More details</a></button>
+        </div>
+        <div class="col">
+          <table>
+            <tr>
+              <th class="pr-3">Surface area:</th>
+              <td>37.900.000 km²</td>
+            </tr>
+            <tr>
+              <th class="pr-3">Mean density:</th>
+              <td>3.34 g/cm³</td>
+            </tr>
+            <tr>
+              <th class="pr-3">Orbital period:</th>
+              <td>27 Earth Days</td>
+            </tr>
+            <tr>
+              <th class="pr-3">Mass:</th>
+              <td>0.07346 (1024 kg)</td>
+            </tr>
+            <tr>
+              <th class="pr-3">Mean radius:</th>
+              <td>1,737.4 km</td>
+            </tr>
+            <tr>
+              <th class="pr-3">Age:</th>
+              <td>4.53 billion years</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="row p-4">
+        <table class="table table-borderless">
+          <tr>
+            <th>The distance from the Sun</th>
+            <th>The distance from the Earth</th>
+          </tr>
+          <tr>
+            <td>93 million<small>miles</small></td>
+            <td>384,400 km<small>miles</small></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- section #2 -->
+    <div class="p-5">
+      <div class="row p-4">
+        <div class="col-sm-12 col-md-6">
+          <h2>What is Planet Moon?</h2>
+          <p class="text-pln-nasa">
+            The Moon is Earth's only natural satellite and the fifth largest natural satellite in the Solar System. So far, this is also the only
+             celestial body other than Earth that humans have set foot on.<br>
+            <hr>
+            Most astronomers agree that the Moon was formed 4.527 ± 0.01 billion years ago, that is, about 30 - 50 million years after the
+             Solar System was formed. By far the most dominant theory of the formation of the Moon is the big impact hypothesis. Accordingly,
+             a Mars-sized object is thought to have crashed into the proto-Earth, ejecting a large enough amount of matter into Earth's orbit and forming the Moon through accretion..<br>
+            <hr>
+            The Moon has a very thin, barely noticeable atmosphere. The total mass of its atmosphere is less than 10^4 kg.
+             With such a thin atmosphere, the surface of the Moon cannot keep the temperature, so the average temperature here is 107 degrees Celsius during the day and -153 degrees Celsius at night.
+          </p>
+        </div>
+        <div class="col-sm-12 col-md-6"><img class="img-nasa" src="./assets/img/themoon-gif.gif" alt="Nasa_moon" autoplay loop
+            muted play>
+        </div>
+      </div>
+    </div>
+      <!--Thêm gạch ngang-->
+      <hr  width="100%"   align="center" color="#00FFFF" />
+    <!-- section #3 -->
+    <div>
+      <div class="row p-3 d-flex justify-content-center ">
+        <div class="content-add col-lg-6">
+          <div>
+            <h4 id="content-section"> LUNAR ECLIPSE</h4>
+            <ul class="years-content">
+              <li class="years-content-text"><i class="bi bi-check-circle"></i><strong>Total lunar eclipse:</strong>The moon will turn red during the night from May 15 to May 16.
+                 A total solar eclipse occurs when the Sun, Moon, and Earth align with each other.</li>
+              <li class="years-content-text"><i class="bi bi-check-circle"></i><strong>2018 - 2021:</strong> Each of the eclipse cycles repeats every 177 days and 4 hours (one cycle) at alternating intersections of the Moon's orbit.</li>
+              <li class="years-content-text"><i class="bi bi-check-circle"></i><strong>Day 3 and 4.12:</strong> According to timeanddate.com, when a full moon or a new moon occurs at the time when the Moon is closest to Earth, called a perihelion, it is a supermoon.</li>
+              <li class="years-content-text"><i class="bi bi-check-circle"></i> Super new moon on December 4, 2021 occurs when the Moon and Earth are at a distance of 356,804 km and is the second super new moon of the year, after the super new moon on November 4
+                 (when the Sun and Moon are 359,856 km apart).</li>
+              <li class="years-content-text"><i class="bi bi-check-circle"></i>For astronomy lovers who want to really see the giant Moon, simply observe the Moon as it rises or sets. Because the Moon near the horizon will always be very large thanks to the famous phenomenon known as the Moon illusion.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- section #4 -->
+    <div class="bg-light text-dark p-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8 col-sm-12">
+          <div class="row g-3">
+            <div class="col-lg-4 d-flex flex-column align-items-center mb-4">
+              <div class="number-bg">
+                1
+              </div>
+              <h3 class="p-2 text-center">ON THE MOON</h3>
+              <div>
+                <p class="text-center">The moon's surface is covered with dead volcanoes, impact craters, and lava flows, 
+                  some visible to the unaided stargazer. Early scientists thought the dark stretches of the moon might be
+                   oceans, and so named such features mare, which is Latin for "seas" (maria when there are more than one).</p>
+              </div>
+            </div>
+            <div class="col-lg-4 d-flex flex-column align-items-center mb-4">
+              <div class="number-bg">
+                2
+              </div>
+              <h3 class="p-2 text-center">THE MOON ROUND</h3>
+              <div>
+                <p class="text-center">The Moon takes about one month to orbit Earth (27.3 days to complete a revolution, but 29.5 days to change from New Moon to New Moon). As the Moon completes each 27.3-day orbit around Earth,
+                   both Earth and the Moon are moving around the Sun.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 d-flex flex-column align-items-center mb-4">
+
+              <img class="p-2 w-100" src="./assets/img/phihanhgia.png" alt="moon-nasa">
+              <p class="text-center">
+                PEOPLE SET FOOT ON THE MOON
+              </p>
+            </div>
+            <div class="col-lg-4 d-flex flex-column align-items-center mb-4">
+              <img class="p-2 w-100" src="./assets/img/eclipsesmon-nasa1.jpg" alt="moon-nasa">
+              <p class="text-center">
+                PICTURE OF ECLIPSES
+              </p>
+            </div>
+            <div class="col-lg-4 d-flex flex-column align-items-center mb-4">
+              <div class="number-bg">
+                3
+              </div>
+              <h3 class="p-2 text-center">LIFE ON THE MOON</h3>
+              <div>
+                <p class="text-center">Areas of the moon locked in permanent shadow, like those shown here, can still harbor water. But long ago, water was abundant across the Moon.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 d-flex flex-column align-items-center mb-4">
+              <div class="number-bg">
+                4
+              </div>
+              <h3 class="p-2 text-center">MOON CORE</h3>
+              <div>
+                <p class="text-center ">The team's findings suggest the moon possesses a solid, iron-rich inner core with a radius of nearly 150 miles and a fluid, 
+                  primarily liquid-iron outer core with a radius of roughly 205 miles.</p>
+              </div>
+            </div>
+            
+            <div class="col-lg-4 d-flex flex-column align-items-center mb-4">
+              <div class="number-bg">
+                5
+              </div>
+              <h3 class="p-2 text-center">MAN ON THE MOON</h3>
+              <div>
+                <p class="text-center">When Kennedy said “We choose to go to the moon,” in 1962, he wanted it done by the end of the decade. At the time, Project Mercury,
+                   NASA’s effort to get an astronaut into orbit, was already under way. But much of the expertise and machinery that would allow humans to walk on the moon did not yet exist.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 d-flex flex-column align-items-center mb-4">
+              <div class="number-bg">
+                6
+              </div>
+              <h3 class="p-2 text-center">APOLLO</h3>
+              <div>
+                <p class="text-center">During the Apollo program of the 1960s and 70s, NASA sent nine missions to the Moon.
+                   Six of them safely landed the astronauts on the surface, the only time humans have visited another world.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 d-flex flex-column align-items-center mb-4">
+              <div>
+                <img class="p-2 w-100" src="./assets/img/apollo11.jpn.jpeg" alt="moon-nasa">
+                <p class="text-center">APOLLO 11: FIRST SPACECRAFT TO EXPLORE THE MOON</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- section #5 -->
+    <div>
+      <div class="bg-stary p-5">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 d-flex flex-column justify-content-around text-center">
+            <i class="fa-solid fa-phone footer__icon-infor"></i>
+            <span class="footer__infor-name">Contact Information</span>
+            <span class="footer__desc">0886313048</span>
+            <span class="footer__desc">SkyGazing@gmail.com</span>
+          </div>
+
+          <div class="col-lg-4 col-sm-12 d-flex flex-column justify-content-around text-center">
+            <i class="fa-solid fa-clock footer__icon-infor"></i>
+            <span class="footer__infor-name">Times</span>
+            <span class="footer__desc">Days of the week</span>
+            <span class="footer__desc">(8:00 AM to 10:00 PM)</span>
+          </div>
+
+          <div class="col-lg-4 col-sm-12 d-flex flex-column justify-content-around text-center">
+            <i class="fa-solid fa-location-dot footer__icon-infor"></i>
+            <span class="footer__infor-name">Address</span>
+            <span class="footer__desc">Fpt Aptech Hà Nội</span>
+            <span class="footer__desc">(Tôn thất thuyết, Mỹ Đình 2, Nam Từ Liêm, Hà Nội)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-0">
+      <div class="map__address">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966092835115!2d105.78010801471528!3d21.028820085998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9ac1%3A0xa9bc04e04602dd85!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1665652904057!5m2!1svi!2s"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" class="map__img"></iframe>
+      </div>
+    </div>
+    <div id="progress">
+      <i class="fa-solid fa-arrow-up" id="progress-value"></i>
+    </div>
+  </div>
+
+
+  <!-- boostrap4 -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+    <script>
+
+      window.onload = function(){
+          hienthithoigian()
+      }
+      
+      function hienthithoigian() {
+          const t = new Date();
+          let h = t.getHours();
+          let m = t.getMinutes();
+          let s = t.getSeconds();
+      
+          m = dinhdang2so(m);
+          s = dinhdang2so(s);
+      
+          document.getElementById("time").innerHTML = h + ":" + m + ":" + s ;
+          setTimeout(hienthithoigian, 1000);
+      }
+      function dinhdang2so(x){
+          if (x  <10) {
+               x = "0" + x;
+               return x;
+          }else{
+          return x;
+          }
+      }
+          </script>
+
+</body>
+
+</html>

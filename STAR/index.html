@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./asets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <script src="Js/main.js"></script>
+
+  <!-- boostrap4 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>STAR</title>
+</head>
+
+<body onload="hienthithoigian()" class="overflow">
+
+
+  <!-- navbar -->
+  <nav style=" background: #060606 !important; height: 74px;" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top navigation">
+    <!-- brand logo -->
+    <a class="navbar-brand" href="#"><img src="./asets/img/logo png.png" alt="Logo"></a>
+    <!-- button for sm-screen -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- nav items -->
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+      <ul class="navbar-nav d-flex justify-content-around navbar-all" style="flex-grow: 1;">
+        <li class="time-navbar">
+          <p style="margin: 15px;">Live: 220</p>
+        </li>
+
+
+        <li class="nav-item dropdown text-uppercase">
+          <a class="nav-link dropdown-toggle dropbtn" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+             Planet
+          </a>
+          <div class="dropdown-menu dropdown-content"  aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="Mercury.html">Mercury</a>
+            <a class="dropdown-item" href="Venus.html">Venus</a>
+            <a class="dropdown-item" href="Earth.html">Earth</a>
+            <a class="dropdown-item" href="Mars.html">Mars</a>
+            <a class="dropdown-item" href="Jupiter.html">Jupiter</a>
+            <a class="dropdown-item" href="Saturn.html">Saturn</a>
+            <a class="dropdown-item" href="Uranus.html">Uranus</a>
+            <a class="dropdown-item" href="Neptune.html">Neptune</a>
+            <a class="dropdown-item" href="Pluto.html">Pluto</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown text-uppercase">
+          <a class="nav-link dropdown-toggle dropbtn" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+            Events The Planet
+          </a>
+          <div class="dropdown-menu dropdown-content"  aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="Mercury.html">Eclipses</a>
+            <a class="dropdown-item" href="Venus.html">BigBang</a>
+            <a class="dropdown-item" href="Earth.html">Evolved Earth</a>
+          </div>
+        </li>
+       
+        <li class="nav-item dropdown text-uppercase">
+          <a class="nav-link dropdown-toggle dropbtn" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+            More
+          </a>
+          <div class="dropdown-menu dropdown-content"  aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">StarGazing</a>
+            <a class="dropdown-item" href="#">Comet</a>
+            <a class="dropdown-item" href="#">Constellation</a>
+            <a class="dropdown-item" href="#">News</a>
+            <a class="dropdown-item" href="#">Observatories</a>
+          </div>
+        </li>
+
+        <li class="nav-item text-uppercase">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <!--Date times-->
+         <li class="time-navbar">
+            <p style="margin: 15px;" >Live times: <span id="time"></span></p>
+          </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- content -->
+  <div class="container-fluid bg-black text-light p-0 main-content">
+    <!-- section #1 -->
+    <div style="background:url(./asets/img/Star1.jpg); height: 750px;margin: -26px;" class="p-5">
+      <div class="row p-4 text-content">
+        <div style="padding-top: 200px;" class="col">     
+          <h1 style="font-size: 3.5rem;">TOP TIPS FOR STARGAZING</h1>
+          <p class="minh-text-planet sub-content">
+            The stars in outer space
+          </p>
+          <button type="button" class="btn btn-light"><a href="#content-section">More details</a></button>
+        </div>
+       
+      </div>
+    
+    </div>
+
+    <!-- section #2 -->
+    <div class="p-5">
+      <div class="row p-4">
+        <div class="col-sm-12 col-md-6">
+          <h2> Interesting facts about the stars !</h2>
+          <p class="text-pln-nasa">
+            Every star that the human eye can see in the sky is many times larger and brighter than the Sun. Of the 50 brightest stars visible to the naked eye on Earth, the weakest is Alpha Centauri. However, it is still 1.5 times brighter than the Sun and cannot be easily seen in the northern hemisphere.<br>
+            <hr>
+             On nights without the moon or any other light source around, a person with good eyesight can see about 2,000 - 2,500 stars at a time. So, if someone says they see millions of stars in the sky, that's just an exaggeration.
+            
+          </p>
+        </div>
+        <div class="col-sm-12 col-md-6"><img class="img-comet" src="./asets/img/stardong.gif" alt="Nasa_moon" autoplay loop
+            muted play>
+        </div>
+      </div>
+    </div>
+      <!--Thêm gạch ngang-->
+      <hr  width="100%"   align="center" color="#00FFFF" />
+    <!-- section #3 -->
+    <div>
+      <div class="row p-3 d-flex justify-content-center ">
+        <div class="content-add col-lg-6">
+          <div>
+            <h4 id="content-section">STAR VIEW LOCATIONS</h4>
+            <ul class="years-content">
+              <li class="years-content-text"><i class="bi bi-check-circle"></i><strong>1.Brecon Beacons, Wales :</strong>During the day, the area is barren with high humidity,
+                but when the sky is clear, the Brecon Beacons site is well worth the long way here. Wales' first 'night sky reserve' has effectively reduced light pollution with the participation of local communities, enabling meteor showers, nebulae and, rarely, meteor showers. Northern Lights in excellent condition. 
+               You can bring binoculars to Hay Bluff or to the atmospheric ruins of medieval Llanthony Abbey to experience starry nights.
+                 <img class="img-star" style="height: 350px; width: 650px;" src="./asets/img/Brecon Beacons.jpg" alt="img-star">
+                </li>
+                <!-- <img style="height: 350px; width: 650px;" src="./asetss/img/Conmet1.jpeg" alt="img-comet"> -->
+              <li class="years-content-text"><i class="bi bi-check-circle"></i><strong>2.Pic du Midi Observatory, Haute-Pyrénées, France :</strong> Hiding in the clouds amid the spectacular peaks of the Pyrenees,
+                Pic du Midi is an extraordinary spot to watch the sky day and night. As the sunset gradually erased the entire mountain landscape, the bright stars covered the sky like a shimmering carpet.
+                 <img class="img-star" style="height: 350px; width: 650px;" src="./asets/img/ PicduMidi.jpg" alt="img-star">
+                </li>
+              
+              <li class="years-content-text"><i class="bi bi-check-circle"></i><strong>3.Atacama Desert, Chile:</strong> The dry conditions and low cloud cover, combined with an altitude of 5000m, make it one of
+                the world's top places for space observation. International scientists use high-tech satellites at the ALMA Observatory - home to the world's largest astronomical project - to "search for the 
+                origins of our universe" with antennas built clustered in clusters in the Atacama Desert facing the sky.
+                <img class="img-star" style="height: 350px; width: 650px;" src="./asets/img/ Atacama.jpg" alt="img-star">
+            </li>
+
+            <li class="years-content-text"><i class="bi bi-check-circle"></i><strong>4.Mauna Kea, Hawaii :</strong> Located more than 4,200m above sea level and with a year-round dry climate, the summit of Mauna 
+                Kea – a dormant volcano on the southernmost island of Hawaii – is ideal for astronomical observations. 13 giant observatories and telescopes owned by 11 different countries appear on the top of Mauna
+                 Kea with the aim of making it possible for scientists to perceive light from distant galaxies.
+                <img class="img-star" style="height: 350px; width: 650px;" src="./asets/img/Hawaii.jpg" alt="img-star">
+            </li>
+
+            <li class="years-content-text"><i class="bi bi-check-circle"></i><strong>5.Sark, Channel Islands :</strong> Designated as the world's first "Night Sky Island" in 2011, tiny Sark Island is free from cars
+                 and street lights, so light pollution is very low. After sunset, the sky above the smallest of the Channel Islands becomes a splendid picture illuminated by thousands of stars. You can see planets and 
+                 meteors without a telescope. Sark also has its own observatory for closer observations of the solar system.
+                <img class="img-star" style="height: 350px; width: 650px;" src="./asets/img/Kerry.jpg" alt="img-star">
+            </li>
+
+            <li class="years-content-text"><i class="bi bi-check-circle"></i><strong>6.Kerry, Ireland :</strong> The star clusters, nebulae and the Andromeda galaxy are all visible to the naked eye in the unpolluted sky over
+                 the beautiful Kerry Peninsula, which sits next to the Kerry Mountains and the Atlantic Ocean. In particular, inscriptions found on prehistoric monuments of the region show that observations of the planets have 
+                 taken place over thousands of years.
+                <img class="img-star" style="height: 350px; width: 650px;" src="./asets/img/Sark.jpg" alt="img-star">
+            </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- section #4 -->
+    <div class="bg-light text-dark p-5">
+      <div class="row d-flex justify-content-center section-justify">
+        <div style="padding:25px 0" class="col-lg-8 col-sm-12">
+          <div class="row g-3">
+            <div class="col-lg-4 d-flex flex-column align-items-center mb-4">
+                <div>
+                  <img class="p-2 w-100" src="./asets/img/hearts&magic.gif" alt="img-star">
+                  <p class="text-center">SKY FULL OF STARS</p>
+                </div>
+              </div>
+
+            <div class="col-lg-4 d-flex flex-column align-items-center mb-4">
+                <h3 class="p-2 text-center topic">The best time to see the stars</h3>
+                <div>
+                  <p class="text-center sub-topic"> If you want to see the stars, you also have to pay attention to the weather. This depends on the weather forecast.
+                     Choose days when the sky is clear and cloudy, without fog. You should look at the stars when the sun has completely disappeared. And of course it will be the most beautiful at night.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-flex flex-column align-items-center mb-4">
+                <h3 class="p-2 text-center topic">Expect From Stargazing</h3>
+                <div>
+                  <p class="text-center sub-topic"> It tells us how small our presence is in the vast and vast universe.It really helps reduce stress and anxiety
+                    Looking up at the dark sky will wash away all the troubles in your head. The pace of human life is increasing, stargazing will help the current life look much more "breathable".
+                  </p>
+                </div>
+              </div>
+
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- section #5 -->
+
+    <div class="container-fluid p-0">
+      <div class="map__address">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966092835115!2d105.78010801471528!3d21.028820085998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9ac1%3A0xa9bc04e04602dd85!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1665652904057!5m2!1svi!2s"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" class="map__img"></iframe>
+      </div>
+        <!--feeback from-->
+  <div class="footer-form m-o c-0 l-5">
+    <form class="footer__form-2 danhgia " onsubmit="sendEmail(); reset(); return false;">
+        <div class="footer-feedback">
+            <p class="footer__feedback-text">Feedback Form:</p>
+        </div>
+        <input type="text" id="footer-form__name" placeholder="Your Name" required class="footer-form__box-2">
+        <input type="email" id="footer-form__email" placeholder="Your Email" required class="footer-form__box-2">
+        <textarea id="message" type="footer-form__message" row="10" placeholder="How can we help you?" class="footer-form__box-message" required> </textarea>
+        <button style="color: #fff; margin: 20px 120px;" type="submit" id="form-2" class="footer-form__click">Send</button>
+    </form>
+  </div>
+
+    </div>
+    <div class="bg-stary p-5">
+      <div class="row">
+        <div style="text-align: left !important;" class="col-lg-4 col-sm-12 d-flex flex-column justify-content-around text-center">
+          <!-- <i class="fa-solid fa-phone footer__icon-infor"></i> -->
+          <span class="footer__infor-name">OUR ADDRES</span>
+          <span class="footer__desc">Mỹ Đình 2, Nam Từ Liêm, Hà Nội</span>
+          <span class="footer__desc">FPT APTECH</span>
+        </div>
+
+        <div style="text-align: left !important;" class="col-lg-4 col-sm-12 d-flex flex-column justify-content-around text-center">
+          <!-- <i class="fa-solid fa-clock footer__icon-infor"></i> -->
+          <span class="footer__infor-name">OUR CONTACT</span>
+          <span class="footer__desc">skygazing2022@gmail.com</span>
+          <span class="footer__desc">0886313048</span>
+        </div>
+
+        <div style="text-align: left !important; display: inline-block;" class="col-lg-4 col-sm-12 d-flex flex-column justify-content-around text-center">
+          <!-- <i class="fa-solid fa-location-dot footer__icon-infor"></i> -->
+          <li class="icon-contact">
+            <i class="fa-brands fa-facebook"></i>
+            <i style="padding: 0 10px;" class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </li> 
+          <div class="follow-us">
+            <hr style="background-color: rgb(111, 146, 243); width: 25px; height: 5px;">
+            <p style="padding: 6px;" >follow us</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="progress">
+      <i class="fa-solid fa-arrow-up" id="progress-value"></i>
+    </div>
+  </div>
+
+
+  <!-- boostrap4 -->
+  <script src="./Data/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        window.onload = function(){
+            hienthithoigian()
+        }
+        
+        function hienthithoigian() {
+            const t = new Date();
+            let h = t.getHours();
+            let m = t.getMinutes();
+            let s = t.getSeconds();
+        
+            m = dinhdang2so(m);
+            s = dinhdang2so(s);
+        
+            document.getElementById("time").innerHTML = h + ":" + m + ":" + s ;
+            setTimeout(hienthithoigian, 1000);
+        }
+        function dinhdang2so(x){
+            if (x  <10) {
+                 x = "0" + x;
+                 return x;
+            }else{
+            return x;
+            }
+        }
+            </script>
+
+</body>
+
+</html>

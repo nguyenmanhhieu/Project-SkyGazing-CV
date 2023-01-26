@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/star-gazing.css">
+    <link rel="stylesheet" href="../reset/reset.css">
+    <link rel="stylesheet" href="../grid/grid_astronomy.css">
+    <link rel="stylesheet" href="./js/star-gazing.js">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Star-Gazing</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" type="images/png" href="/logo-icon/solar-system.ico"/>
+
+
+</head>
+<body>
+
+    <div class="loader disppear" >
+        <img src="../loading/9b1398619fa808505a7dbd6da70b2ff1.gif" alt="">
+    </div>
+
+    <div class="astronomy-home">
+
+        <!-- menu -->
+
+        <div id="header">
+            <input type="checkbox" name="" class="nav-input" id="nav-res-input">
+            <label for="nav-res-input" class="nav-overlay"></label>
+            <div id="logo_img">
+                <a href="../Skygazing.com.html"><img src="./img/logo png.png" alt="Logo"></a>
+            </div>
+            <label for="nav-res-input"><i id="icon-mobile" class="bi bi-list"></i></label>
+            <ul id="nav">
+                <li class="astronomy-home__numberlives">live: 220</li>
+                <li><a href="#">Planets</a>
+                    <ul class="subnav">
+                        <li><a href="../planet/Mercury.html">Mercury</a></li>
+                        <li><a href="../planet/Venus.html">Venus</a></li>
+                        <li><a href="../planet/Earth.html">Earth</a></li>
+                        <li><a href="../planet/Mars.html">Mars</a></li>
+                        <li><a href="../planet/Jupiter.html">Jupiter</a></li>
+                        <li><a href="../planet/Saturn.html">Saturn</a></li>
+                        <li><a href="../planet/Uranus.html">Uranus</a></li>
+                        <li><a href="../planet/Neptune.html">Neptune</a></li>
+                        <li><a href="../planet/Pluto.html">Pluto</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Events The Planets</a>
+                    <ul class="subnav">
+                        <li><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                        <li><a href="../bigbang/bigbang.html">BigBang</a></li>
+                        <li><a href="../EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                    </ul>
+                </li>  
+                <li><a href="#">More</a>
+                    <ul class="subnav">
+                        <li><a href="./star-gazing.html">StarGazing</a></li>
+                        <li><a href="../comet-event/comet.html">Comet</a></li>
+                        <li><a href="../Observation/Observation.html">Observatories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li> 
+                <li class="astronomy-home__time-lives">
+                    <span>Times live:</span>
+                    <span id="hours">00</span>
+                    <span>:</span>
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                    <span id="session">AM</span>
+                </li>
+            </ul> 
+            <div class="header-res">   
+                <label for="nav-res-input"><i id="icon-res" class="bi bi-x-lg"></i></label>
+                <ul id="nav-res">
+                    <li class="nav-res__menu"><a href="#">Planets</a>
+                        <input type="checkbox" id="nav-down1">
+                        <label for="nav-down1"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res1">
+                            <li><a href="../planet/Mercury.html">Mercury</a></li>
+                            <li><a href="../planet/Venus.html">Venus</a></li>
+                            <li><a href="../planet/Earth.html">Earth</a></li>
+                            <li><a href="../planet/Mars.html">Mars</a></li>
+                            <li><a href="../planet/Jupiter.html">Jupiter</a></li>
+                            <li><a href="../planet/Saturn.html">Saturn</a></li>
+                            <li><a href="../planet/Uranus.html">Uranus</a></li>
+                            <li><a href="../planet/Neptune.html">Neptune</a></li>
+                            <li><a href="../planet/Pluto.html">Pluto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-res__menu"><a href="#">Events The Planets</a>
+                        <input type="checkbox" id="nav-down2">
+                        <label for="nav-down2"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res2">
+                            <li><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                            <li><a href="../bigbang/bigbang.html">BigBang</a></li>
+                            <li><a href="./EvolveEarth.html">Evolved Earth</a></li>
+                        </ul>
+                    </li>  
+                    <li class="nav-res__menu"><a href="#">More</a>
+                        <input type="checkbox" id="nav-down3">
+                        <label for="nav-down3"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res3">
+                            <li><a href="./star-gazing.html">StarGazing</a></li>
+                            <li><a href="../comet-event/comet.html">Comet</a></li>
+                            <li><a href="../Observation/Observation.html">Observatories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-res__menu"><a href="#">About Us</a></li>
+                </ul>  
+            </div> 
+        </div>
+
+        <!-- banner -->
+
+        <div class="banner">
+            <img src="./img/Star1.jpg" alt="background-destination-desktop" class="banner-img">
+
+            <div class="banner-link">
+                <p class="banner-title">SUPER COMET</p>
+                <p class="banner-desc">Dirty Snow Ball</p>
+                <div class="banner-click">
+                    <button class="banner-click__button"><a href="#content-seconds__post">More details</a></button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- content 1 -->
+
+        <div class="content-first">
+            <div class="content-first__grid grid wide">
+                <div class="content-first__row body-row_post">
+
+                    <div class="content-first__setting col l-6 m-10 c-10">
+                        <div class="content-first__post-1">
+                            <p class="content-first__title" data-aos="fade-right" data-aos-duration="2000">Interesting facts about the stars!</p>
+                            <p class="content-first__desc" data-aos="fade-right" data-aos-duration="2000">Every star that the human eye can see in 
+                                the sky is many times larger and brighter than the Sun. Of the 50 
+                                brightest stars visible to the naked eye on Earth, the weakest is 
+                                Alpha Centauri. However, it is still 1.5 times brighter than the 
+                                Sun and cannot be easily seen in the northern hemisphere.
+                            </p>
+                            <p class="content-first__desc" data-aos="fade-right" data-aos-duration="2000">On nights without the moon or any other 
+                                light source around, a person with good eyesight can see about 
+                                2,000 - 2,500 stars at a time. So, if someone says they see millions 
+                                of stars in the sky, that's just an exaggeration.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="content-first__setting col l-6 m-10 c-10">
+                        <div class="content-first__gif-1" data-aos="fade-left" data-aos-duration="2000">
+                            <img src="./img/stardong.gif" alt="Comet Space Stars" class="content-first__gif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- content 2 -->
+
+        <div class="content-seconds">
+            <div class="content-seconds__grid grid wide">
+                <div class="content-seconds__row row-colum">
+                    <div class="content-seconds__setting col l-8 l-o-2 m-10 c-10 c-o-1">
+                        <div class="content-seconds__post" id="content-seconds__post">
+
+                            <p class="content-seconds__title" data-aos="fade-up" data-aos-duration="2000">STAR VIEW LOCATIONS</p>
+                        
+                            <p class="content-seconds__desc" data-aos="fade-up" data-aos-duration="2000"><strong style="font-weight: 700;">1.Brecon Beacons, Wales :</strong>
+                            During the day, the area is barren with high humidity, but when the sky is clear, the Brecon Beacons 
+                            site is well worth the long way here. Wales' first 'night sky reserve' has effectively reduced light 
+                            pollution with the participation of local communities, enabling meteor showers, nebulae and, rarely, 
+                            meteor showers. Northern Lights in excellent condition. You can bring binoculars to Hay Bluff or to 
+                            the atmospheric ruins of medieval Llanthony Abbey to experience starry nights.</p>
+        
+                            <div class="content-seconds__img" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="./img/Brecon Beacons.jpg" alt="Brecon Beacons" class="content-seconds__img-comet">
+                            </div>
+        
+                            <p class="content-seconds__desc" data-aos="fade-up" data-aos-duration="2000"><strong style="font-weight: 700;">2.Pic du Midi Observatory, Haute-Pyrénées, France: </strong>
+                            Hiding in the clouds amid the spectacular peaks of the Pyrenees, Pic du Midi is an extraordinary spot to watch the sky day 
+                            and night. As the sunset <br>
+                            gradually erased the entire mountain landscape, the bright stars covered the sky like a shimmering carpet.
+                            </br></p>
+        
+                            <div class="content-seconds__img" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="./img/ PicduMidi.jpg" alt="img-comet" class="content-seconds__img-comet">
+                            </div>
+
+                            <p class="content-seconds__desc" data-aos="fade-up" data-aos-duration="2000"><strong style="font-weight: 700;">3.Atacama Desert, Chile: </strong>
+                            The dry conditions and low cloud cover, combined with an altitude of 5000m, make it one of the world's top places for space 
+                            observation. International scientists use high-tech satellites at the ALMA Observatory - home to the world's largest 
+                            astronomical project - to "search for the origins of our universe" with antennas built clustered in clusters in the Atacama
+                            Desert facing the sky.
+                            </p>
+        
+                            <div class="content-seconds__img" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="./img/ Atacama.jpg" alt="img-comet" class="content-seconds__img-comet">
+                            </div>
+
+                             <p class="content-seconds__desc" data-aos="fade-up" data-aos-duration="2000"><strong style="font-weight: 700;">4.Mauna Kea, Hawaii: </strong>
+                            Located more than 4,200m above sea level and with a year-round dry climate, the summit of Mauna Kea – a dormant volcano on 
+                            the southernmost island of Hawaii – is ideal for astronomical observations. 13 giant observatories and telescopes owned by 
+                            11 different countries appear on the top of Mauna Kea with the aim of making it possible for scientists to perceive light 
+                            from distant galaxies.
+                            </p>
+        
+                            <div class="content-seconds__img" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="./img/Hawaii.jpg" alt="img-comet" class="content-seconds__img-comet">
+                            </div>
+
+                            <p class="content-seconds__desc" data-aos="fade-up" data-aos-duration="2000"><strong style="font-weight: 700;">5.Sark, Channel Islands: </strong>
+                                Designated as the world's first "Night Sky Island" in 2011, tiny Sark Island is free from cars and street lights, so 
+                                light pollution is very low. After sunset, the sky above the smallest of the Channel Islands becomes a splendid picture 
+                                illuminated by thousands of stars. You can see planets and meteors without a telescope. Sark also has its own observatory 
+                                for closer observations of the solar system.
+                            </p>
+        
+                            <div class="content-seconds__img" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="./img/Kerry.jpg" alt="img-comet" class="content-seconds__img-comet">
+                            </div>
+
+                            <p class="content-seconds__desc" data-aos="fade-up" data-aos-duration="2000"><strong style="font-weight: 700;">6.Kerry, Ireland: </strong>
+                                The star clusters, nebulae and the Andromeda galaxy are all visible to the naked eye in the unpolluted sky over the beautiful 
+                                Kerry Peninsula, which sits next to the Kerry Mountains and the Atlantic Ocean. In particular, inscriptions found on prehistoric 
+                                monuments of the region show that observations of the planets have taken place over thousands of years.
+                            </p>
+        
+                            <div class="content-seconds__img" data-aos="fade-up" data-aos-duration="2000">
+                                <img src="./img/Kerry.jpg" alt="img-comet" class="content-seconds__img-comet">
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content 3 -->
+
+        <div class="content-three">
+            <div class="content-three__grid grid wide">
+                <div class="content-three__row body-row_post">
+
+                    <div class="content-information__setting col l-3 m-12 c-12">
+                        <div class="content-three__post" data-aos="fade-right" data-aos-duration="2000">
+                            <div class="content-three__gif">
+                                <img src="./img/hearts&magic.gif" alt="hearts&magic" class="content-three__img">
+                            </div>
+                            <div class="content-three__desc">
+                                <span class="content-three__desc-text">SKY FULL OF STARS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-information__setting col l-3 m-12 c-12">
+                        <div class="content-three__post" data-aos="fade-right" data-aos-duration="2500">
+                            <div class="content-three__title">
+                                <p class="content-three__title-text">The best time to see the stars</p>
+                            </div>
+                            <div class="content-three__content">
+                                <p class="content-three__content-text">If you want to see the stars, 
+                                    you also have to pay attention to the weather. This depends on the 
+                                    weather forecast. Choose days when the sky is clear and cloudy, 
+                                    without fog. You should look at the stars when the sun has completely 
+                                    disappeared. And of course it will be the most beautiful at night.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-information__setting col l-3 m-12 c-12">
+                        <div class="content-three__post" data-aos="fade-right" data-aos-duration="3000">
+                            <div class="content-three__title">
+                                <p class="content-three__title-text">Expect From Stargazing</p>
+                            </div>
+                            <div class="content-three__content">
+                                <p class="content-three__content-text">It tells us how small our presence 
+                                    is in the vast and vast universe.It really helps reduce stress and anxiety 
+                                    Looking up at the dark sky will wash away all the troubles in your head. 
+                                    The pace of human life is increasing, stargazing will help the current life 
+                                    look much more "breathable".
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- Footer -->
+
+   <div class="footer">
+        <div class="footer-title">
+            <p class="footer-title__contact">Contact Us</p>
+        </div>
+
+        <div class="footer-contact__mobie grid wide">
+            <div class="footer-contact__row row">
+                <div class="footer-contact__setting col c-10 c-o-1 l-0">
+
+                    <div class="footer-contact">
+                        <form class="footer-contact__form" onsubmit="sendEmail(); reset(); return false;">
+                            <div class="footer-feedback">
+                                <p class="footer__feedback-text">Feedback Form:</p>
+                            </div>
+                            <input type="text" id="fullName" placeholder="Your Name" required class="footer-contact__box">
+                            <input type="email" id="email_id" placeholder="Your Email" required class="footer-contact__box">
+                            <textarea id="message" type="footer-contact__message" row="10" placeholder="How can we help you?" required class="footer-contact__box"> </textarea>
+                            <button onclick="SendMail()" type="submit" id="btn" class="footer-contact__click">Send</button>
+                
+                        </form>
+                    </div>
+
+                </div>
+                
+            </div>
+       
+        </div>
+
+        <div class="footer-contact__2">
+
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966092835115!2d105.78010801471528!3d21.028820085998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9ac1%3A0xa9bc04e04602dd85!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1665652904057!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="footer-map__img"></iframe>
+            </div>
+            
+            <div class="footer-form m-o c-0 l-5">
+                <form class="footer__form-2">
+                    <div class="footer-feedback">
+                        <p class="footer__feedback-text">Feedback Form:</p>
+                    </div>
+                    <input type="text" id="fullName" placeholder="Your Name" required class="footer-form__box-2">
+                    <input type="email" id="email_id" placeholder="Your Email" required class="footer-form__box-2">
+                    <textarea id="message" type="footer-form__message" row="10" placeholder="How can we help you?" class="footer-form__box-message" required> </textarea>
+                    <button onclick="SendMail()" class="footer-form__click">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact-about" data-aos="fade-up" data-aos-duration="2000">
+            <div class="contact-about__grid grid wide">
+                <div class="footer-about__flex">
+                    <div class="footer-about__row body-row_post-4">
+                        
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__1">
+                                <p class="contact-about__title">OUR ADDRES</p>
+                                <p class="contact-about__desc">Mỹ Đình 2, Nam Từ Liêm, Hà Nội</p>
+                                <p class="contact-about__desc">FPT APTECH</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__2">
+                                <p class="contact-about__title">OUR CONTACT</p>
+                                <p class="contact-about__desc">skygazing2022@gmail.com</p>
+                                <p class="contact-about__desc">0886313048</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__icon">
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__flower l-3 l-o-9">
+                            <p class="contact-about__flower-text">follow us</p>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+
+            <!-- mobie -->
+
+            <div class="contact-about__grid grid wide">
+                <div class="footer-about__flex">
+                    <div class="footer-about__row row-footer__contact">
+                        
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__title">OUR ADDRES</p>
+                                <p class="contact-about__desc">Mỹ Đình 2, Nam Từ Liêm, Hà Nội</p>
+                                <p class="contact-about__desc">FPT APTECH</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__title">OUR CONTACT</p>
+                                <p class="contact-about__desc">skygazing2022@gmail.com</p>
+                                <p class="contact-about__desc">0886313048</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer-icon">
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__folower">Follower</p>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+   
+    </div>
+
+    <!-- scroll to top -->
+
+    <div id="progress">
+        <i class="fa-solid fa-arrow-up" id="progress-value"></i>
+    </div>
+
+    <script src="./js/star-gazing.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

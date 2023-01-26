@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/EvolveEarth.css">
+    <link rel="stylesheet" href="../reset/reset.css">
+    <link rel="stylesheet" href="../grid/grid_astronomy.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="images/png" href="/logo-icon/solar-system.ico"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" type="images/png" href="/logo-icon/solar-system.ico"/>
+
+    <title>EvolveEarth</title>
+</head>
+<body>
+    <div class="loader disppear" >
+        <img src="../loading/9b1398619fa808505a7dbd6da70b2ff1.gif" alt="">
+    </div>
+    <div class="astronomy-home">
+        <div id="header">
+            <input type="checkbox" name="" class="nav-input" id="nav-res-input">
+            <label for="nav-res-input" class="nav-overlay"></label>
+            <div id="logo_img">
+                <a href="../Skygazing.com.html"><img src="./img/logo png.png" alt="Logo"></a>
+            </div>
+            <label for="nav-res-input"><i id="icon-mobile" class="bi bi-list"></i></label>
+            <ul id="nav">
+                <li class="astronomy-home__numberlives">live: 220</li>
+                <li><a href="#">Planets</a>
+                    <ul class="subnav">
+                        <li><a href="../planet/Mercury.html">Mercury</a></li>
+                        <li><a href="../planet/Venus.html">Venus</a></li>
+                        <li><a href="../planet/Earth.html">Earth</a></li>
+                        <li><a href="../planet/Mars.html">Mars</a></li>
+                        <li><a href="../planet/Jupiter.html">Jupiter</a></li>
+                        <li><a href="../planet/Saturn.html">Saturn</a></li>
+                        <li><a href="../planet/Uranus.html">Uranus</a></li>
+                        <li><a href="../planet/Neptune.html">Neptune</a></li>
+                        <li><a href="../planet/Pluto.html">Pluto</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Events The Planets</a>
+                    <ul class="subnav">
+                        <li><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                        <li><a href="../bigbang/bigbang.html">BigBang</a></li>
+                        <li><a href="./EvolveEarth.html">Evolved Earth</a></li>
+                    </ul>
+                </li>  
+                <li><a href="#">More</a>
+                    <ul class="subnav">
+                        <li><a href="../star-gazing/star-gazing.html">StarGazing</a></li>
+                        <li><a href="../comet-event/comet.html">Comet</a></li>
+                        <li><a href="../Observation/Observation.html">Observatories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li> 
+                <li class="astronomy-home__time-lives">
+                    <span>Times live:</span>
+                    <span id="hours">00</span>
+                    <span>:</span>
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                    <span id="session">AM</span>
+                </li>
+            </ul> 
+            <div class="header-res">   
+                <label for="nav-res-input"><i id="icon-res" class="bi bi-x-lg"></i></label>
+                <ul id="nav-res">
+                    <li class="nav-res__menu"><a href="#">Planets</a>
+                        <input type="checkbox" id="nav-down1">
+                        <label for="nav-down1"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res1">
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="../planet/Mercury.html">Mercury</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="../planet/Venus.html">Venus</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="../planet/Earth.html">Earth</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i></i><a href="../planet/Mars.html">Mars</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i></i><a href="../planet/Jupiter.html">Jupiter</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="../planet/Saturn.html">Saturn</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="../planet/Uranus.html">Uranus</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="../planet/Neptune.html">Neptune</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="../planet/Pluto.html">Pluto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-res__menu"><a href="#">Events The Planets</a>
+                        <input type="checkbox" id="nav-down2">
+                        <label for="nav-down2"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res2">
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="../bigbang/bigbang.html">BigBang</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="./EvolveEarth.html">Evolved Earth</a></li>
+                        </ul>
+                    </li>  
+                    <li class="nav-res__menu"><a href="#">More</a>
+                        <input type="checkbox" id="nav-down3">
+                        <label for="nav-down3"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res3">
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="../star-gazing/star-gazing.html">StarGazing</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="../comet-event/comet.html">Comet</a></li>
+                            <li class="nav-menu__child"><i class="bi bi-dash"></i></i><a href="../Observation/Observation.html">Observatories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-res__menu"><a href="#">About Us</a></li>
+                </ul>  
+            </div> 
+        </div>
+
+        <!-- banner -->
+        <div class="banner">
+
+            <div class="banner-img">
+                <video class="banner-img__slider" autoplay loop muted plays>
+                    <source src="./img/rock-gif-2.mp4">
+                </video>
+            </div>
+
+        </div>
+
+        <!-- post -->
+        <div class="post">
+
+            <!-- post-title__img -->
+
+            <div class="post-Evolve">
+
+                <div class="post-grid-wide grid wide">
+                    <div class="post-row row">
+                        <div class="post-setting col l-6 l-o-3 c-10 c-o-1 m-10 m-o-1">
+                            <div class="post-title">
+                                <p class="post-title__post">How Did the Earth Form?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-img__title l-8 l-o-2 c-10 c-o-1">
+                    <div class="post-img__setting" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                        <img src="./img/Earth_Evolution-2.jpeg" alt="Earth-Evolution" class="post-title__img">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- post 1 -->
+            <div class="post-Evolve">
+                <div class="post-setting">
+                    <div class="post-grid-wide grid wide">
+                        <div class="post-row row">
+                            <div class="post-setting col l-12 c-12 m-12">
+                                <div class="post-title" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                                    <p class="post-title__post">Rocks Tell the Earth's Story</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-gif__setting">
+                    <div class="post-grid-wide grid wide">
+                        <div class="post-row body-row_post-3">
+                            
+                            <div class="post-setting col l-5 c-12 m-12">
+
+                                    <div class="post__gif-1" data-aos="fade-right" data-aos-duration="3000">
+                                        <video class="post-gif" autoplay loop muted plays>
+                                            <source src="./img/rock-gif-2.mp4">
+                                        </video>
+                                    </div>
+                                
+                            </div>
+
+                            <div class="post-setting col l-7 c-10 m-12">
+
+                                <div class="post__title-1" data-aos="fade-left" data-aos-duration="3000">
+                                    <p class="post-title-1">The continental crust contains the 
+                                        historical record of our planet. Its most ancient rocks 
+                                        are four billion years old, and the youngest ones are 
+                                        still forming today. Parts of the continental crust may 
+                                        be older than four billion years, but if so, they are not 
+                                        exposed, or have not been found, on the Earth’s surface. 
+                                        The rocks of the crust convey the story of how the planet 
+                                        has been transformed between the period shortly after its 
+                                        formation and the way we see it today.</p>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+
+
+            <!-- post 2 -->
+            <div class="post-Evolve">
+                <div class="post-setting">
+                    <div class="post-grid-wide grid wide">
+                        <div class="post-row row">
+                            <div class="post-setting col l-12 c-12 m-12">
+                                <div class="post-title" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                                    <p class="post-title__post">How Did the Earth Form?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-gif__setting">
+                    <div class="post-grid-wide grid wide">
+                        <div class="post-row body-row_post-3">
+                            
+                            <div class="post-setting col l-5 c-12 m-12">
+
+                                    <div class="post__gif-1" data-aos="fade-right" data-aos-duration="3000">
+                                        <video class="post-gif" autoplay loop muted plays>
+                                            <source src="./img/rock-gif-2.mp4">
+                                        </video>
+                                    </div>
+                                
+                            </div>
+
+                            <div class="post-setting col l-7 c-10 m-12">
+
+                                <div class="post__title-1" data-aos="fade-left" data-aos-duration="3000">
+                                    <p class="post-title-1">The Sun and its family of planets 
+                                        formed when a cloud of dust and gas condensed 4.6 billion 
+                                        years ago. Several hundred million years after the Earth 
+                                        took form, an outer crust developed. But these surface 
+                                        rocks are no longer available for study: they have 
+                                        disappeared into the interior of our dynamic planet. Our 
+                                        only clues to how the Earth formed come from meteorites 
+                                        and the Moon because both formed simultaneously with the 
+                                        planets.</p>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+
+
+            <!-- post 3 -->
+            <div class="post-Evolve">
+                <div class="post-setting">
+                    <div class="post-grid-wide grid wide">
+                        <div class="post-row row">
+                            <div class="post-setting col l-12 c-12 m-12">
+                                <div class="post-title" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                                    <p class="post-title__post">What Is the Earth Made Of?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="post-title__setting">  
+                <div class="post-grid-wide grid wide">
+                    <div class="post-row row">
+                        <div class="post-setting col l-10 l-o-1 c-10 c-o-1 m-10">
+                            <div class="post__title-1" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                                <p class="post-title-1">The Sun and its family of planets 
+                                    formed when a cloud of dust and gas condensed 4.6 billion 
+                                    years ago. Several hundred million years after the Earth 
+                                    took form, an outer crust developed. But these surface rocks 
+                                    are no longer available for study: they have disappeared into 
+                                    the interior of our dynamic planet. Our only clues to how the 
+                                    Earth formed come from meteorites and the Moon because both 
+                                    formed simultaneously with the planets.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="post-gif__setting">
+                <div class="post-grid-wide grid wide">
+                    <div class="post-row body-row_post">
+                        <div class="post-setting col l-6 l-o-3 c-10 m-12">
+                            <div class="post-of-3" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                                <img src="./img/infor-earth.png" alt="infor-earth" class="post-img-3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- post 3 -->
+            <div class="post-Evolve">
+
+                <div class="post-grid-wide grid wide">
+                    <div class="post-row row">
+                        <div class="post-setting col l-10 l-o-1 c-10 c-o-1 m-10 m-o-1">
+                            <div class="post__title-1">
+                                <p class="post-title-1" data-aos="fade-up" data-aos-anchor-placement="center-bottom">The Sun and its family of planets 
+                                    formed when a cloud of dust and gas condensed 4.6 billion 
+                                    years ago. Several hundred million years after the Earth 
+                                    took form, an outer crust developed. But these surface rocks 
+                                    are no longer available for study: they have disappeared into 
+                                    the interior of our dynamic planet. Our only clues to how the 
+                                    Earth formed come from meteorites and the Moon because both 
+                                    formed simultaneously with the planets.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        <!-- news more -->
+
+
+        <div class="news-more">
+            <p class="news-more__title">News More</p>
+            <div class="news-more__news">
+                <div class="swiper mySwiper2 news-more__swiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- post-1 -->
+
+                        <div class="swiper-slide">
+                            <div class="news-more__slider">
+                                <div class="news-more__img-slider">
+    
+                                    <a href="../planet/Mercury.html"> <img src="./img/mercury.png" alt="mercury-img" class="news-more__img"></a>
+                                   
+                                </div>
+                                <p class="news-more__desc">Mercury</p>
+                            </div>
+                        </div>
+                        
+                        <!-- post-2 -->
+
+                        <div class="swiper-slide">
+                            <div class="news-more__slider">
+                                <div class="news-more__img-slider">
+    
+                                    <a href="../planet/Venus.html"> <img src="./img/venus.png" alt="venus-img" class="news-more__img"></a>
+                                   
+                                </div>
+                                <p class="news-more__desc">Venus</p>
+                            </div>
+                        </div>
+
+                        <!-- post-3 -->
+    
+                        <div class="swiper-slide">
+                            <div class="news-more__slider">
+                                <div class="news-more__img-slider">
+    
+                                    <a href="../planet/Earth.html"> <img src="./img/Earth.png" alt="Earth-img" class="news-more__img"></a>
+                                   
+                                </div>
+                                <p class="news-more__desc">Earth</p>
+                            </div>
+                        </div>
+
+                        <!-- post-4 -->
+    
+                        <div class="swiper-slide">
+                            <div class="news-more__slider">
+                                <div class="news-more__img-slider">
+    
+                                    <a href="../planet/Mars.html"> <img src="./img/mars.png" alt="Mars-img" class="news-more__img"></a>
+                                   
+                                </div>
+                                <p class="news-more__desc">Mars</p>
+                            </div>
+                        </div>
+    
+                        <!-- post-5 -->
+
+                        <div class="swiper-slide">
+                            <div class="news-more__slider">
+                                <div class="news-more__img-slider">
+    
+                                    <a href="../planet/Jupiter.html"> <img src="./img/jupiter.png" alt="Jupiter-img" class="news-more__img"></a>
+                                   
+                                </div>
+                                <p class="news-more__desc">Jupiter</p>
+                            </div>
+                        </div>
+
+                        <!-- post-6 -->
+    
+                        <div class="swiper-slide">
+                            <div class="news-more__slider">
+                                <div class="news-more__img-slider">
+    
+                                    <a href="../planet/Saturn.html"> <img src="./img/saturn.png" alt="Saturn-img" class="news-more__img"></a>
+                                   
+                                </div>
+                                <p class="news-more__desc">Saturn</p>
+                            </div>
+                        </div>
+
+                        <!-- post-7 -->
+    
+                        <div class="swiper-slide">
+                            <div class="news-more__slider">
+                                <div class="news-more__img-slider">
+    
+                                    <a href="../planet/Uranus.html"> <img src="./img/unarus.png" alt="Uranus-img" class="news-more__img"></a>
+                                   
+                                </div>
+                                <p class="news-more__desc">Uranus</p>
+                            </div>
+                        </div>
+    
+                        <!-- post-8 -->
+
+                        <div class="swiper-slide">
+                            <div class="news-more__slider">
+                                <div class="news-more__img-slider">
+    
+                                    <a href="../planet/Neptune.html"> <img src="./img/neptun.png" alt="" class="news-more__img"></a>
+                                   
+                                </div>
+                                <p class="news-more__desc">Neptune</p>
+                            </div>
+                        </div>
+
+                        <!-- post-9 -->
+
+                        <div class="swiper-slide">
+                            <div class="news-more__slider">
+                                <div class="news-more__img-slider">
+    
+                                    <a href="../planet/Pluto.html"> <img src="./img/Dwarf-Planet.png" alt="Dwarf-Planet-img" class="news-more__img"></a>
+                                    
+                                </div>
+                                <p class="news-more__desc">Dwarf Planet</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <div class="footer-title">
+            <p class="footer-title__contact">Contact Us</p>
+        </div>
+
+        <div class="footer-contact__mobie grid wide">
+            <div class="footer-contact__row row">
+                <div class="footer-contact__setting col c-10 c-o-1 l-0">
+
+                    <div class="footer-contact">
+                        <form class="footer-contact__form" onsubmit="sendEmail(); reset(); return false;">
+                            <input type="text" id="footer-contact__name" placeholder="Your Name" required class="footer-contact__box">
+                            <input type="email" id="footer-contact__email" placeholder="Your Email" required class="footer-contact__box">
+                            <input type="text" id="footer-contact__phone" placeholder="Your Phone" required class="footer-contact__box">
+                            <textarea id="message" type="footer-contact__message" row="10" placeholder="How can we help you?" required class="footer-contact__box"> </textarea>
+                            <button type="submit" id="btn" class="footer-contact__click">Send</button>
+                
+                        </form>
+                    </div>
+
+                </div>
+                
+            </div>
+    
+        </div>
+
+        <div class="footer-contact__2">
+
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966092835115!2d105.78010801471528!3d21.028820085998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9ac1%3A0xa9bc04e04602dd85!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1665652904057!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="footer-map__img"></iframe>
+            </div>
+
+            <div class="footer-form m-o c-0 l-5">
+                <form class="footer__form-2" onsubmit="sendEmail(); reset(); return false;">
+                    <div class="footer-feedback">
+                        <p class="footer__feedback-text">Feedback Form:</p>
+                    </div>
+                    <input type="text" id="footer-form__name" placeholder="Your Name" required class="footer-form__box-2">
+                    <input type="email" id="footer-form__email" placeholder="Your Email" required class="footer-form__box-2">
+                    <input type="text" id="footer-form__text" placeholder="Your Phone" required class="footer-form__box-2">
+                    <textarea id="message" type="footer-form__message" row="10" placeholder="How can we help you?" class="footer-form__box-message" required> </textarea>
+                    <button type="submit" id="form-2" class="footer-form__click">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact-about" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+            <div class="contact-about__grid grid wide">
+                <div class="footer-about__flex">
+                    <div class="footer-about__row row">
+                        
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__1">
+                                <p class="contact-about__title">OUR ADDRES</p>
+                                <p class="contact-about__desc">Mỹ Đình 2, Nam Từ Liêm, Hà Nội</p>
+                                <p class="contact-about__desc">FPT APTECH</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__2">
+                                <p class="contact-about__title">OUR CONTACT</p>
+                                <p class="contact-about__desc">skygazing2022@gmail.com</p>
+                                <p class="contact-about__desc">0886313048</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__icon">
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-about__setting col l-3 c-0 m-3">
+                            <div class="contact-about__flower l-3 l-o-9">
+                            <p class="contact-about__flower-text">follow us</p>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+
+            <!-- mobie -->
+
+            <div class="contact-about__grid grid wide">
+                <div class="footer-about__flex">
+                    <div class="footer-about__row row-footer__contact">
+                        
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__title">OUR ADDRES</p>
+                                <p class="contact-about__desc">Mỹ Đình 2, Nam Từ Liêm, Hà Nội</p>
+                                <p class="contact-about__desc">FPT APTECH</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__title">OUR CONTACT</p>
+                                <p class="contact-about__desc">skygazing2022@gmail.com</p>
+                                <p class="contact-about__desc">0886313048</p>
+                            </div>
+                        </div>
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer-icon">
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.facebook.com/Hieuhee2001/" class="contact-about__social"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-about__setting col l-0 m-0 c-10 c-o-1">
+                            <div class="contact-about__footer">
+                                <p class="contact-about__folower">Follower</p>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- scroll to top -->
+
+    <div id="progress">
+        <i class="fa-solid fa-arrow-up" id="progress-value"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/EvolveEarth.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

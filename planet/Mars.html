@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Grid.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="Js/main.js"></script>
+    <script src="Js/time-out.js"></script>
+    <link rel="shortcut icon" type="images/png" href="/logo-icon/solar-system.ico"/>
+    <title>Mars</title>
+    <style>
+        .explo-planet #img-nasa {
+            margin-top: 0px;
+            width: 24%;
+        }
+        img.img-fact {
+            margin-left: 0px;
+            width: 100%;
+        }
+        .content{
+            height: 60rem;
+        }
+
+        @media only screen and (max-width: 46.1875em){
+        .content {
+            height: 92rem;
+            }
+        .content-add {
+            height: 75rem;
+            } 
+        .explo-planet #img-nasa {
+            margin-top: 10px;
+            width: 100%;
+            }
+        }
+        @media only screen and (min-width: 600px) and (max-width: 800px) {
+            .slider-responsive {
+                height: 900px;
+            }
+            img.img-fact {
+                margin-left: 4rem;
+                width: 80%;
+            }
+            .content-add {
+                height: 52rem;
+            }
+        } 
+        @media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+            .content {
+                height: 88rem !important;
+            }
+        }
+        @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+            .content {
+                height: 76rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader disppear" >
+        <img src="../loading/9b1398619fa808505a7dbd6da70b2ff1.gif" alt="">
+    </div>
+    <div id="progress">
+        <i class="fa-solid fa-arrow-up" id="progress-value"></i>
+    </div>
+
+    <div id="main">
+        <div id="header">
+            <input type="checkbox" name="" class="nav-input" id="nav-res-input">
+            <label for="nav-res-input" class="nav-overlay"></label>
+            <div id="logo_img">
+                <a href="../Skygazing.com.html"><img src="./images/logo png.png" alt="Logo"></a>
+            </div>
+            <label for="nav-res-input"><i id="icon-mobile" class="bi bi-list"></i></label>
+            <ul id="nav">
+                <li class="astronomy-home__numberlives">live: 220</li>
+                <li><a href="Planets.html">Planets</a>
+                    <ul class="subnav">
+                        <li><a href="Mercury.html">Mercury</a></li>
+                        <li><a href="Venus.html">Venus</a></li>
+                        <li><a href="Earth.html">Earth</a></li>
+                        <li><a href="Mars.html">Mars</a></li>
+                        <li><a href="Jupiter.html">Jupiter</a></li>
+                        <li><a href="Saturn.html">Saturn</a></li>
+                        <li><a href="Uranus.html">Uranus</a></li>
+                        <li><a href="Neptune.html">Neptune</a></li>
+                        <li><a href="Pluto.html">Pluto</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Events The Planets</a>
+                    <ul class="subnav">
+                        <li><a href="../eclipse/eclipse.html">Eclipse</a></li>
+                        <li><a href="../bigbang/bigbang.html">BigBang</a></li>
+                        <li><a href="../EvolveEarth/EvolveEarth.html">Evolved Earth</a></li>
+                    </ul>
+                </li>  
+                <li><a href="#">More</a>
+                    <ul class="subnav">
+                        <li><a href="../star-gazing/star-gazing.html">StarGazing</a></li>
+                        <li><a href="../comet-event/comet.html">Comet</a></li>
+                        <li><a href="../Observation/Observation.html">Observatories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li> 
+                <li class="astronomy-home__time-lives">
+                    <span>Times live:</span>
+                    <span id="hours">00</span>
+                    <span>:</span>
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                    <span id="session">AM</span>
+                </li>
+            </ul>  
+            <div class="header-res">   
+                <label for="nav-res-input"><i id="icon-res" class="bi bi-x-lg"></i></label>
+                <ul id="nav-res">
+                    <li><a href="Planets.html">Planets</a>
+                        <input type="checkbox" id="nav-down1">
+                        <label for="nav-down1"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res1">
+                            <li><i class="bi bi-dash"></i></i><a href="Mercury.html">Mercury</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Venus.html">Venus</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Earth.html">Earth</a></li>
+                            <li><i class="bi bi-dash"></i></i></i><a href="Mars.html">Mars</a></li>
+                            <li><i class="bi bi-dash"></i></i></i><a href="Jupiter.html">Jupiter</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Saturn.html">Saturn</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Uranus.html">Uranus</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Neptune.html">Neptune</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="Pluto.html">Pluto</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Events The Planets</a>
+                        <input type="checkbox" id="nav-down2">
+                        <label for="nav-down2"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res2">
+                            <li><i class="bi bi-dash"></i></i><a href="#">Eclipse</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="#">BigBang</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="#">Evolved Earth</a></li>
+                        </ul>
+                    </li>  
+                    <li><a href="#">More</a>
+                        <input type="checkbox" id="nav-down3">
+                        <label for="nav-down3"><i class="bi bi-caret-down-fill"></i></label>
+                        <ul class="subnav-res3">
+                            <li><i class="bi bi-dash"></i></i><a href="#">StarGazing</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="#">Comet</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="#">Constellation</a></li>
+                            <li><i class="bi bi-dash"></i></i></i><a href="#">News</a></li>
+                            <li><i class="bi bi-dash"></i></i><a href="#">Observatories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About Us</a></li>
+                </ul>  
+            </div>    
+        </div>
+        <div class="slider">
+            <img id="img_planet" src="images/Mars.png" alt="Mars">
+            <div id="planet_name"><b>Mars</b> 
+                <p id="text_planet">
+                    Mars is a dusty, cold, desert world with a very thin atmosphere. There is strong evidence Mars was—billions of years ago—wetter and warmer, with a thicker atmosphere.
+                </p>
+                <button id="btn_planet"><a href="#More-InfoPlantet">More details</a></button>
+            </div>
+            <div class="planet_info">
+                <table>
+                    <tr>
+                        <th>Surface area:</th>
+                        <td>144.800.000 km²</td>
+                    </tr>
+                    <tr>
+                        <th>Mean density:</th>    
+                        <td>3,93 g/cm³</td>                                      
+                    </tr>
+                    <tr>
+                        <th>Rotation cycle:</th>
+                        <td>24.6 hours</td>
+                    </tr>
+                    <tr>
+                        <th>Mass:</th>
+                        <td>6,39E23 kg (0,107 M⊕)</td>
+                    </tr>
+                    <tr>
+                        <th>Mean radius:</th>
+                        <td>3.389,5 km</td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td>4,603E9 Year</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="planet_distance">
+                <table>
+                    <tr>
+                        <th>The distance from the Sun</th>
+                        <th>The distance from the Earth</th>
+                    </tr>
+                    <tr>
+                        <td>142 million<small>miles</small></td>
+                        <td>140 million<small>miles</small></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="slider-responsive">
+            <img id="img_responsive"  src="images/Mars.png" alt="Mars">
+            <div data-aos="fade-up"
+            data-aos-duration="3000" id="planet_responsive"><b>Mars</b>  
+                <p id="text_responsive">
+                    Mars is a dusty, cold, desert world with a very thin atmosphere. There is strong evidence Mars was—billions of years ago—wetter and warmer, with a thicker atmosphere.
+                </p>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000" class="responsive-table">
+                <table>
+                    <tr>
+                        <th>Surface area:</th>
+                        <td>144.800.000 km²</td>
+                    </tr>
+                    <tr>
+                        <th>Mean density:</th>    
+                        <td>3,93 g/cm³</td>                                      
+                    </tr>
+                    <tr>
+                        <th>Rotation cycle:</th>
+                        <td>24.6 hours</td>
+                    </tr>
+                    <tr>
+                        <th>Mass:</th>
+                        <td>6,39E23 kg (0,107 M⊕)</td>
+                    </tr>
+                    <tr>
+                        <th>Mean radius:</th>
+                        <td>3.389,5 km</td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td>4,603E9 Year</td>
+                    </tr>
+                </table>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000" class="responsive-distance">
+                <table>
+                    <tr>
+                        <th>The distance from the Sun</th>
+                        <th>The distance from the Earth</th>
+                    </tr>
+                    <tr>
+                        <td class="res-td">142 million<small>miles</small></td>
+                        <td class="res-td">140 million<small>miles</small></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2 data-aos="fade-right" data-aos-offset="300" id="title-planet-name">What's The Mars Planet ?</h2>
+                <div class="explo-planet">
+                    <div class="text-explo" data-aos="fade-up"  data-aos-easing="linear"    data-aos-duration="1500">
+                        <p class="text-pln-nasa"> 
+                            Mars is no place for the faint-hearted. It’s dry, rocky, and bitter cold. The fourth planet from the Sun, Mars is one of Earth's two closest planetary neighbors (Venus is the other). Mars is one of the easiest planets to spot in the night sky – it looks like a bright red point of light. <br>
+                            Despite being inhospitable to humans, robotic explorers – like NASA's new Perseverance rover – are serving as pathfinders to eventually get humans to the surface of the Red Planet.
+                        </p>
+                        <details>
+                            <summary>More details</summary>
+                            <p class="text-pln-nasa">
+                                Mars is one of the most explored bodies in our solar system, and it's the only planet where we've sent rovers to roam the alien landscape.
+                            </p>
+                            <p class="text-pln-nasa">
+                                Mars was named by the ancient Romans for their god of war because its reddish color was reminiscent of blood. Other civilizations also named the planet for this attribute – for example, the Egyptians called it "Her Desher," meaning "the red one." Even today, it is frequently called the "Red Planet" because iron minerals in the Martian dirt oxidize, or rust, causing the surface to look red.
+                            </p>
+                            <p class="text-pln-nasa">
+                                Scientists don't expect to find living things currently thriving on Mars. Instead, they're looking for signs of life that existed long ago, when Mars was warmer and covered with water.
+                            </p>
+                        </details>
+                    </div>
+                    <img id="img-nasa" src="images/mars-gif.gif" alt="Nasa_mars" autoplay loop muted play>
+                </div>          
+        </div>
+
+        <div class="content-img">
+            <div data-aos="zoom-in-up" class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-mars1.jpg" >
+                  <div class="text">
+                    This mosaic comprises about 50 red-, green-, and violet-filter Viking Orbiter images, mosaiced in an orthographic projection at a scale of 1 km/pixel. The images were acquired in 1980 during late northern summer on Mars.
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-mars2.jpg" >
+                  <div class="text">
+                    On a clear day on Mars, you can see tens of thousands of rocks. Two high-resolution scans by one of Viking 2's cameras were mosaiced to create this scene looking northeast to the horizon some three kilometers (two miles) away. 
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class="img-slider" src="images/img-mars3.jpg">
+                  <div class="text">
+                    During the Viking Mission, the Viking Lander Camera System acquired many high-resolution images of the scene at Chryse Planitia. Using individual camera events, which occurred on many days throughout the mission, computer mosaics have been created for the site as viewed by each of the two cameras on the spacecraft. 
+                  </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/img-mars4.jpg">
+                    <div class="text">
+                        A panoramic view of Pathfinder's Ares Vallis landing site, featured on the cover of the Dec. 5 issue of Science, reveals traces of this warmer, wetter past, showing a floodplain covered with a variety of rock types, boulders, rounded and semi-rounded cobbles and pebbles. These rocks and pebbles are thought to have been swept down and deposited by floods which occurred early in Mars' evolution in the Ares and Tiu regions near the Pathfinder landing site. 
+                    </div>
+                  </div>
+
+                <div class="mySlides fade">
+                    <img class="img-slider" src="images/img-mars5.jpg">
+                    <div class="text">
+                        This 8-image mosaic was acquired during the late afternoon (near 5pm LST, note the long shadows) on Sol 2 as part of the predeploy "insurance panorama" and shows the newly deployed rover sitting on the Martian surface. 
+                    </div>
+                </div>
+ 
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                  <span class="dot" onclick="currentSlide(5)"></span> 
+                </div>
+        </div>
+        <div class="content-add">
+            <div class="content-planet">
+                <h4 data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">Significant Events</h4>
+                <ul data-aos="fade-up"
+                data-aos-duration="2000" id="years-content">
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text">   
+                        No planet beyond Earth has been studied as intensely as Mars. Recorded observations of Mars date as far back as the era of ancient Egypt over 4,000 years ago, when they charted the planet's movements in the sky. Today, NASA has a fleet of robotic spacecraft study Mars from all angles.
+                    </li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>On the ground:</strong>
+                        NASA's next-generation Perseverance rover – the largest, most advanced rover NASA has sent to another world – touched down on Mars on Feb. 18, 2021. Two other NASA spacecraft already are at work on the surface. NASA's Curiosity rover is exploring Mount Sharp in Gale Crater. NASA's InSight, a stationary lander, is probing the interior of Mars from a site on a flat smooth plain called Elysium Planitia.
+                    </li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>In the air:</strong>
+                        The Ingenuity helicopter flew to Mars attached to the belly of Perseverance. On April 19, 2021, Ingenuity became the first aircraft in history to make a powered, controlled flight on another planet.
+                    </li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>In orbit:</strong>
+                        NASA has three spacecraft in orbit: Mars Reconnaissance Orbiter, Mars Odyssey, and MAVEN.
+                    </li>
+                    <li data-aos="fade-up"
+                    data-aos-duration="3000" id="years-content-text"><i class="bi bi-check-circle"></i><strong>International missions:</strong> 
+                        The Hope orbiter from the United Arab Emirates arrived at Mars on Feb. 9, 2021. China’s Tianwen-1 mission arrived on Feb. 10, 2021, and it includes an orbiter, a lander, and a rover. In May 2021, China became the second nation to ever land successfully on Mars when its Zhurong Mars rover touched down. ESA manages the ExoMars Trace Gas Orbiter and Mars Express missions. India's first Red Planet spacecraft – the Mars Orbiter Mission (MOM) – has been orbiting Mars since 2014.
+                    </li>  
+            </div>
+        </div>
+        <div class="content-last">
+            <div class="content-header">
+                <h2 data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" id="More-InfoPlantet">10 Need-to-Know Things About Mars</h2>
+            </div>
+            <div data-aos="fade-up"
+            data-aos-duration="3000" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="grid wide">
+                <div class="row">
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">1</div>
+                        <h3 class="grid-title">SMALL PLANET</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">If the Sun were as tall as a typical front door, Earth would be the size of a dime, and Mars would be about as big as an aspirin tablet.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">2</div>
+                        <h3 class="grid-title">FOURTH ROCK</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Mars orbits our Sun, a star. Mars is the fourth planet from the Sun at an average distance of about 228 million km (142 million miles) or 1.52 AU.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">3</div>
+                        <h3 class="grid-title">LONGER DAYS</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">
+                                One day on Mars takes a little over 24 hours. Mars makes a complete orbit around the Sun (a year in Martian time) in 687 Earth days.
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <img class="img-fact" src="images/mars-nasa1.jpg" alt="mars-nasa">
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">4</div>
+                        <h3 class="grid-title">RUGGED TERRAIN</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Mars is a rocky planet. Its solid surface has been altered by volcanoes, impacts, winds, crustal movement and chemical reactions.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">5</div>
+                        <h3 class="grid-title">BRING A SPACESUIT</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Mars has a thin atmosphere made up mostly of carbon dioxide (CO2), argon (Ar), nitrogen (N2), and a small amount of oxygen and water vapor.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">6</div>
+                        <h3 class="grid-title">TWO MOONS</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Mars has two moons named Phobos and Deimos.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">7</div>
+                        <h3 class="grid-title">Ringless</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">There are no rings around Mars.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">8</div>
+                        <h3 class="grid-title">MANY MISSIONS</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Several missions have visited this planet, from flybys and orbiters to rovers on the surface.The first true Mars mission success was the Mariner 4 flyby in 1965.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count">9</div>
+                        <h3 class="grid-title">TOUGH PLACE FOR LIFE</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">At this time, Mars' surface cannot support life as we know it. Current missions are determining Mars' past and future potential for life.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <div class="number-count-fact">10</div>
+                        <h3 class="grid-title">RUSTY PLANET</h3>
+                        <div class="thing-fact">
+                            <p class="text-fact">Mars is known as the Red Planet because iron minerals in the Martian soil oxidize, or rust, causing the soil and atmosphere to look red.</p>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col l-4 item-planet">
+                        <img class="img-fact" src="images/mars-nasa2.jpg" alt="mars-nasa">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+
+            <div class="footer__bg">
+                <img src="images/Star.jpg" alt="bg-footer">
+                
+                <div class="footer__infor">
+    
+                    <div class="footer__icon-phone">
+                        <i class="fa-solid fa-phone footer__icon-infor"></i>
+                        <span class="footer__infor-name">Contact Information</span>
+                        <span class="footer__desc">0886313048</span>
+                        <span class="footer__desc">SkyGazing@gmail.com</span>
+                    </div>
+    
+                    <div class="footer__icon-times">
+                        <i class="fa-solid fa-clock footer__icon-infor"></i>
+                        <span class="footer__infor-name">Times</span>
+                        <span class="footer__desc">Days of the week</span>
+                        <span class="footer__desc">(8:00 AM to 10:00 PM)</span>
+                    </div>
+    
+                    <div class="footer__icon-address">
+                        <i class="fa-solid fa-location-dot footer__icon-infor"></i>
+                        <span class="footer__infor-name">Address</span>
+                        <span class="footer__desc">Fpt Aptech Hà Nội</span>
+                        <span class="footer__desc">(Tôn thất thuyết, Mỹ Đình 2, Nam Từ Liêm, Hà Nội)</span>
+                    </div>
+               
+                </div>
+            </div>
+
+        </div>
+
+        <div class="map">
+            <div class="map__address">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966092835115!2d105.78010801471528!3d21.028820085998362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9ac1%3A0xa9bc04e04602dd85!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIFRo4buRbmcgxJDDoG8gVOG6oW8gTOG6rXAgVHLDrG5oIFZpw6puIFF14buRYyBU4bq_IChTaW5jZSAxOTk5KQ!5e0!3m2!1svi!2s!4v1665652904057!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map__img"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Js/img-slider.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+</html>
